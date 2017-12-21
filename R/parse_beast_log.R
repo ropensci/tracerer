@@ -4,7 +4,7 @@
 #' @export
 #' @examples
 #'   log_filename <- system.file(
-#'     "extdata", "beast2_example_output.log", package = "RBeast"
+#'     "extdata", "beast2_example_output.log", package = "beastier"
 #'   )
 #'   estimates <- parse_beast_log(filename = log_filename)
 #'   expected_names <- c(

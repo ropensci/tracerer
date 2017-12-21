@@ -5,7 +5,7 @@
 #' @return the auto_correlation time
 #' @examples
 #'   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-#'   act <- RBeast::calc_act_r(
+#'   act <- beastier::calc_act_r(
 #'     trace = trace,
 #'     sample_interval = 1
 #'   )
@@ -88,7 +88,7 @@ calc_act_r <- function(trace, sample_interval) {
 }
 
 # Keep the next three lines for RCpp
-#' @useDynLib RBeast
+#' @useDynLib beastier
 #' @importFrom Rcpp sourceCpp
 NULL
 
@@ -99,7 +99,7 @@ NULL
 #' @export
 #' @examples
 #'   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-#'   act <- RBeast::calc_act(
+#'   act <- beastier::calc_act(
 #'     trace = trace,
 #'     sample_interval = 1
 #'   )

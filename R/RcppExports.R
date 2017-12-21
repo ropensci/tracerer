@@ -6,6 +6,6 @@
 #' @param sample_interval sample interval
 #' @return the ACT
 calc_act_cpp <- function(sample, sample_interval) {
-    .Call('_RBeast_calc_act_cpp', PACKAGE = 'RBeast', sample, sample_interval)
+    .Call('_beastier_calc_act_cpp', PACKAGE = 'beastier', sample, sample_interval)
 }
 

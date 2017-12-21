@@ -3,7 +3,7 @@ context("parse_beast_trees")
 test_that("parse_beast_trees: use", {
 
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "RBeast"
+    "extdata", "beast2_example_output.trees", package = "beastier"
   )
 
   posterior <- parse_beast_trees(
@@ -20,7 +20,7 @@ test_that("parse_beast_trees: abuse", {
   )
 
   log_filename <- system.file(
-   "extdata", "beast2_example_output.log", package = "RBeast"
+   "extdata", "beast2_example_output.log", package = "beastier"
   )
   testthat::expect_error(
     parse_beast_trees(

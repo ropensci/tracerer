@@ -15,7 +15,7 @@ test_that("100 percent burn-in", {
 
   # Remove first ten percent
   v <- data.frame(x = seq(1, 10), y = seq(11, 20))
-  w <- RBeast::remove_burn_ins(trace = v, burn_in_fraction  = 1.0)
+  w <- beastier::remove_burn_ins(trace = v, burn_in_fraction  = 1.0)
   testthat::expect_equal(nrow(w), 0)
 })
 

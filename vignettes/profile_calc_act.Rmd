@@ -10,7 +10,7 @@ vignette: >
 ---
 
 Goal if this vignette is to measure the run-time speed of `calc_act`, for 
-[RBeast issue #10](https://github.com/beast-dev/RBeast/issues/10).
+[beastier issue #10](https://github.com/beast-dev/beastier/issues/10).
 
 ```{r}
 library(beastier)

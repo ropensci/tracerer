@@ -3,7 +3,7 @@
 #' @return a list of phylogenies of type 'phylo'
 #' @examples
 #'   trees_file <- system.file(
-#'     "extdata", "read_beast2_trees_example.trees", package = "RBeast"
+#'     "extdata", "read_beast2_trees_example.trees", package = "beastier"
 #'   )
 #'   testit::assert(file.exists(trees_file))
 #'   posterior <- read_beast2_trees(trees_file)

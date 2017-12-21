@@ -3,7 +3,7 @@ context("calc_act")
 test_that("calc_act use", {
 
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-  act <- RBeast::calc_act(
+  act <- beastier::calc_act(
     trace = trace,
     sample_interval = 1
   )
@@ -13,7 +13,7 @@ test_that("calc_act use", {
 test_that("calc_act_r use", {
 
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-  act <- RBeast::calc_act_r(
+  act <- beastier::calc_act_r(
     trace = trace,
     sample_interval = 1
   )

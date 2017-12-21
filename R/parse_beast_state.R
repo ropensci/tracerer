@@ -5,7 +5,7 @@
 #' @export
 #' @examples
 #'   xml_state_filename <- system.file(
-#'     "extdata", "beast2_example_output.xml.state", package = "RBeast"
+#'     "extdata", "beast2_example_output.xml.state", package = "beastier"
 #'   )
 #'   estimates <- parse_beast_state_operators(filename = xml_state_filename)
 #'   expected_names <- c("operator", "p", "accept", "reject", "acceptFC",
@@ -17,13 +17,13 @@
 #'   #testit::assert(estimates$operator == expected_operators)
 #' @author Richel Bilderbeek
 parse_beast_state_operators <- function(
-    filename = system.file("extdata", "beast2_example_output.xml.state", package = "RBeast")
+    filename = system.file("extdata", "beast2_example_output.xml.state", package = "beastier")
 ) {
   if (!file.exists(filename)) {
     stop("file absent")
   }
 
-  lines <- RBeast::extract_operators_lines(filename)
+  lines <- beastier::extract_operators_lines(filename)
   json <- jsonlite::fromJSON(lines)
   df <- as.data.frame(json)
   names(df) <- gsub("operators.", "", names(df))

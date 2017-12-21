@@ -4,7 +4,7 @@
 #' @export
 #' @examples
 #'   trees_filename <- system.file(
-#'     "extdata", "beast2_example_output.trees", package = "RBeast"
+#'     "extdata", "beast2_example_output.trees", package = "beastier"
 #'   )
 #'   posterior <- parse_beast_trees(
 #'     filename = trees_filename

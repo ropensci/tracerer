@@ -6,7 +6,7 @@
 #'
 #'   # Obtain an example log file its name
 #'   filename <- system.file(
-#'     "extdata", "beast2_example_output.log", package = "RBeast"
+#'     "extdata", "beast2_example_output.log", package = "beastier"
 #'   )
 #'
 #'   # Parse that log file
@@ -45,7 +45,7 @@ calc_esses <- function(traces, sample_interval) {
 
   for (i in seq_along(traces)) {
     trace <- as.numeric(t(traces[i]))
-    esses[i] <- RBeast::calc_ess(
+    esses[i] <- beastier::calc_ess(
       trace, sample_interval = sample_interval
     )
   }

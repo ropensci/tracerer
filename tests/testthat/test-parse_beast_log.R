@@ -3,10 +3,10 @@ context("parse_beast_log")
 test_that("parse_beast_log: use", {
 
   filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "RBeast"
+    "extdata", "beast2_example_output.log", package = "beastier"
   )
 
-  estimates <- RBeast::parse_beast_log(
+  estimates <- beastier::parse_beast_log(
     filename = filename
   )
   expected_names <- c(

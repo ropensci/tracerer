@@ -5,10 +5,10 @@
 #' @export
 #' @examples
 #'   trees_filename <- system.file(
-#'    "extdata", "beast2_example_output.trees", package = "RBeast"
+#'    "extdata", "beast2_example_output.trees", package = "beastier"
 #'   )
 #'   log_filename <- system.file(
-#'    "extdata", "beast2_example_output.log", package = "RBeast"
+#'    "extdata", "beast2_example_output.log", package = "beastier"
 #'   )
 #'   posterior <- parse_beast_posterior(
 #'     trees_filename = trees_filename,
@@ -26,13 +26,13 @@ parse_beast_posterior <- function(trees_filename, log_filename) {
     stop("log_filename absent")
   }
 
-  posterior_trees <- RBeast::parse_beast_trees(trees_filename)
-  posterior_estimates <- RBeast::parse_beast_log(log_filename)
+  posterior_trees <- beastier::parse_beast_trees(trees_filename)
+  posterior_estimates <- beastier::parse_beast_log(log_filename)
 
   posterior <- list(
     trees = posterior_trees,
     estimates = posterior_estimates
   )
-  testit::assert(RBeast::is_posterior(posterior))
+  testit::assert(beastier::is_posterior(posterior))
   posterior
 }
