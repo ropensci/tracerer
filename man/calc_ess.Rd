@@ -21,11 +21,12 @@ Calculates the Effective Sample Size
   filename <- get_path("beast2_example_output.log")
 
  # Parse the file as-is and conclude the sampling interval
- df <- beastier::parse_beast_log(filename)
- sample_interval <- df$Sample[2] - df$Sample[1]
+ df <- parse_beast_log(filename)
+ sample_interval <- df$Sample[2] - df$Sample[1] # nolint use uppercase variable name just like BEAST2
 
- # Only keep the parameter estimates, do not care about the sampling times anymore
- estimates <- subset(df, select = -Sample)
+ # Only keep the parameter estimates,
+ # do not care about the sampling times anymore
+ estimates <- subset(df, select = -Sample) # nolint use uppercase variable name just like BEAST2
 
  esses <- rep(NA, ncol(estimates))
  burn_in_fraction <- 0.1
@@ -34,10 +35,13 @@ Calculates the Effective Sample Size
    trace_raw <- as.numeric(t(estimates[i]))
 
    # Trace with the burn-in removed
-   trace <- beastier::remove_burn_in(trace = trace_raw, burn_in_fraction = 0.1)
+   trace <- remove_burn_in(
+     trace = trace_raw,
+     burn_in_fraction = 0.1
+   )
 
    # Store the effectice sample size
-   esses[i] <- beastier::calc_ess(trace, sample_interval = sample_interval)
+   esses[i] <- calc_ess(trace, sample_interval = sample_interval)
  }
 
  # Use the values that TRACER shows

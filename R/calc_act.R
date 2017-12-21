@@ -5,13 +5,13 @@
 #' @return the auto_correlation time
 #' @examples
 #'   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-#'   act <- beastier::calc_act_r(
+#'   act <- calc_act_r(
 #'     trace = trace,
 #'     sample_interval = 1
 #'   )
 #'   testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
 #' @export
-#' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161}
+#' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richel Bilderbeek
 calc_act_r <- function(trace, sample_interval) {
@@ -99,12 +99,12 @@ NULL
 #' @export
 #' @examples
 #'   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-#'   act <- beastier::calc_act(
+#'   act <- calc_act(
 #'     trace = trace,
 #'     sample_interval = 1
 #'   )
 #'   testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
-#' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161}
+#' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richel Bilderbeek
 calc_act <- function(trace, sample_interval) {
@@ -114,5 +114,5 @@ calc_act <- function(trace, sample_interval) {
   if (sample_interval < 1) {
     stop("sample interval must be at least one")
   }
-  return(calc_act_cpp(trace, sample_interval))
+  calc_act_cpp(trace, sample_interval) # nolint internal function
 }

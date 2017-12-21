@@ -8,10 +8,10 @@ test_that("exanple usage", {
   df <- beastier::parse_beast_log(
     filename = filename
   )
-  sample_interval <- df$Sample[2] - df$Sample[1]
+  sample_interval <- df$Sample[2] - df$Sample[1] # nolint use uppercase variable name just like BEAST2
 
   # Only keep the parameter estimates, do not care about the sampling times anymore
-  estimates <- subset(df, select = -Sample)
+  estimates <- subset(df, select = -Sample) # nolint use uppercase variable name just like BEAST2
 
   esses <- rep(NA, ncol(estimates))
   burn_in_fraction <- 0.1

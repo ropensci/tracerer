@@ -35,9 +35,9 @@ calc_esses <- function(traces, sample_interval) {
   }
 
   # Remove warning: no visible binding for global variable 'Sample'
-  Sample <- NULL; rm(Sample)
+  Sample <- NULL; rm(Sample) # nolint use uppercase variable name just like BEAST2
   # Remove the Sample column from the dataframe
-  traces <- subset(traces, select = -c(Sample ))
+  traces <- subset(traces, select = -c(Sample )) # nolint use uppercase variable name just like BEAST2
 
   esses <- rep(NA, ncol(traces))
 

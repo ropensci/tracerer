@@ -2,14 +2,9 @@
 library(beastier)
 
 ## ------------------------------------------------------------------------
-trees_file <- system.file(
-  "extdata", "beast2_example_output.log", package = "beastier"
-)
+trees_file <- get_path("beast2_example_output.log")
 testit::assert(file.exists(trees_file))
-estimates <- parse_beast_log(
-  filename = trees_file
-)
-
+estimates <- parse_beast_log(trees_file)
 knitr::kable(estimates)
 
 ## ------------------------------------------------------------------------
@@ -37,7 +32,7 @@ rownames(df_esses) <- names(estimates)
 knitr::kable(df_esses)
 
 ## ----fig.width = 7, fig.height = 7---------------------------------------
-melted <- reshape2::melt(estimates, id.vars = c("Sample"))
+melted <- reshape2::melt(estimates, id.vars = c("Sample")) # nolint use uppercase variable name just like BEAST2
 
 ggplot2::ggplot(
   melted, 

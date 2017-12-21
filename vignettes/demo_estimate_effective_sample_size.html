@@ -75,14 +75,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(beastier)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(
-  <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;beast2_example_output.log&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;beastier&quot;</span>
-)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
 testit<span class="op">::</span><span class="kw">assert</span>(<span class="kw">file.exists</span>(trees_file))
-estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(
-  <span class="dt">filename =</span> trees_file
-)
-
+estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(trees_file)
 knitr<span class="op">::</span><span class="kw">kable</span>(estimates)</code></pre></div>
 <table>
 <thead>
@@ -292,7 +287,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(df_esses)</code></p
 </tbody>
 </table>
 <p>I will melt these, to plot all at once:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">melted &lt;-<span class="st"> </span>reshape2<span class="op">::</span><span class="kw">melt</span>(estimates, <span class="dt">id.vars =</span> <span class="kw">c</span>(<span class="st">&quot;Sample&quot;</span>))
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">melted &lt;-<span class="st"> </span>reshape2<span class="op">::</span><span class="kw">melt</span>(estimates, <span class="dt">id.vars =</span> <span class="kw">c</span>(<span class="st">&quot;Sample&quot;</span>)) <span class="co"># nolint use uppercase variable name just like BEAST2</span>
 
 ggplot2<span class="op">::</span><span class="kw">ggplot</span>(
   melted, 

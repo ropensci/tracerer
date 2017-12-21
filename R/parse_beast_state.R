@@ -28,7 +28,7 @@ parse_beast_state_operators <- function(
   testit::assert(names(df)[1] == "id")
   names(df)[1] <- "operator"
 
-  # 'WilsonBalding.t:test-alignment_to_beast_posterior' -> 'WilsonBalding.t'
+  # 'WilsonBalding.t:test-alignment_to_beast_posterior' -> 'WilsonBalding.t' # nolint this is a regular comment, not code
   df$operator <- gsub(":.*", "", df$operator)
 
   df
