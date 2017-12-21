@@ -3,11 +3,11 @@ context("calc_ess")
 test_that("exanple usage", {
 
   filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "beastier"
+    "extdata", "beast2_example_output.log", package = "RBeast"
   )
 
   # Parse the file as-is and conclude the sampling interval
-  df <- beastier::parse_beast_log(
+  df <- RBeast::parse_beast_log(
     filename = filename
   )
   sample_interval <- df$Sample[2] - df$Sample[1]
@@ -22,10 +22,10 @@ test_that("exanple usage", {
     trace_raw <- as.numeric(t(estimates[i]))
 
     # Trace with the burn-in removed
-    trace <- beastier::remove_burn_in(trace = trace_raw, burn_in_fraction = 0.1)
+    trace <- RBeast::remove_burn_in(trace = trace_raw, burn_in_fraction = 0.1)
 
     # Store the effectice sample size
-    esses[i] <- beastier::calc_ess(trace, sample_interval = sample_interval)
+    esses[i] <- RBeast::calc_ess(trace, sample_interval = sample_interval)
   }
 
   # Use the values that TRACER shows

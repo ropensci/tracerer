@@ -4,10 +4,10 @@
 #' @author Richel Bilderbeek
 #' @examples
 #'   trees_filename <- system.file(
-#'    "extdata", "beast2_example_output.trees", package = "beastier"
+#'    "extdata", "beast2_example_output.trees", package = "RBeast"
 #'   )
 #'   log_filename <- system.file(
-#'    "extdata", "beast2_example_output.log", package = "beastier"
+#'    "extdata", "beast2_example_output.log", package = "RBeast"
 #'   )
 #'   posterior <- parse_beast_posterior(
 #'     trees_filename = trees_filename,

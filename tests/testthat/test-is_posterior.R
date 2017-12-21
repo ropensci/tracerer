@@ -3,16 +3,16 @@ context("is_posterior")
 test_that("detect posterior", {
 
   trees_filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   testit::assert(file.exists(trees_filename))
 
   log_filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "beastier"
+    "extdata", "beast2_example_output.log", package = "RBeast"
   )
   testit::assert(file.exists(log_filename))
 
-  posterior <- beastier::parse_beast_posterior(
+  posterior <- RBeast::parse_beast_posterior(
     trees_filename = trees_filename,
     log_filename = log_filename
   )
@@ -23,7 +23,18 @@ test_that("detect posterior", {
 test_that("detect non-posteriors", {
 
   testthat::expect_false(
-    beastier::is_posterior("nonsense")
+    RBeast::is_posterior("nonsense")
+  )
+
+  testthat::expect_false(
+    RBeast::is_posterior(list("estimates" = NA,  "nonsense" = NA))
+  )
+  testthat::expect_false(
+    RBeast::is_posterior(list("trees" = NA,  "nonsense" = NA))
+  )
+
+  testthat::expect_true(
+    RBeast::is_posterior(list("trees" = NA,  "estimates" = NA))
   )
 
 })

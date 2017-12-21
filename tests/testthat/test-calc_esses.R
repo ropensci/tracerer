@@ -3,7 +3,7 @@ context("calc_esses")
 test_that("calc_esses: use", {
 
   filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "beastier"
+    "extdata", "beast2_example_output.log", package = "RBeast"
   )
 
   estimates_raw <- parse_beast_log(

@@ -2,7 +2,7 @@ context("is_trees_posterior")
 
 test_that("can find is_trees_posterior_test.R", {
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   file_exists <- file.exists(filename)
   expect_true(file_exists)
@@ -10,7 +10,7 @@ test_that("can find is_trees_posterior_test.R", {
 
 test_that("can create a posterior", {
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   posterior <- parse_beast_trees(
     filename
@@ -20,7 +20,7 @@ test_that("can create a posterior", {
 
 test_that("can create a posterior with length 10", {
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   posterior <- parse_beast_trees(
     filename
@@ -38,7 +38,7 @@ test_that("can detect an invalid posterior, basic types", {
 test_that("can detect an invalid posterior, vector", {
   # Putting posteriors in a vector must yield an invalid BEAST posterior
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   posterior <- parse_beast_trees(
     filename
@@ -52,7 +52,7 @@ test_that("can detect an invalid posterior, vector", {
 test_that("can detect an invalid posterior, list", {
   # Putting posteriors in a list must yield an invalid BEAST posterior
   filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
+    "extdata", "beast2_example_output.trees", package = "RBeast"
   )
   posterior <- parse_beast_trees(
     filename
