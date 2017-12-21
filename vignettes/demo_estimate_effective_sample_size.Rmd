@@ -13,7 +13,6 @@ vignette: >
 
 ```{r}
 library(beastier)
-library(coda)
 ```
 
 ```{r}

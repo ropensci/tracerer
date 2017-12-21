@@ -9,14 +9,14 @@ Description:
 License: file LICENSE
 LazyData: TRUE
 Imports:
+  jsonlite,
+  rBEAST,
   Rcpp
 Suggests:
   ape,
-  coda,
   ggplot2,
   knitr,
   phangorn,
-  OutbreakTools,
   geiger,
   rbenchmark,
   reshape2,

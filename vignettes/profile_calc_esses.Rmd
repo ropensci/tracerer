@@ -17,7 +17,6 @@ It proves that `calc_esses`'s main speed is taken up by `calc_act`
 
 ```{r}
 library(beastier)
-library(coda)
 ```
 
 Starting point
