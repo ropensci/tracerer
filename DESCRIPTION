@@ -1,0 +1,36 @@
+Package: beastier
+Type: Package
+Title: Work with BEAST2 and its output
+Version: 0.1.0
+Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
+Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
+Description:
+  This package allows to work with BEAST2 and its output.
+License: file LICENSE
+LazyData: TRUE
+Imports:
+  Rcpp
+Suggests:
+  ape,
+  coda,
+  ggplot2,
+  knitr,
+  phangorn,
+  OutbreakTools,
+  geiger,
+  rbenchmark,
+  reshape2,
+  rmarkdown,
+  testit,
+  testthat
+Remotes:
+  jimhester/covr,
+  jimhester/lintr,
+  olli0601/rBEAST,
+  richelbilderbeek/beastscriptr,
+  MangoTheCat/goodpractice
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
+URL: https://github.com/richelbilderbeek/beastier
+BugReports: https://github.com/richelbilderbeek/beastier
+LinkingTo: Rcpp
