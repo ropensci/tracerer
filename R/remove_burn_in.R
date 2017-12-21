@@ -29,6 +29,5 @@ remove_burn_in <- function(trace, burn_in_fraction) {
   if (first_index >= length(trace)) {
     return(c())
   }
-  out <- trace[ seq(first_index, n) ]
-  out
+  trace[seq(first_index, n)]
 }

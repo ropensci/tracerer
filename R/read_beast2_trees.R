@@ -1,5 +1,6 @@
 #' Extract a list of phylogenies from a BEAST2 posterior file
-#' @param filename name of the BEAST2 posterior filename, usually ends with '.trees'
+#' @param filename name of the BEAST2 posterior filename,
+#'   usually ends with '.trees'
 #' @return a list of phylogenies of type 'phylo'
 #' @examples
 #'   trees_file <- get_path("read_beast2_trees_example.trees")
@@ -13,5 +14,5 @@ read_beast2_trees <- function(filename) {
   if (!file.exists(filename)) {
     stop("file not found")
   }
-  return (rBEAST::beast2out.read.trees(filename))
+  rBEAST::beast2out.read.trees(filename)
 }

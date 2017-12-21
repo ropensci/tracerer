@@ -7,7 +7,9 @@ test_that("use", {
       beastier:::get_path("beast2_example_output.log"),
       beastier:::get_path("beast2_example_output.trees")
     ),
-    beastier:::get_paths(c("beast2_example_output.log", "beast2_example_output.trees"))
+    beastier:::get_paths(
+      c("beast2_example_output.log", "beast2_example_output.trees")
+    )
   )
 
 })

@@ -13,7 +13,7 @@ parse_beast_trees <- function(filename) {
     stop("file absent")
   }
 
-  posterior <- tryCatch( {
+  posterior <- tryCatch({
       rBEAST::beast2out.read.trees(filename)
     },
     error = function(cond) {

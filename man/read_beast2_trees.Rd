@@ -7,7 +7,8 @@
 read_beast2_trees(filename)
 }
 \arguments{
-\item{filename}{name of the BEAST2 posterior filename, usually ends with '.trees'}
+\item{filename}{name of the BEAST2 posterior filename,
+usually ends with '.trees'}
 }
 \value{
 a list of phylogenies of type 'phylo'

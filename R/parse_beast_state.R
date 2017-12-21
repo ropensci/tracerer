@@ -39,8 +39,7 @@ parse_beast_state_operators <- function(
 #' @param filename name of the BEAST2 .xml.state output file
 #' @export
 #' @author Richel Bilderbeek
-extract_operators_lines <- function(filename)
-{
+extract_operators_lines <- function(filename) {
   if (!file.exists(filename)) {
     stop("file absent")
   }
