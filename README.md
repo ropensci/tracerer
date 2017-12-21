@@ -6,7 +6,9 @@ master|[![Build Status](https://travis-ci.org/richelbilderbeek/beastier.svg?bran
 develop|[![Build Status](https://travis-ci.org/richelbilderbeek/beastier.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/beastier)|[![codecov.io](https://codecov.io/github/richelbilderbeek/beastier/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/beastier/branch/develop)
 
 R package for working with BEAST and BEAST2 output (`.log` and `.trees`) files. 
+
 Use [beautier](https://github.com/richelbilderbeek/beautier) to generate BEAST2 input (`.xml`) files.
+Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 
 ## Example
 
@@ -19,7 +21,7 @@ filename <- system.file(
 )
 
 # Parse that log file
-beast_log_full <- parse_beast_log(filename = filename)
+beast_log_full <- parse_beast_log(filename)
 
 # Remove the burn-in
 beast_log <- remove_burn_ins(
