@@ -16,12 +16,8 @@ TRUE or FALSE
 Determines if the input is a BEAST2 posterior
 }
 \examples{
-  trees_filename <- system.file(
-   "extdata", "beast2_example_output.trees", package = "beastier"
-  )
-  log_filename <- system.file(
-   "extdata", "beast2_example_output.log", package = "beastier"
-  )
+  trees_filename <- get_path("beast2_example_output.trees")
+  log_filename <- get_path("beast2_example_output.log")
   posterior <- parse_beast_posterior(
     trees_filename = trees_filename,
     log_filename = log_filename

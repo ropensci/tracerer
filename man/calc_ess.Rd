@@ -18,14 +18,10 @@ the effective sample size
 Calculates the Effective Sample Size
 }
 \examples{
-  filename <- system.file(
-   "extdata", "beast2_example_output.log", package = "beastier"
- )
+  filename <- get_path("beast2_example_output.log")
 
  # Parse the file as-is and conclude the sampling interval
- df <- beastier::parse_beast_log(
-   filename = filename
- )
+ df <- beastier::parse_beast_log(filename)
  sample_interval <- df$Sample[2] - df$Sample[1]
 
  # Only keep the parameter estimates, do not care about the sampling times anymore

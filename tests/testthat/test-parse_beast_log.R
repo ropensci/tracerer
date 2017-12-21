@@ -2,9 +2,7 @@ context("parse_beast_log")
 
 test_that("parse_beast_log: use", {
 
-  filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "beastier"
-  )
+  filename <- get_path("beast2_example_output.log")
 
   estimates <- beastier::parse_beast_log(
     filename = filename

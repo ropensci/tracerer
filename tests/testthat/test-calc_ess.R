@@ -2,9 +2,7 @@ context("calc_ess")
 
 test_that("exanple usage", {
 
-  filename <- system.file(
-    "extdata", "beast2_example_output.log", package = "beastier"
-  )
+  filename <- get_path("beast2_example_output.log")
 
   # Parse the file as-is and conclude the sampling interval
   df <- beastier::parse_beast_log(

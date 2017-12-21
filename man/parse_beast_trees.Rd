@@ -16,12 +16,8 @@ the phylogenies in the posterior
 Parses a BEAST2 .trees output file
 }
 \examples{
-  trees_filename <- system.file(
-    "extdata", "beast2_example_output.trees", package = "beastier"
-  )
-  posterior <- parse_beast_trees(
-    filename = trees_filename
-  )
+  trees_filename <- get_path("beast2_example_output.trees")
+  posterior <- parse_beast_trees(trees_filename)
   testit::assert(is_trees_posterior(posterior))
 }
 \author{

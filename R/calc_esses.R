@@ -5,9 +5,7 @@
 #' @examples
 #'
 #'   # Obtain an example log file its name
-#'   filename <- system.file(
-#'     "extdata", "beast2_example_output.log", package = "beastier"
-#'   )
+#'   filename <- get_path("beast2_example_output.log")
 #'
 #'   # Parse that log file
 #'   beast_log_full <- parse_beast_log(filename = filename)
