@@ -8,6 +8,7 @@ develop|[![Build Status](https://travis-ci.org/richelbilderbeek/beastier.svg?bra
 R package for working with BEAST and BEAST2 output (`.log` and `.trees`) files. 
 
 Use [beautier](https://github.com/richelbilderbeek/beautier) to generate BEAST2 input (`.xml`) files.
+
 Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 
 ## Example
@@ -33,7 +34,7 @@ beast_log <- remove_burn_ins(
 esses <- calc_esses(beast_log, sample_interval = 1000)
 ```
 
-## Instructions
+## Installation
 
 To install `beastier` in `R`:
 
