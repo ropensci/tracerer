@@ -80,9 +80,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="extracting-the-phylogenies-from-the-.trees-file" class="section level2">
 <h2>Extracting the phylogenies from the .trees file</h2>
 <p>Check if the example file can be found:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(
-    <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;read_beast2_trees_example.trees&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;beastier&quot;</span>
-)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">get_path</span>(<span class="st">&quot;read_beast2_trees_example.trees&quot;</span>)
 testit<span class="op">::</span><span class="kw">assert</span>(<span class="kw">file.exists</span>(trees_file))</code></pre></div>
 <p>Parse the posterior:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">posterior_trees &lt;-<span class="st"> </span><span class="kw">read_beast2_trees</span>(trees_file)</code></pre></div>

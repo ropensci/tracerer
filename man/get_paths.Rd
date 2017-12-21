@@ -20,13 +20,13 @@ Get the full paths of files in the 'inst/extdata' folder
     length(
       get_paths(
         c(
-          "beast2_example_output.log", 
-          "beast2_example_output.trees", 
+          "beast2_example_output.log",
+          "beast2_example_output.trees",
           "beast2_example_output.xml",
           "beast2_example_output.xml.state"
         )
       )
-     ) == 3
+     ) == 4
    )
 }
 \seealso{

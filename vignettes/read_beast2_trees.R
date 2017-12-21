@@ -2,13 +2,10 @@
 library(beastier)
 
 ## ------------------------------------------------------------------------
-trees_file <- system.file(
-	"extdata", "read_beast2_trees_example.trees", package = "beastier"
-)
+trees_file <- get_path("read_beast2_trees_example.trees")
 testit::assert(file.exists(trees_file))
 
 ## ------------------------------------------------------------------------
-
 posterior_trees <- read_beast2_trees(trees_file)
 
 ## ------------------------------------------------------------------------
