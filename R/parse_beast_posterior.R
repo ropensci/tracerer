@@ -11,15 +11,20 @@
 #'     log_filename = log_filename
 #'   )
 #'   testit::assert(is_posterior(posterior))
-#' @author Richel Bilderbeek
-parse_beast_posterior <- function(trees_filename, log_filename) {
+#' @author Richel J.C. Bilderbeek
+parse_beast_posterior <- function(
+  trees_filename,
+  log_filename
+) {
 
   if (!file.exists(trees_filename)) {
-    stop("trees_filename absent")
+    stop("'trees_filename' must be the name of an existing file. ",
+      "File with name '", trees_filename, "' not found")
   }
 
   if (!file.exists(log_filename)) {
-    stop("log_filename absent")
+    stop("'log_filename' must be the name of an existing file. ",
+      "File with name '", trees_filename, "' not found")
   }
 
   posterior_trees <- beastier::parse_beast_trees(trees_filename)

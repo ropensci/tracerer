@@ -3,7 +3,7 @@
 #' @param burn_in_fraction the fraction that needs to be removed, must be [0,1>
 #' @return the data frame with the burn-in removed
 #' @export
-#' @author Richel Bilderbeek
+#' @author Richel J.C. Bilderbeek
 remove_burn_ins <- function(traces, burn_in_fraction) {
   if (!is.data.frame(traces)) {
     stop("traces must be a data.frame")

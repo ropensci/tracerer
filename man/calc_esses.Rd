@@ -41,5 +41,5 @@ Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 
 }
 \author{
-Richel Bilderbeek
+Richel J.C. Bilderbeek
 }

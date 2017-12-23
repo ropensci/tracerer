@@ -1,7 +1,7 @@
 #' Determines if the input is a BEAST2 posterior
 #' @param x the input
 #' @return TRUE or FALSE
-#' @author Richel Bilderbeek
+#' @author Richel J.C. Bilderbeek
 #' @examples
 #'   trees_filename <- get_path("beast2_example_output.trees")
 #'   log_filename <- get_path("beast2_example_output.log")

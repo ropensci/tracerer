@@ -19,3 +19,12 @@ test_that("example", {
   testthat::expect_equal(estimates$operator, expected_operators)
 
 })
+
+test_that("abuse", {
+
+  testthat::expect_error(
+    parse_beast_state_operators(filename = "abs.ent"),
+    "'filename' must be the name of an existing file"
+  )
+
+})

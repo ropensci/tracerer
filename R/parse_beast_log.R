@@ -11,7 +11,7 @@
 #'     "BirthDeath", "birthRate2", "relativeDeathRate2"
 #'   )
 #'   testit::assert(names(estimates) == expected_names)
-#' @author Richel Bilderbeek
+#' @author Richel J.C. Bilderbeek
 parse_beast_log <- function(filename) {
   if (!file.exists(filename)) {
     stop("file absent")

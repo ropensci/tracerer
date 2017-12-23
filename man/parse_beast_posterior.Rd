@@ -27,5 +27,5 @@ Parses BEAST2 output files to a posterior
   testit::assert(is_posterior(posterior))
 }
 \author{
-Richel Bilderbeek
+Richel J.C. Bilderbeek
 }

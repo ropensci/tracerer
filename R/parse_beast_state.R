@@ -13,12 +13,13 @@
 #'     "WilsonBalding.t", "BirthRateScaler.t", "DeathRateScaler.t")
 #'   testit::assert(names(estimates) == expected_names)
 #'   #testit::assert(estimates$operator == expected_operators)
-#' @author Richel Bilderbeek
+#' @author Richel J.C. Bilderbeek
 parse_beast_state_operators <- function(
     filename = get_path("beast2_example_output.xml.state")
 ) {
   if (!file.exists(filename)) {
-    stop("file absent")
+    stop("'filename' must be the name of an existing file. ",
+      "File '", filename, "' not found")
   }
 
   lines <- beastier::extract_operators_lines(filename)
@@ -32,32 +33,4 @@ parse_beast_state_operators <- function(
   df$operator <- gsub(":.*", "", df$operator)
 
   df
-}
-
-
-#' Extract the JSON lines out of a .xml.state file with the operators
-#' @param filename name of the BEAST2 .xml.state output file
-#' @export
-#' @author Richel Bilderbeek
-extract_operators_lines <- function(filename) {
-  if (!file.exists(filename)) {
-    stop("file absent")
-  }
-
-  lines <- readLines(filename, warn = FALSE)
-
-  start_indices <- lines ==  "{\"operators\":["
-  if (sum(start_indices) != 1) {
-    stop("start of BEAST2 operators JSON not found")
-  }
-  start_index <- which(start_indices == TRUE)
-  testit::assert(lines[start_index] == "{\"operators\":[")
-
-  end_indices <- lines ==  "]}"
-  testit::assert(sum(end_indices) == 1)
-  end_index <- which(end_indices == TRUE)
-  testit::assert(lines[end_index] == "]}")
-
-  operator_lines <- lines[start_index:end_index]
-  operator_lines
 }

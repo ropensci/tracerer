@@ -10,9 +10,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="Richel Bilderbeek" />
+<meta name="author" content="Richel J.C. Bilderbeek" />
 
-<meta name="date" content="2017-12-21" />
+<meta name="date" content="2017-12-23" />
 
 <title>Profile calc_esses</title>
 
@@ -69,8 +69,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Profile calc_esses</h1>
-<h4 class="author"><em>Richel Bilderbeek</em></h4>
-<h4 class="date"><em>2017-12-21</em></h4>
+<h4 class="author"><em>Richel J.C. Bilderbeek</em></h4>
+<h4 class="date"><em>2017-12-23</em></h4>
 
 
 
@@ -78,14 +78,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>It proves that <code>calc_esses</code>’s main speed is taken up by <code>calc_act</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(beastier)</code></pre></div>
 <p>Starting point</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(
-  <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;beast2_example_output.log&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;beastier&quot;</span>
-)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
 testit<span class="op">::</span><span class="kw">assert</span>(<span class="kw">file.exists</span>(trees_file))
-estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(
-  <span class="dt">filename =</span> trees_file
-)
-
+estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(trees_file)
 knitr<span class="op">::</span><span class="kw">kable</span>(estimates)</code></pre></div>
 <table>
 <thead>
