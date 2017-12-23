@@ -1,8 +1,8 @@
-context("calc_act")
+context("calc_act_r")
 
 test_that("use", {
 
-  act <- beastier::calc_act(
+  act <- calc_act_r(
     trace = sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100)),
     sample_interval = 1
   )
@@ -12,12 +12,12 @@ test_that("use", {
 test_that("abuse", {
 
   testthat::expect_error(
-    calc_act(trace = "not numeric", sample_interval = 1),
+    calc_act_r(trace = "not numeric", sample_interval = 1),
     "trace must be numeric"
   )
 
   testthat::expect_error(
-    calc_act(trace = seq(1, 10), sample_interval = 0),
+    calc_act_r(trace = seq(1, 10), sample_interval = 0),
     "sample interval must be at least one"
   )
 

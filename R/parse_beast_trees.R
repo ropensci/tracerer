@@ -21,9 +21,7 @@ parse_beast_trees <- function(filename) {
     }
   )
 
-  if (length(posterior) == 1 && is.na(posterior)) {
-    stop("invalid file")
-  }
+  testit::assert(length(posterior) != 1 || !is.na(posterior))
 
   posterior
 }
