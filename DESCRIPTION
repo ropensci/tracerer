@@ -9,11 +9,13 @@ Description:
 License: file LICENSE
 LazyData: TRUE
 Imports:
+  ape,
   beautier,
   jsonlite,
+  phangorn,
   rBEAST,
-  stringr,
-  Rcpp
+  Rcpp,
+  stringr
 Suggests:
   ape,
   ggplot2,

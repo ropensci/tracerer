@@ -21,6 +21,7 @@ Save text (a container of strings) to a file
   text <- c("hello", "world")
   beastier:::save_lines(filename = "test.txt", lines = text)
   testit::assert(file.exists("test.txt"))
+  beastier:::remove_files("test.txt")
 }
 \author{
 Richel J.C. Bilderbeek

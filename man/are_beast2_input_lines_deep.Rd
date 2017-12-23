@@ -21,7 +21,7 @@ Would these lines of text, when written to a file,
   result in a valid BEAST2 input file?
 }
 \examples{
-  fasta_filename <- beautier::get_path("test_output_0.fas")
+  fasta_filename <- get_path("anthus_aco.fas")
   lines <- beautier::create_beast2_input(fasta_filename)
 }
 \seealso{
