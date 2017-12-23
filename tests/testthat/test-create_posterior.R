@@ -61,7 +61,8 @@ test_that("abuse", {
       sequence_length = 4,
       mcmc = beautier::create_mcmc(chain_length = 10000),
       crown_ages = 15
-    )
+    ),
+    "'n_taxa' must be two or more"
   )
 
   testthat::expect_error(
@@ -70,17 +71,8 @@ test_that("abuse", {
       sequence_length = 0, # Must be non-zero positive
       mcmc = beautier::create_mcmc(chain_length = 10000),
       crown_ages = 15
-    )
-  )
-
-  testthat::expect_error(
-    beastier:::create_posterior(
-      n_taxa = 2,
-      sequence_length = 1,
-      mcmc = "nonsense",
-      crown_ages = 15
     ),
-    "'mcmc' must be a valid mcmc object"
+    "'sequence_length' must be one or more"
   )
 
   testthat::expect_error(
@@ -88,8 +80,29 @@ test_that("abuse", {
       n_taxa = 2,
       sequence_length = 1,
       mcmc = beautier::create_mcmc(chain_length = 10000),
-      crown_ages = -42 # Must be NA or positive
-    )
+      crown_ages = ape::rcoal(3) # Error
+    ),
+    "crown age must be either NA or a non-zero positive number"
+  )
+
+  testthat::expect_error(
+    beastier:::create_posterior(
+      n_taxa = 2,
+      sequence_length = 1,
+      mcmc = beautier::create_mcmc(chain_length = 10000),
+      crown_ages = -123 # Error
+    ),
+    "crown age must be either NA or a non-zero positive number"
+  )
+
+  testthat::expect_error(
+    beastier:::create_posterior(
+      n_taxa = 2,
+      sequence_length = 1,
+      crown_ages = 15,
+      mcmc = "nonsense"
+    ),
+    "'mcmc' must be a valid mcmc object"
   )
 
   testthat::expect_error(
@@ -97,7 +110,8 @@ test_that("abuse", {
       n_taxa = 2,
       sequence_length = 4,
       mcmc = beautier::create_mcmc(chain_length = -1234)
-    )
+    ),
+    "chain_length must be at least"
   )
 
 })

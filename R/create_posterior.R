@@ -10,10 +10,10 @@ create_posterior <- function(
   verbose = FALSE
 ) {
   if (n_taxa < 2) {
-    stop("Must create at least two taxa")
+    stop("'n_taxa' must be two or more")
   }
   if (sequence_length < 1) {
-    stop("Must create a sequence of at least one nucleotide")
+    stop("'sequence_length' must be one or more")
   }
   for (crown_age in crown_ages) {
     if (!is.na(crown_age) && !is.numeric(crown_age)) {
