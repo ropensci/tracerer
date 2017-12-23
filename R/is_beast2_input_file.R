@@ -19,7 +19,7 @@ is_beast2_input_file <- function(
   if (!file.exists(beast_jar_path)) {
     stop(
       "'beast_jar_path' must be the fullpath of the BEAST2 file 'beast2.jar'. ",
-      "beast.jar not found at path '", beast_jar_path ,"'"
+      "beast.jar not found at path '", beast_jar_path, "'"
     )
   }
   # Let BEAST2 run the created XML file
