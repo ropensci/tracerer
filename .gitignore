@@ -6,3 +6,4 @@ tests/testthat/*.trees
 tests/testthat/tmp_*
 tests/testthat/*.fasta
 tests/testthat/*.xml
+tmp_*

@@ -65,7 +65,7 @@ create_posterior <- function(
 
   # Create BEAST2 input file
   testthat::expect_false(file.exists(beast_filename))
-  beautier::create_beast2_input_file(
+  beautier::create_beast2_input_file_1_12(
     input_fasta_filenames = input_fasta_filenames,
     mcmc = mcmc,
     output_xml_filename = beast_filename,
