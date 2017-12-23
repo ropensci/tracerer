@@ -17,10 +17,8 @@ Imports:
   Rcpp,
   stringr
 Suggests:
-  ape,
   ggplot2,
   knitr,
-  phangorn,
   geiger,
   rbenchmark,
   reshape2,
