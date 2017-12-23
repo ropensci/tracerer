@@ -1,10 +1,10 @@
 context("is_beast2_input_file")
 
-test_that("FASTA file is not a valid BEAST2 input file", {
+test_that("beast2_example_output.log is not a valid BEAST2 input file", {
 
   if (!is_on_travis()) return()
 
-  filename <- beautier::get_fasta_filename()
+  filename <- get_path("beast2_example_output.log")
   is_ok <- NULL
 
   testthat::expect_output(
@@ -15,12 +15,12 @@ test_that("FASTA file is not a valid BEAST2 input file", {
 
 })
 
-test_that("invalid.xml is not a valid BEAST2 input file", {
+test_that("beast2_example_output.trees is not a valid BEAST2 input file", {
 
   # Gives a status error
   if (!is_on_travis()) return()
 
-  filename <- beautier::get_path("invalid.xml")
+  filename <- get_path("beast2_example_output.trees")
 
   is_ok <- NULL
 
@@ -29,16 +29,6 @@ test_that("invalid.xml is not a valid BEAST2 input file", {
   )
 
   testthat::expect_false(is_ok)
-
-})
-
-test_that("bd_2_4.xml is valid", {
-
-  if (!is_on_travis()) return()
-
-  filename <- beautier::get_path("bd_2_4.xml")
-  testthat::expect_true(file.exists(filename))
-  testthat::expect_true(is_beast2_input_file(filename))
 
 })
 
@@ -46,7 +36,7 @@ test_that("anthus_2_4.xml is valid", {
 
   if (!is_on_travis()) return()
 
-  filename <- beautier::get_path("anthus_2_4.xml")
+  filename <- get_path("anthus_2_4.xml")
   testthat::expect_true(file.exists(filename))
   testthat::expect_true(is_beast2_input_file(filename))
 
@@ -54,10 +44,17 @@ test_that("anthus_2_4.xml is valid", {
 
 test_that("abuse", {
 
-  if (!is_on_travis()) return()
+  testthat::expect_error(
+    is_beast2_input_file("abs.ent"),
+    "'filename' must be the name of an existing file. "
+  )
 
   testthat::expect_error(
-    is_beast2_input_file("abs.ent")
+    is_beast2_input_file(
+      get_path("anthus_2_4.xml"),
+      beast_jar_path = "abs.ent"
+    ),
+    "'beast_jar_path' must be the fullpath of the BEAST2 file 'beast2.jar'."
   )
 
 })

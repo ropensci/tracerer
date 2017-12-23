@@ -11,10 +11,16 @@ is_beast2_input_file <- function(
   beast_jar_path = "~/Programs/beast/lib/beast.jar"
 ) {
   if (!file.exists(filename)) {
-    stop("file not found")
+    stop(
+      "'filename' must be the name of an existing file. ",
+      "Filename '", filename, "' not found"
+    )
   }
   if (!file.exists(beast_jar_path)) {
-    stop("BEAST2 not found at path '", beast_jar_path ,"'")
+    stop(
+      "'beast_jar_path' must be the fullpath of the BEAST2 file 'beast2.jar'. ",
+      "beast.jar not found at path '", beast_jar_path ,"'"
+    )
   }
   # Let BEAST2 run the created XML file
   cmd <- paste("java -jar", beast_jar_path, "-validate", filename)
