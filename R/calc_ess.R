@@ -7,11 +7,11 @@
 #'
 #'  # Parse the file as-is and conclude the sampling interval
 #'  df <- parse_beast_log(filename)
-#'  sample_interval <- df$Sample[2] - df$Sample[1] # nolint use uppercase variable name just like BEAST2
+#'  sample_interval <- df$Sample[2] - df$Sample[1] # nolint BEAST2 style
 #'
 #'  # Only keep the parameter estimates,
 #'  # do not care about the sampling times anymore
-#'  estimates <- subset(df, select = -Sample) # nolint use uppercase variable name just like BEAST2
+#'  estimates <- subset(df, select = -Sample) # nolint BEAST2 style
 #'
 #'  esses <- rep(NA, ncol(estimates))
 #'  burn_in_fraction <- 0.1

@@ -80,7 +80,7 @@ test_that("abuse", {
       mcmc = "nonsense",
       crown_ages = 15
     ),
-    "'mcmc' must use a valid mcmc object"
+    "'mcmc' must be a valid mcmc object"
   )
 
   testthat::expect_error(
