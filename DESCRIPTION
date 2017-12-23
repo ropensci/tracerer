@@ -12,6 +12,7 @@ Imports:
   beautier,
   jsonlite,
   rBEAST,
+  stringr,
   Rcpp
 Suggests:
   ape,
