@@ -12,8 +12,7 @@ create_posterior(n_taxa, sequence_length, mcmc = beautier::create_mcmc(),
 
 \item{sequence_length}{a DNA sequence length, in base pairs}
 
-\item{mcmc}{one mcmc object,
-as returned by \code{\link{create_mcmc}}}
+\item{mcmc}{one \code{beautier} mcmc object}
 
 \item{crown_ages}{the crown ages of the phylogenies. Set to NA
 if the crown age needs to be estimated}
