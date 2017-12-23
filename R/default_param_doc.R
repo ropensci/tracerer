@@ -2,12 +2,6 @@
 #' documentation.
 #' @param bd_tree_prior a Birth-Death tree prior, as created
 #'   by \code{\link{create_bd_tree_prior}}
-#' @param cbs_tree_prior a Coalescent Bayesian Skyline tree prior,
-#'   as returned by \code{\link{create_cbs_tree_prior}}
-#' @param ccp_tree_prior a Coalescent Constant Population tree prior,
-#'   as returned by \code{\link{create_ccp_tree_prior}}
-#' @param cep_tree_prior a cep tree prior,
-#'   as returned by \code{\link{create_cep_tree_prior}}
 #' @param clock_model a clock model,
 #'   as returned by \code{\link{create_clock_model}}
 #' @param clock_models a list of one or more clock models,
@@ -70,8 +64,6 @@
 #'   as returned by \code{\link{create_tree_prior}}
 #' @param verbose if TRUE, additional information is displayed, that
 #'   is potentially useful in debugging
-#' @param yule_tree_prior a Yule tree_prior,
-#'   as created by \code{\link{create_yule_tree_prior}}
 #' @author Richel J.C. Bilderbeek
 default_params_doc <- function(
   bd_tree_prior,

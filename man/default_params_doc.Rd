@@ -18,15 +18,6 @@ default_params_doc(bd_tree_prior, cbs_tree_prior, ccp_tree_prior,
 \item{bd_tree_prior}{a Birth-Death tree prior, as created
 by \code{\link{create_bd_tree_prior}}}
 
-\item{cbs_tree_prior}{a Coalescent Bayesian Skyline tree prior,
-as returned by \code{\link{create_cbs_tree_prior}}}
-
-\item{ccp_tree_prior}{a Coalescent Constant Population tree prior,
-as returned by \code{\link{create_ccp_tree_prior}}}
-
-\item{cep_tree_prior}{a cep tree prior,
-as returned by \code{\link{create_cep_tree_prior}}}
-
 \item{clock_model}{a clock model,
 as returned by \code{\link{create_clock_model}}}
 
@@ -117,9 +108,6 @@ as returned by \code{\link{create_tree_prior}}}
 
 \item{verbose}{if TRUE, additional information is displayed, that
 is potentially useful in debugging}
-
-\item{yule_tree_prior}{a Yule tree_prior,
-as created by \code{\link{create_yule_tree_prior}}}
 }
 \description{
 This function does nothing. It is intended to inherit is parameters'
