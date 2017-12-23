@@ -38,7 +38,6 @@
 default_params_doc <- function(
   clock_model, clock_models,
   crown_age, crown_ages,
-  distr_id,
   fasta_filename, fasta_filenames,
   fixed_crown_age,
   fixed_crown_ages,
