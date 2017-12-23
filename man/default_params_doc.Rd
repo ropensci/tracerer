@@ -15,9 +15,6 @@ default_params_doc(bd_tree_prior, cbs_tree_prior, ccp_tree_prior,
   yule_tree_prior)
 }
 \arguments{
-\item{bd_tree_prior}{a Birth-Death tree prior, as created
-by \code{\link{create_bd_tree_prior}}}
-
 \item{clock_model}{a clock model,
 as returned by \code{\link{create_clock_model}}}
 

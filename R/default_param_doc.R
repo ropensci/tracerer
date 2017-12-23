@@ -1,7 +1,5 @@
 #' This function does nothing. It is intended to inherit is parameters'
 #' documentation.
-#' @param bd_tree_prior a Birth-Death tree prior, as created
-#'   by \code{\link{create_bd_tree_prior}}
 #' @param clock_model a clock model,
 #'   as returned by \code{\link{create_clock_model}}
 #' @param clock_models a list of one or more clock models,

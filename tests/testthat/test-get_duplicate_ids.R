@@ -2,7 +2,7 @@ context("get_duplicate_ids")
 
 test_that("use", {
 
-  text_0 <- parameter_to_xml(create_alpha_param(id = 0))
+  text_0 <- beautier:::parameter_to_xml(beautier::create_alpha_param(id = 0))
   text_1 <- c(text_0, text_0)
 
   testthat::expect_equal(

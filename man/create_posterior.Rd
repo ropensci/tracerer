@@ -4,7 +4,7 @@
 \alias{create_posterior}
 \title{Create a BEAST2 posterior by running BEAST2 from a random alignment}
 \usage{
-create_posterior(n_taxa, sequence_length, mcmc = create_mcmc(),
+create_posterior(n_taxa, sequence_length, mcmc = beautier::create_mcmc(),
   crown_ages = NA, verbose = FALSE)
 }
 \arguments{

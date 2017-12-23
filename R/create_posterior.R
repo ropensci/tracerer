@@ -5,7 +5,7 @@
 create_posterior <- function(
   n_taxa,
   sequence_length,
-  mcmc = create_mcmc(),
+  mcmc = beautier::create_mcmc(),
   crown_ages = NA,
   verbose = FALSE
 ) {
@@ -15,8 +15,8 @@ create_posterior <- function(
   if (sequence_length < 1) {
     stop("Must create a sequence of at least one nucleotide")
   }
-  if (!is_mcmc(mcmc)) {
-    stop("Must use a valid mcmc object")
+  if (!beautier:::is_mcmc(mcmc)) {
+    stop("'mcmc' must use a valid mcmc object")
   }
   for (crown_age in crown_ages) {
     if (!is.na(crown_age) && !is.numeric(crown_age)) {
@@ -56,12 +56,12 @@ create_posterior <- function(
       next
     }
     testit::assert(crown_age > 0.0)
-    initial_phylogenies[[i]] <- fasta_to_phylo(
+    initial_phylogenies[[i]] <- beautier::fasta_to_phylo(
       fasta_filename = input_fasta_filenames[i],
       crown_age = crown_age
     )
   }
-  testit::assert(are_initial_phylogenies(initial_phylogenies))
+  testit::assert(beautier:::are_initial_phylogenies(initial_phylogenies))
   testit::assert(length(input_fasta_filenames) == length(initial_phylogenies))
   testit::assert(length(input_fasta_filenames) == length(crown_ages))
   fixed_crown_ages <- !is.na(crown_ages)
