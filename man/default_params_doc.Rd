@@ -5,7 +5,7 @@
 \title{This function does nothing. It is intended to inherit is parameters'
 documentation.}
 \usage{
-default_params_doc(clock_model, clock_models, crown_age, crown_ages, distr_id,
+default_params_doc(clock_model, clock_models, crown_age, crown_ages,
   fasta_filename, fasta_filenames, fixed_crown_age, fixed_crown_ages,
   initial_phylogenies, input_fasta_filenames, mcmc, misc_options,
   output_xml_filename, sequence_length, site_model, site_models, tree_prior,
