@@ -7,6 +7,12 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - olli0601/rBEAST
 
+before_script:
+  - sudo apt-get install -qq oracle-java8-installer # Java 8
+  - sudo apt-get install oracle-java8-set-default
+  - ./install_beast2
+  # - if [ -f ".lintr" ]; then echo "Do use Hadley Wickham's style guide"; exit 1; fi
+
 after_success:
   - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
