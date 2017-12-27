@@ -3,7 +3,7 @@
 #' @return nothing, removes those files that are present
 #' @examples
 #'   # Can safely delete absent files
-#'   beautier:::remove_files("abs.ent")
+#'   beastier:::remove_files("abs.ent")
 #'
 #'   # Create a file
 #'   fasta_filename <- "remove_files.fas"
@@ -15,7 +15,7 @@
 #'   testit::assert(file.exists(fasta_filename))
 #'
 #'   # Can safely delete a mix of present and absent files
-#'   beautier:::remove_files(c("abs.ent", fasta_filename))
+#'   beastier:::remove_files(c("abs.ent", fasta_filename))
 #'   testit::assert(!file.exists(fasta_filename))
 #' @author Richel J.C. Bilderbeek
 remove_files <- function(filenames) {

@@ -41,8 +41,8 @@ are_beast2_input_lines <- function(
 #' @author Richel J.C. Bilderbeek
 #' @seealso Use \code{\link{is_beast2_input_file}} to check a file
 #' @examples
-#'   fasta_filename <- get_path("anthus_aco.fas")
-#'   lines <- beautier::create_beast2_input(fasta_filename)
+#'   beast2_filename <- get_path("anthus_2_4.xml")
+#'   testit::assert(are_beast2_input_lines_deep(beast2_filename))
 are_beast2_input_lines_deep <- function(
   lines,
   verbose = FALSE
@@ -61,6 +61,9 @@ are_beast2_input_lines_deep <- function(
 #' @return TRUE if the text is valid, FALSE if not
 #' @author Richel J.C. Bilderbeek
 #' @seealso Use \code{\link{is_beast2_input_file}} to check a file
+#' @examples
+#'   beast2_filename <- get_path("anthus_2_4.xml")
+#'   testit::assert(are_beast2_input_lines_deep(beast2_filename))
 are_beast2_input_lines_fast <- function(
   lines
 ) {

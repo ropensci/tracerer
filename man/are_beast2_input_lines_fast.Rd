@@ -17,6 +17,10 @@ TRUE if the text is valid, FALSE if not
 Would these lines of text, when written to a file,
   result in a valid BEAST2 input file?
 }
+\examples{
+  beast2_filename <- get_path("anthus_2_4.xml")
+  testit::assert(are_beast2_input_lines_deep(beast2_filename))
+}
 \seealso{
 Use \code{\link{is_beast2_input_file}} to check a file
 }
