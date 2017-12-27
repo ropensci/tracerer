@@ -34,9 +34,9 @@ esses <- calc_esses(beast_log, sample_interval = 1000)
 
 ## Installation
 
-To install `beastier` in `R`:
+Install `beastier` in `R` using `devtools`:
 
 ```{r}
-install.packages("devtools")
 devtools::install_github("richelbilderbeek/beastier")
 ```
+
