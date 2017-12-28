@@ -1,11 +1,12 @@
 #' Create a BEAST2 posterior by running BEAST2 from a random alignment
 #' @inheritParams default_params_doc
+#' @param mcmc_chain_length the MCMC chain length, must be at least 10,000
 #' @param n_taxa number of taxa in the simulated phylogeny
 #' @author Richel J.C. Bilderbeek
 create_posterior <- function(
   n_taxa,
   sequence_length,
-  mcmc = beautier::create_mcmc(),
+  mcmc_chain_length,
   crown_ages = NA,
   verbose = FALSE
 ) {
@@ -67,7 +68,7 @@ create_posterior <- function(
   testthat::expect_false(file.exists(beast_filename))
   beautier::create_beast2_input_file_1_12(
     input_fasta_filenames = input_fasta_filenames,
-    mcmc = mcmc,
+    mcmc = create_mcmc(chain_length = mcmc_chain_length),
     output_xml_filename = beast_filename,
     fixed_crown_ages = fixed_crown_ages,
     initial_phylogenies = initial_phylogenies

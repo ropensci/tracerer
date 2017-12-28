@@ -9,6 +9,8 @@ R package for working with BEAST and BEAST2 output (`.log` and `.trees`) files.
 
 Use [beautier](https://github.com/richelbilderbeek/beautier) to generate BEAST2 input (`.xml`) files.
 
+Use [lumier](https://github.com/richelbilderbeek/lumier) to run BEAST2.
+
 Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 
 ## Example

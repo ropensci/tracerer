@@ -4,15 +4,15 @@
 \alias{create_posterior}
 \title{Create a BEAST2 posterior by running BEAST2 from a random alignment}
 \usage{
-create_posterior(n_taxa, sequence_length, mcmc = beautier::create_mcmc(),
-  crown_ages = NA, verbose = FALSE)
+create_posterior(n_taxa, sequence_length, mcmc_chain_length, crown_ages = NA,
+  verbose = FALSE)
 }
 \arguments{
 \item{n_taxa}{number of taxa in the simulated phylogeny}
 
 \item{sequence_length}{a DNA sequence length, in base pairs}
 
-\item{mcmc}{one \code{beautier} mcmc object}
+\item{mcmc_chain_length}{the MCMC chain length, must be at least 10,000}
 
 \item{crown_ages}{the crown ages of the phylogenies. Set to NA
 if the crown age needs to be estimated}
