@@ -1,7 +1,5 @@
 #' This function does nothing. It is intended to inherit is parameters'
 #' documentation.
-#' @param clock_model a \code{beautier} clock model
-#' @param clock_models a list of one or more \code{beautier} clock models
 #' @param crown_age the crown age of the phylogeny
 #' @param crown_ages the crown ages of the phylogenies. Set to NA
 #'   if the crown age needs to be estimated
@@ -23,15 +21,9 @@
 #'   the phylogeny is assumed to be of class ape::phylo.
 #' @param input_fasta_filenames One or more FASTA filenames.
 #'   Use \code{\link{get_fasta_filename}} to obtain a testing FASTA filename.
-#' @param mcmc one \code{beautier} mcmc object
-#' @param misc_options one \code{beautier} misc_options object
 #' @param output_xml_filename Name of the XML parameter file created by this
 #'   function. BEAST2 uses this file as input.
 #' @param sequence_length a DNA sequence length, in base pairs
-#' @param site_model a \code{beautier} site model
-#' @param site_models one or more \code{beautier} site models
-#' @param tree_prior a \code{beautier} tree prior
-#' @param tree_priors one or more \code{beautier} tree priors
 #' @param verbose if TRUE, additional information is displayed, that
 #'   is potentially useful in debugging
 #' @author Richel J.C. Bilderbeek

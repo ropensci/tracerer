@@ -2,22 +2,9 @@ context("has_unique_ids")
 
 test_that("use for unique IDs", {
 
-  text <- c(
-    beautier:::parameter_to_xml(beautier::create_alpha_param(id = 0)),
-    beautier:::parameter_to_xml(beautier::create_alpha_param(id = 1)),
-    "nothing"
-  )
-  testthat::expect_true(has_unique_ids(text))
-
-})
-
-test_that("use for dupliucate IDs", {
-
-  text <- c(
-    beautier:::parameter_to_xml(beautier::create_alpha_param(id = 0)),
-    beautier:::parameter_to_xml(beautier::create_alpha_param(id = 0))
-  )
-
-  testthat::expect_false(has_unique_ids(text))
+  line_1 <- "<parameter id=\"RealParameter.1\" ...</parameter>"
+  line_2 <- "<parameter id=\"RealParameter.2\" ...</parameter>"
+  testthat::expect_true(beastier:::has_unique_ids(c(line_1, line_2)))
+  testthat::expect_false(!beastier:::has_unique_ids(c(line_1, line_1)))
 
 })

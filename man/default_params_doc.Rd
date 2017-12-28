@@ -12,10 +12,6 @@ default_params_doc(clock_model, clock_models, crown_age, crown_ages,
   tree_priors, verbose)
 }
 \arguments{
-\item{clock_model}{a \code{beautier} clock model}
-
-\item{clock_models}{a list of one or more \code{beautier} clock models}
-
 \item{crown_age}{the crown age of the phylogeny}
 
 \item{crown_ages}{the crown ages of the phylogenies. Set to NA
@@ -45,22 +41,10 @@ the phylogeny is assumed to be of class ape::phylo.}
 \item{input_fasta_filenames}{One or more FASTA filenames.
 Use \code{\link{get_fasta_filename}} to obtain a testing FASTA filename.}
 
-\item{mcmc}{one \code{beautier} mcmc object}
-
-\item{misc_options}{one \code{beautier} misc_options object}
-
 \item{output_xml_filename}{Name of the XML parameter file created by this
 function. BEAST2 uses this file as input.}
 
 \item{sequence_length}{a DNA sequence length, in base pairs}
-
-\item{site_model}{a \code{beautier} site model}
-
-\item{site_models}{one or more \code{beautier} site models}
-
-\item{tree_prior}{a \code{beautier} tree prior}
-
-\item{tree_priors}{one or more \code{beautier} tree priors}
 
 \item{verbose}{if TRUE, additional information is displayed, that
 is potentially useful in debugging}
