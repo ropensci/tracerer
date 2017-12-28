@@ -6,7 +6,8 @@ Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description:
   beastier parses BEAST2's output files and calculates the same
-  statistics as Tracer 
+  statistics as Tracer. beastier is related in functionality to
+  the beautier (create BEAST2 input files) and lumier (run BEAST2) packages.
 License: file LICENSE
 LazyData: TRUE
 Imports:
