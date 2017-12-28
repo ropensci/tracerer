@@ -2,6 +2,11 @@ context("parse_beast_posterior")
 
 test_that("use", {
 
+  posterior <- parse_beast_posterior(
+    trees_filename = get_path("beast2_example_output.trees"),
+    log_filename = get_path("beast2_example_output.log")
+  )
+  testthat::expect_true(is_posterior(posterior))
 
 })
 
