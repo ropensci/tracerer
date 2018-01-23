@@ -12,7 +12,7 @@ vignette: >
 
 
 ```{r}
-library(beastier)
+library(tracerer)
 ```
 
 ```{r}

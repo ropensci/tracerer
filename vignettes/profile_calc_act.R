@@ -1,5 +1,5 @@
 ## ------------------------------------------------------------------------
-library(beastier)
+library(tracerer)
 
 ## ------------------------------------------------------------------------
 trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 10))
@@ -21,12 +21,12 @@ for (i in seq(1, n_sizes))
   
   # Measure again
   t_r <- rbenchmark::benchmark(
-    beastier::calc_act_r(trace, sample_interval = 2),
+    tracerer::calc_act_r(trace, sample_interval = 2),
     replications = 1,
     columns = c("elapsed")
   )$elapsed
   t_cpp <- rbenchmark::benchmark(
-    beastier::calc_act(trace, sample_interval = 2),
+    tracerer::calc_act(trace, sample_interval = 2),
     replications = 1,
     columns = c("elapsed")
   )$elapsed

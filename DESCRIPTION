@@ -1,12 +1,12 @@
-Package: beastier
+Package: tracerer
 Type: Package
 Title: Work with BEAST2 and its output
 Version: 0.1.0
 Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description:
-  beastier parses BEAST2's output files and calculates the same
-  statistics as Tracer. beastier is related in functionality to
+  tracerer parses BEAST2's output files and calculates the same
+  statistics as Tracer. tracerer is related in functionality to
   the beautier (create BEAST2 input files) and lumier (run BEAST2) packages.
 License: file LICENSE
 LazyData: TRUE
@@ -33,6 +33,6 @@ Remotes:
   MangoTheCat/goodpractice
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
-URL: https://github.com/richelbilderbeek/beastier
-BugReports: https://github.com/richelbilderbeek/beastier
+URL: https://github.com/richelbilderbeek/tracerer
+BugReports: https://github.com/richelbilderbeek/tracerer
 LinkingTo: Rcpp

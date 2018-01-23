@@ -22,7 +22,7 @@ parse_beast_state_operators <- function(
       "File '", filename, "' not found")
   }
 
-  lines <- beastier::extract_operators_lines(filename)
+  lines <- tracerer::extract_operators_lines(filename)
   json <- jsonlite::fromJSON(lines)
   df <- as.data.frame(json)
   names(df) <- gsub("operators.", "", names(df))

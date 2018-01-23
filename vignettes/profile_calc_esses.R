@@ -1,5 +1,5 @@
 ## ------------------------------------------------------------------------
-library(beastier)
+library(tracerer)
 
 ## ------------------------------------------------------------------------
 trees_file <- get_path("beast2_example_output.log")
@@ -32,7 +32,7 @@ rownames(df_esses) <- names(estimates)
 knitr::kable(df_esses)
 
 ## ------------------------------------------------------------------------
-rprof_tmp_output <- "~/tmp_beastier_rprof"
+rprof_tmp_output <- "~/tmp_tracerer_rprof"
 Rprof(rprof_tmp_output)
 
 for (i in 1:1) {

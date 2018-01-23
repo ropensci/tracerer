@@ -1,4 +1,4 @@
 library(testthat)
-library(beastier)
+library(tracerer)
 
-test_check("beastier")
+test_check("tracerer")

@@ -1,5 +1,5 @@
 ## ----message = FALSE-----------------------------------------------------
-library(beastier)
+library(tracerer)
 
 ## ------------------------------------------------------------------------
 trees_file <- get_path("read_beast2_trees_example.trees")

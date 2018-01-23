@@ -43,7 +43,7 @@ calc_esses <- function(traces, sample_interval) {
 
   for (i in seq_along(traces)) {
     trace <- as.numeric(t(traces[i]))
-    esses[i] <- beastier::calc_ess(
+    esses[i] <- tracerer::calc_ess(
       trace, sample_interval = sample_interval
     )
   }

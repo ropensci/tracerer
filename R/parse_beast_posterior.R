@@ -27,13 +27,13 @@ parse_beast_posterior <- function(
       "File with name '", trees_filename, "' not found")
   }
 
-  posterior_trees <- beastier::parse_beast_trees(trees_filename)
-  posterior_estimates <- beastier::parse_beast_log(log_filename)
+  posterior_trees <- tracerer::parse_beast_trees(trees_filename)
+  posterior_estimates <- tracerer::parse_beast_log(log_filename)
 
   posterior <- list(
     trees = posterior_trees,
     estimates = posterior_estimates
   )
-  testit::assert(beastier::is_posterior(posterior))
+  testit::assert(tracerer::is_posterior(posterior))
   posterior
 }

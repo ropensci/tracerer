@@ -10,10 +10,10 @@ vignette: >
 ---
 
 Goal if this vignette is to measure the run-time speed of `calc_act`, for 
-[beastier issue #10](https://github.com/beast-dev/beastier/issues/10).
+[tracerer issue #10](https://github.com/beast-dev/tracerer/issues/10).
 
 ```{r}
-library(beastier)
+library(tracerer)
 ```
 
 Create a trace:
@@ -41,12 +41,12 @@ for (i in seq(1, n_sizes))
   
   # Measure again
   t_r <- rbenchmark::benchmark(
-    beastier::calc_act_r(trace, sample_interval = 2),
+    tracerer::calc_act_r(trace, sample_interval = 2),
     replications = 1,
     columns = c("elapsed")
   )$elapsed
   t_cpp <- rbenchmark::benchmark(
-    beastier::calc_act(trace, sample_interval = 2),
+    tracerer::calc_act(trace, sample_interval = 2),
     replications = 1,
     columns = c("elapsed")
   )$elapsed
