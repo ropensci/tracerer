@@ -10,7 +10,7 @@ to work with BEAST2 output files.
 
 Use [beautier](https://github.com/richelbilderbeek/beautier) to create BEAST2 input (`.xml`) files.
 
-Use [lumier](https://github.com/richelbilderbeek/lumier) to run BEAST2.
+Use [beastier](https://github.com/richelbilderbeek/beastier) to run BEAST2.
 
 Use [BEASTmasteR](https://github.com/nmatzke/BEASTmasteR) for tip-dating analyses using fossils as dated terminal taxa.
 

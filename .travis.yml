@@ -7,7 +7,7 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - olli0601/rBEAST
   - richelbilderbeek/beautier
-  - richelbilderbeek/lumier
+  - richelbilderbeek/beastier
 
 before_script:
   - sudo apt-get install -qq oracle-java8-installer # Java 8
@@ -23,5 +23,5 @@ after_failure:
   - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
   - Rscript -e 'goodpractice::gp()'
-  - cat /home/travis/build/richelbilderbeek/beastier/..Rcheck/00install.out
-  - cat /home/travis/build/richelbilderbeek/beastier/..Rcheck/00check.log
+  - cat /home/travis/build/richelbilderbeek/tracerer/..Rcheck/00install.out
+  - cat /home/travis/build/richelbilderbeek/tracerer/..Rcheck/00check.log
