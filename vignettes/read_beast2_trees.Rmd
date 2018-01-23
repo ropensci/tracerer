@@ -9,12 +9,12 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This vignette shows how to parse a BEAST2 posterior file using `beastier`.
+This vignette shows how to parse a BEAST2 posterior file using `tracerer`.
 
-Load the `beastier` package:
+Load the `tracerer` package:
 
 ```{r message = FALSE}
-library(beastier)
+library(tracerer)
 ```
 
 

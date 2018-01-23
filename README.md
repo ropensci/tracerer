@@ -1,11 +1,12 @@
-# beastier
+# tracerer
 
 Branch|[![Travis CI logo](TravisCI.png)](https://travis-ci.org)|[![Codecov logo](Codecov.png)](https://www.codecov.io)
 ---|---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/beastier.svg?branch=master)](https://travis-ci.org/richelbilderbeek/beastier)|[![codecov.io](https://codecov.io/github/richelbilderbeek/beastier/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/beastier/branch/master)
-develop|[![Build Status](https://travis-ci.org/richelbilderbeek/beastier.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/beastier)|[![codecov.io](https://codecov.io/github/richelbilderbeek/beastier/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/beastier/branch/develop)
+master|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tracerer)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tracerer/branch/master)
+develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tracerer)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tracerer/branch/develop)
 
-R package for working with BEAST and BEAST2 output (`.log` and `.trees`) files. 
+`tracerer`, 'Tracer for R' is an R package 
+to work with BEAST2 output files. 
 
 Use [beautier](https://github.com/richelbilderbeek/beautier) to create BEAST2 input (`.xml`) files.
 
@@ -18,7 +19,7 @@ Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 ## Example
 
 ```
-library(beastier)
+library(tracerer)
 
 # Obtain an example log file its name
 filename <- get_path("beast2_example_output.log")
@@ -38,8 +39,8 @@ esses <- calc_esses(beast_log, sample_interval = 1000)
 
 ## Installation
 
-Install `beastier` in `R` using `devtools`:
+Install `tracerer` in `R` using `devtools`:
 
 ```{r}
-devtools::install_github("richelbilderbeek/beastier")
+devtools::install_github("richelbilderbeek/tracerer")
 ```

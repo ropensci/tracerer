@@ -2,7 +2,7 @@ context("calc_act")
 
 test_that("use", {
 
-  act <- beastier::calc_act(
+  act <- tracerer::calc_act(
     trace = sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100)),
     sample_interval = 1
   )

@@ -4,7 +4,7 @@ test_that("parse_beast_log: use", {
 
   filename <- get_path("beast2_example_output.log")
 
-  estimates <- beastier::parse_beast_log(
+  estimates <- tracerer::parse_beast_log(
     filename = filename
   )
   expected_names <- c(

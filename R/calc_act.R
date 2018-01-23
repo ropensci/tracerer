@@ -88,7 +88,7 @@ calc_act_r <- function(trace, sample_interval) {
 }
 
 # Keep the next three lines for RCpp
-#' @useDynLib beastier
+#' @useDynLib tracerer
 #' @importFrom Rcpp sourceCpp
 NULL
 

@@ -11,7 +11,7 @@
 #' @export
 get_path <- function(filename) {
 
-  full <- system.file("extdata", filename, package = "beastier")
+  full <- system.file("extdata", filename, package = "tracerer")
   if (!file.exists(full)) {
     stop("'filename' must be the name of a file in 'inst/extdata'")
   }

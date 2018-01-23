@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richel J.C. Bilderbeek" />
 
-<meta name="date" content="2017-12-23" />
+<meta name="date" content="2018-01-23" />
 
 <title>Profile calc_esses</title>
 
@@ -70,13 +70,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Profile calc_esses</h1>
 <h4 class="author"><em>Richel J.C. Bilderbeek</em></h4>
-<h4 class="date"><em>2017-12-23</em></h4>
+<h4 class="date"><em>2018-01-23</em></h4>
 
 
 
-<p>Goal if this vignette is to measure the big-O complexity of <code>calc_esses</code>, for <a href="https://github.com/beast-dev/beastier/issues/10">beastier issue #10</a>.</p>
+<p>Goal if this vignette is to measure the big-O complexity of <code>calc_esses</code>, for <a href="https://github.com/beast-dev/tracerer/issues/10">tracerer issue #10</a>.</p>
 <p>It proves that <code>calc_esses</code>’s main speed is taken up by <code>calc_act</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(beastier)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tracerer)</code></pre></div>
 <p>Starting point</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trees_file &lt;-<span class="st"> </span><span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
 testit<span class="op">::</span><span class="kw">assert</span>(<span class="kw">file.exists</span>(trees_file))
@@ -290,7 +290,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(df_esses)</code></p
 </tbody>
 </table>
 <p>Measuring run-time speed:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rprof_tmp_output &lt;-<span class="st"> &quot;~/tmp_beastier_rprof&quot;</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rprof_tmp_output &lt;-<span class="st"> &quot;~/tmp_tracerer_rprof&quot;</span>
 <span class="kw">Rprof</span>(rprof_tmp_output)
 
 <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1</span>) {

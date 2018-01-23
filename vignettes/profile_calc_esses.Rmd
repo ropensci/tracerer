@@ -11,12 +11,12 @@ vignette: >
 
 Goal if this vignette is to measure the big-O complexity
 of `calc_esses`, for 
-[beastier issue #10](https://github.com/beast-dev/beastier/issues/10).
+[tracerer issue #10](https://github.com/beast-dev/tracerer/issues/10).
 
 It proves that `calc_esses`'s main speed is taken up by `calc_act`
 
 ```{r}
-library(beastier)
+library(tracerer)
 ```
 
 Starting point
@@ -58,7 +58,7 @@ knitr::kable(df_esses)
 Measuring run-time speed:
 
 ```{r}
-rprof_tmp_output <- "~/tmp_beastier_rprof"
+rprof_tmp_output <- "~/tmp_tracerer_rprof"
 Rprof(rprof_tmp_output)
 
 for (i in 1:1) {
