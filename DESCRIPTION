@@ -1,6 +1,6 @@
 Package: tracerer
 Type: Package
-Title: Work with BEAST2 and its output
+Title: Tracer for R
 Version: 0.1.0
 Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
