@@ -8,6 +8,8 @@ develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?bra
 `tracerer`, 'Tracer for R' is an R package 
 to work with BEAST2 output files. 
 
+![tracerer logo](pics/tracerer_logo.png)
+
 Use [beautier](https://github.com/richelbilderbeek/beautier) to create BEAST2 input (`.xml`) files.
 
 Use [beastier](https://github.com/richelbilderbeek/beastier) to run BEAST2.
