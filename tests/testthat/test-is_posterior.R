@@ -26,11 +26,11 @@ test_that("detect non-posteriors", {
     tracerer::is_posterior(list("estimates" = NA,  "nonsense" = NA))
   )
   testthat::expect_false(
-    tracerer::is_posterior(list("trees" = NA,  "nonsense" = NA))
+    tracerer::is_posterior(list("_trees" = NA,  "nonsense" = NA))
   )
 
   testthat::expect_true(
-    tracerer::is_posterior(list("trees" = NA,  "estimates" = NA))
+    tracerer::is_posterior(list("_trees" = NA,  "estimates" = NA))
   )
 
 })

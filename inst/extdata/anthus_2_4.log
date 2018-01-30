@@ -1,0 +1,57 @@
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution id="YuleModel.t:Anthus_aco" spec="beast.evolution.speciation.YuleModel">
+#            <parameter id="birthRate.t:Anthus_aco" name="birthDiffRate">1.0</parameter>
+#            <tree id="Tree.t:Anthus_aco">
+#                <taxonset id="TaxonSet.Anthus_aco" spec="beast.evolution.alignment.TaxonSet">
+#                </taxonset>
+#            </tree>
+#        </distribution>
+#        <distribution id="YuleModel.t:Anthus_nd2" spec="beast.evolution.speciation.YuleModel">
+#            <parameter id="birthRate.t:Anthus_nd2" name="birthDiffRate">1.0</parameter>
+#            <tree id="Tree.t:Anthus_nd2">
+#                <taxonset id="TaxonSet.Anthus_nd2" spec="beast.evolution.alignment.TaxonSet">
+#                </taxonset>
+#            </tree>
+#        </distribution>
+#        <prior id="YuleBirthRatePrior.t:Anthus_aco" name="distribution" x="@birthRate.t:Anthus_aco">
+#            <Uniform id="Uniform.1" name="distr" upper="Infinity"/>
+#        </prior>
+#        <prior id="YuleBirthRatePrior.t:Anthus_nd2" name="distribution" x="@birthRate.t:Anthus_nd2">
+#            <Uniform id="Uniform.4" name="distr" upper="Infinity"/>
+#        </prior>
+#        <prior id="ClockPrior.c:Anthus_nd2" name="distribution">
+#            <parameter id="clockRate.c:Anthus_nd2" name="x">1.0</parameter>
+#            <Uniform id="Uniform.3" name="distr" upper="Infinity"/>
+#        </prior>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
+#        <distribution data="@Anthus_aco" id="treeLikelihood.Anthus_aco" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:Anthus_aco">
+#            <siteModel id="SiteModel.s:Anthus_aco" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:Anthus_aco" name="mutationRate">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:Anthus_aco" name="shape">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:Anthus_aco" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+#                <substModel id="JC69.s:Anthus_aco" spec="beast.evolution.substitutionmodel.JukesCantor"/>
+#            </siteModel>
+#            <branchRateModel id="StrictClock.c:Anthus_aco" spec="beast.evolution.branchratemodel.StrictClockModel">
+#                <parameter estimate="false" id="clockRate.c:Anthus_aco" name="clock.rate">1.0</parameter>
+#            </branchRateModel>
+#        </distribution>
+#        <distribution data="@Anthus_nd2" id="treeLikelihood.Anthus_nd2" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:Anthus_nd2">
+#            <siteModel id="SiteModel.s:Anthus_nd2" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:Anthus_nd2" name="mutationRate">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:Anthus_nd2" name="shape">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:Anthus_nd2" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+#                <substModel id="JC69.s:Anthus_nd2" spec="beast.evolution.substitutionmodel.JukesCantor"/>
+#            </siteModel>
+#            <branchRateModel clock.rate="@clockRate.c:Anthus_nd2" id="StrictClock.c:Anthus_nd2" spec="beast.evolution.branchratemodel.StrictClockModel"/>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	posterior	likelihood	prior	treeLikelihood.aco	treeLikelihood.nd2	TreeHeight.aco	TreeHeight.nd2	clockRate	YuleModel.aco	YuleModel.nd2	birthRate.aco	birthRate.nd2
+0	-19746.73345148104	-19733.131631712888	-13.60181976815134	-8583.861415183055	-11149.270216529834	1.3591449304527716	1.1611649780676196	1.0	-8.061053620535128	-5.540766147616212	1.0	1.0
+1000	-8217.46846179976	-8253.98019123538	36.51172943561987	-2180.9774651187463	-6073.002726116634	0.03299475090238357	0.5584488398616027	0.1693643780012914	29.495721731538087	7.016007704081784	4.232892616430074	4.0591412393949335

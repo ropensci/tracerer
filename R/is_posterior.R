@@ -16,12 +16,9 @@ is_posterior <- function(x) {
   if (class(x) != "list") {
     return(FALSE)
   }
-  if (!("trees" %in% names(x))) {
-    return(FALSE)
+  for (name in names(x)) {
+    if (!grepl("_trees", name) && name != "estimates")
+      return(FALSE)
   }
-  if (!("estimates" %in% names(x))) {
-    return(FALSE)
-  }
-
   return(TRUE)
 }

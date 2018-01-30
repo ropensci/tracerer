@@ -4,10 +4,11 @@
 \alias{parse_beast_posterior}
 \title{Parses BEAST2 output files to a posterior}
 \usage{
-parse_beast_posterior(trees_filename, log_filename)
+parse_beast_posterior(trees_filenames, log_filename)
 }
 \arguments{
-\item{trees_filename}{name of the BEAST2 .trees output file}
+\item{trees_filenames}{one or more names of the BEAST2 .trees output files.
+A BEAST2 run will create as much .trees files as there are alignments}
 
 \item{log_filename}{name of the BEAST2 .trees output file}
 }
@@ -18,10 +19,10 @@ a posterior
 Parses BEAST2 output files to a posterior
 }
 \examples{
-  trees_filename <- get_path("beast2_example_output.trees")
+  trees_filenames <- get_path("beast2_example_output.trees")
   log_filename <- get_path("beast2_example_output.log")
   posterior <- parse_beast_posterior(
-    trees_filename = trees_filename,
+    trees_filenames = trees_filenames,
     log_filename = log_filename
   )
   testit::assert(is_posterior(posterior))
