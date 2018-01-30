@@ -1,13 +1,14 @@
 Package: tracerer
 Type: Package
 Title: Tracer for R
-Version: 0.1.0
+Version: 0.9.0
 Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description:
   tracerer parses BEAST2's output files and calculates the same
-  statistics as Tracer. tracerer is related in functionality to
-  the beautier (create BEAST2 input files) and lumier (run BEAST2) packages.
+  statistics as Tracer. tracerer is part of the babette package suite.
+  Within the babette package suite, beautier creates a BEAST2 input
+  file, beastier runs BEAST2 and tracerer parses the BEAST2 output.
 License: file LICENSE
 LazyData: TRUE
 Imports:
