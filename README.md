@@ -10,9 +10,11 @@ to work with BEAST2 output files.
 
 ![tracerer logo](pics/tracerer_logo.png)
 
-Use [beautier](https://github.com/richelbilderbeek/beautier) to create BEAST2 input (`.xml`) files.
+`tracerer` is part of the [babette](https://github.com/richelbilderbeek/babette) package suite:
 
-Use [beastier](https://github.com/richelbilderbeek/beastier) to run BEAST2.
+ * [beautier](https://github.com/richelbilderbeek/beautier) creates BEAST2 input (`.xml`) files.
+ * [beastier](https://github.com/richelbilderbeek/beastier) runs BEAST2
+ * [tracerer](https://github.com/richelbilderbeek/tracerer) pastes BEAST2 output (`.log`, `.trees`, etc) files.
 
 Use [BEASTmasteR](https://github.com/nmatzke/BEASTmasteR) for tip-dating analyses using fossils as dated terminal taxa.
 
@@ -46,3 +48,38 @@ Install `tracerer` in `R` using `devtools`:
 ```{r}
 devtools::install_github("richelbilderbeek/tracerer")
 ```
+
+## FAQ
+
+See [FAQ](Faq.md)
+
+## There is a feature I miss
+
+See [CONTRIBUTING](CONTRIBUTING.md), at `Submitting use cases`
+
+## I want to collaborate
+
+See [CONTRIBUTING](CONTRIBUTING.md), at 'Submitting code'
+
+## I think I have found a bug
+
+See [CONTRIBUTING](CONTRIBUTING.md), at 'Submitting bugs' 
+
+## There's something else I want to say
+
+Sure, just add an Issue. Or send an email.
+
+## External links
+
+ * [BEAST2 GitHub](https://github.com/CompEvol/beast2)
+
+## References
+
+Article about `tracerer`:
+
+ * Bilderbeek, Richel J.C., Etienne, Rampal S., "babette: [unknown subtitle]" *In preparation*.
+
+FASTA files `anthus_aco.fas` and `anthus_nd2.fas` from:
+ 
+ * Van Els, Paul, and Heraldo V. Norambuena. "A revision of species limits in Neotropical pipits Anthus based on multilocus genetic and vocal data." Ibis.
+
