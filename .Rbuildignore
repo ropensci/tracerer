@@ -7,3 +7,6 @@
 ^install_beast2$
 ^dependencies\.gemspec$
 ^pics$
+^code_of_conduct.md$
+^CONTRIBUTING.md$
+^Faq.md$

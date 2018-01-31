@@ -51,7 +51,7 @@ devtools::install_github("richelbilderbeek/tracerer")
 
 ## FAQ
 
-See [FAQ](Faq.md)
+See [FAQ](faq.md)
 
 ## There is a feature I miss
 

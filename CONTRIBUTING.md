@@ -1,26 +1,20 @@
 # Contributing
 
-Awesome that you are reading this!
+Awesome that you are reading this.
 
 This GitHub follows the [Contributor Covenant Code of Conduct](code_of_conduct.md).
 
  * For questions, you can create an Issue
  * Code changes go via Pull Requests
 
-## Which package to contribute to?
+## Submitting use cases
 
-`babette` consists out of three packages.
+New use cases are welcome.
 
-If you want to contribute to the creation of BEAST2 XML input file,
-go to [beautier](https://github.com/richelbilderbeek/beautier/blob/master/CONTRIBUTING.md).
+You can do so by:
 
-If you want to contribute to how BEAST2 is run,
-go to [beautier](https://github.com/richelbilderbeek/beautier/blob/master/CONTRIBUTING.md).
-
-If you want to contribute to how BEAST2 output is parsed,
-go to [tracerer](https://github.com/richelbilderbeek/tracerer/blob/master/CONTRIBUTING.md)
-
-If you want to contribute with an overarching idea, you are at the right spot :-) 
+ * Add an Issue
+ * Send @richelbilderbeek an email (@richelbilderbeek will make an Issue of it)
 
 ## Submitting code
 
@@ -37,7 +31,7 @@ Emails with code will not be accepted.
 
 ## Submitting bugs
 
-Awesome! These are your options:
+Awesome. These are your options:
 
  * Add an Issue, with the test that fails
  * Submit a Pull Request, where the test is added to the `tests/testthat` folder
@@ -52,15 +46,15 @@ Pull Requests should follow the same guidelines as 'Submitting code'.
 
 ## git usage
 
-To get started working on `babette` do:
+To get started working on `tracerer` do:
 
 ```
-git clone https://github.com/richelbilderbeek/babette
+git clone https://github.com/richelbilderbeek/tracerer
 ```
 
 Development is done on the `develop` branch. 
 To download and checkout the `develop` branch, 
-first go into the `beautier` folder (`cd babette`), then do:
+first go into the `tracerer` folder (`cd tracerer`), then do:
 
 ```
 git checkout -b develop origin/develop
