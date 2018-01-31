@@ -71,7 +71,8 @@ Sure, just add an Issue. Or send an email.
 
 ## External links
 
- * [BEAST2 GitHub](https://github.com/CompEvol/beast2)
+ * [BEAST2 GitHub repository](https://github.com/CompEvol/beast2)
+ * [Tracer GitHub repository](https://github.com/beast-dev/tracer)
 
 ## References
 

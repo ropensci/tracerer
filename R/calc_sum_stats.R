@@ -10,5 +10,19 @@ calc_sum_stats <- function(
   sample_interval,
   burn_in_fraction = 0.1
 ) {
-  traces
+  # Remove burn-in
+  traces <- remove_burn_in(traces, burn_in_fraction = burn_in_fraction)
+
+  data.frame(
+    mean = mean(traces),
+    stderr_mean = calc_stderr_mean(traces),
+    stdev = sd(traces),
+    variance = var(traces),
+    mode = calc_mode(traces),
+    geom_mean = calc_geom_mean(traces),
+    hpd_interval_low = 1,
+    hpd_interval_high = 2,
+    act = calc_act(traces, sample_interval = sample_interval),
+    ess = calc_ess(traces, sample_interval = sample_interval)
+  )
 }
