@@ -13,7 +13,6 @@ elapseds <- data.frame(
   t_sec = rep(NA, times = n_sizes * n_types)
 )
 
-
 for (i in seq(1, n_sizes))
 {
   # Duplicate input
@@ -37,12 +36,11 @@ for (i in seq(1, n_sizes))
   elapseds$t_sec[i * 2] <- t_r
 }
 
-## ------------------------------------------------------------------------
-
+## ----fig.width=7---------------------------------------------------------
 ggplot2::ggplot(
  data = elapseds,
  ggplot2::aes(x = size, y = t_sec, color = type)
 ) + ggplot2::geom_line() + 
   ggplot2::geom_point() + 
-  ggplot2::ggtitle("cpp version is faster")
+  ggplot2::ggtitle("cpp version is faster (less time is better)")
 

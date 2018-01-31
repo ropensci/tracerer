@@ -4,12 +4,14 @@
 \alias{calc_esses}
 \title{Calculates the Effective Sample Sizes from a parsed BEAST2 log file}
 \usage{
-calc_esses(traces, sample_interval)
+calc_esses(traces, sample_interval, burn_in_fraction = 0.1)
 }
 \arguments{
 \item{traces}{a dataframe with traces with removed burn-in}
 
 \item{sample_interval}{the interval in timesteps between samples}
+
+\item{burn_in_fraction}{the fraction that needs to be removed, must be [0,1>}
 }
 \value{
 the effective sample sizes
@@ -18,27 +20,18 @@ the effective sample sizes
 Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 }
 \examples{
+  # Parse an example log file
+  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
 
-  # Obtain an example log file its name
-  filename <- get_path("beast2_example_output.log")
-
-  # Parse that log file
-  beast_log_full <- parse_beast_log(filename = filename)
-
-  # Remove the burn-in
-  beast_log <- remove_burn_ins(
-    beast_log_full,
+  # Calculate the effective sample sizes of all parameter estimates
+  esses <- calc_esses(
+    estimates,
+    sample_interval = 1000,
     burn_in_fraction = 0.1
   )
 
-  # Calculates the effective sample sizes of all parameter estimates
-  esses <- calc_esses(beast_log, sample_interval = 1000)
-
-  # Round off values to nearest integers
-  esses <- as.integer(esses[1, ] + 0.5)
   expected <- c(10, 10, 10, 10, 7, 10, 9, 6)
   testit::assert(all(esses == expected))
-
 }
 \author{
 Richel J.C. Bilderbeek

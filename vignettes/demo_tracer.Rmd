@@ -1,0 +1,53 @@
+---
+title: "tracerer versus Tracer demo"
+author: "Richel J.C. Bilderbeek"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tracerer versus Tracer demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+`tracerer`: 'Tracer for R' is an R package that does the same as
+Tracer does, from within R.
+
+```{r}
+library(tracerer)
+```
+
+## Comparison
+
+When loading `beast2_example_output.log` in Tracer, the following is displayed:
+
+![](tracer_example_output.png)
+
+Most promently, at the left, the effective sample sizes (ESSes) are shown.
+
+The show the ESSES using `tracerer`:
+
+```{r}
+estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+esses <- calc_esses(estimates, sample_interval = 1000, burn_in_fraction = 0.1)
+table <- t(esses)
+colnames(table) <- c("ESS")
+knitr::kable(table)
+```
+
+At the top-right, some measures of the variable `posterior` is shown.
+To reproduce these measures in `tracerer`:
+
+```{r}
+sum_stats <- calc_sum_stats(estimates$posterior, sample_interval = 1000, burn_in_fraction = 0.1)
+knitr::kable(sum_stats)
+```
+

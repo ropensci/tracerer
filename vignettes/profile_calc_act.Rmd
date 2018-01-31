@@ -9,8 +9,8 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Goal if this vignette is to measure the run-time speed of `calc_act`, for 
-[tracerer issue #10](https://github.com/beast-dev/tracerer/issues/10).
+Goal if this vignette is to compare the run-time speeds of `calc_act` (the
+C++ version) and `calc_act_r` (the R version).
 
 ```{r}
 library(tracerer)
@@ -32,7 +32,6 @@ elapseds <- data.frame(
   size = rep(NA, times = n_sizes * n_types),
   t_sec = rep(NA, times = n_sizes * n_types)
 )
-
 
 for (i in seq(1, n_sizes))
 {
@@ -60,16 +59,11 @@ for (i in seq(1, n_sizes))
 
 In a plot:
 
-```{r}
-
+```{r fig.width=7}
 ggplot2::ggplot(
  data = elapseds,
  ggplot2::aes(x = size, y = t_sec, color = type)
 ) + ggplot2::geom_line() + 
   ggplot2::geom_point() + 
-  ggplot2::ggtitle("cpp version is faster")
+  ggplot2::ggtitle("cpp version is faster (less time is better)")
 ```
-
-
-
-

@@ -16,9 +16,8 @@ library(tracerer)
 ```
 
 ```{r}
-trees_file <- get_path("beast2_example_output.log")
-testit::assert(file.exists(trees_file))
-estimates <- parse_beast_log(trees_file)
+log_file <- get_path("beast2_example_output.log")
+estimates <- parse_beast_log(log_file)
 knitr::kable(estimates)
 ```
 

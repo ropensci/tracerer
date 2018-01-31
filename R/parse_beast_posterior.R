@@ -33,8 +33,12 @@ parse_beast_posterior <- function(
     trees_filename <- trees_filenames[i]
     posterior[[i]] <- tracerer::parse_beast_trees(trees_filename)
   }
-  posterior[[length(trees_filenames) + 1]] <- tracerer::parse_beast_log(log_filename)
-  names(posterior) <- c(paste0(basename(tools::file_path_sans_ext(trees_filenames)), "_trees"), "estimates")
+  n_trees <- length(trees_filenames)
+  posterior[[n_trees + 1]] <- tracerer::parse_beast_log(log_filename)
+  names(posterior) <- c(
+    paste0(basename(tools::file_path_sans_ext(trees_filenames)), "_trees"),
+    "estimates"
+  )
   #testit::assert(tracerer::is_posterior(posterior))
   posterior
 }
