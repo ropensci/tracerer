@@ -3,11 +3,12 @@
 
 #include <vector>
 
-//' Does magic,
+//' Calculate the auto correlation time
 //' from https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159 # nolint
 //' @param sample sample
 //' @param sample_interval sample interval
-//' @return the ACT
+//' @return the auto correlation time
+//' @author Richel J.C. Bilderbeek
 // [[Rcpp::export]]
 double calc_act_cpp(const std::vector<double>& sample, const int sample_interval);
 

@@ -7,7 +7,7 @@
 calc_std_error_of_mean_cpp(sample, sample_interval)
 }
 \arguments{
-\item{sample}{sample}
+\item{sample}{numeric vector of values}
 
 \item{sample_interval}{sample interval}
 }
@@ -16,4 +16,7 @@ the standard error of the mean
 }
 \description{
 Calculates the standard error of the mean
+}
+\author{
+Richel J.C. Bilderbeek
 }
