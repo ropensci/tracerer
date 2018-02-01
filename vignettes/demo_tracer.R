@@ -28,3 +28,24 @@ ggplot2::ggplot(
 ) + ggplot2::geom_histogram(binwidth = 0.21) + ggplot2::scale_x_continuous(breaks = seq(-75,-68))
 
 
+## ------------------------------------------------------------------------
+ggplot2::ggplot(
+  data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
+  ggplot2::aes(x = Sample) 
+) + ggplot2::geom_line(ggplot2::aes(y = posterior))
+
+
+## ------------------------------------------------------------------------
+trees <- parse_beast_trees(
+  get_path("beast2_example_output.trees"), 
+  return_type = "multiPhylo"
+)
+phangorn::densiTree(trees)
+
+## ------------------------------------------------------------------------
+ggplot2::ggplot(
+  data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
+  ggplot2::aes(x = posterior) 
+) + ggplot2::geom_density() + ggplot2::scale_x_continuous(breaks = seq(-75,-65))
+
+

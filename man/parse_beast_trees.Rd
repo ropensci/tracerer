@@ -4,7 +4,7 @@
 \alias{parse_beast_trees}
 \title{Parses a BEAST2 .trees output file}
 \usage{
-parse_beast_trees(filename)
+parse_beast_trees(filename, return_type = "list")
 }
 \arguments{
 \item{filename}{name of the BEAST2 .trees output file}
