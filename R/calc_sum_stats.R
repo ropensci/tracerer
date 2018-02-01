@@ -13,15 +13,18 @@ calc_sum_stats <- function(
   # Remove burn-in
   traces <- remove_burn_in(traces, burn_in_fraction = burn_in_fraction)
 
+  # use string "N.A" instead of NA
   geom_mean <- calc_geom_mean(traces)
   geom_mean <- ifelse(is.na(geom_mean), "N/A", geom_mean)
+  mode <- calc_mode(traces)
+  mode <- ifelse(is.na(mode), "N/A", mode)
 
   data.frame(
     mean = mean(traces),
     stderr_mean = calc_stderr_mean(traces, sample_interval = sample_interval),
     stdev = sd(traces),
     variance = var(traces),
-    mode = calc_mode(traces),
+    mode = mode,
     geom_mean = geom_mean,
     hpd_interval_low = 1,
     hpd_interval_high = 2,
