@@ -1,5 +1,5 @@
 ---
-title: "tracerer versus Tracer demo"
+title: "tracerer demo"
 author: "Richel J.C. Bilderbeek"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -16,24 +16,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Introduction
 
 `tracerer`: 'Tracer for R' is an R package that does the same as
-Tracer does, from within R.
+Tracer does, from within R. 
+
+To use `tracerer`, it needs to be loaded:
 
 ```{r}
 library(tracerer)
 ```
 
-## Comparison
-
 When loading `beast2_example_output.log` in Tracer, the following is displayed:
 
-![](tracer_example_output.png)
+![Tracer output](tracer_example_output.png)
 
 Most promently, at the left, the effective sample sizes (ESSes) are shown.
 
-The show the ESSES using `tracerer`:
+The show the ESSes using `tracerer`:
 
 ```{r}
 estimates <- parse_beast_log(get_path("beast2_example_output.log"))
@@ -51,7 +50,6 @@ sum_stats <- calc_sum_stats(estimates$posterior, sample_interval = 1000, burn_in
 table <- t(sum_stats)
 colnames(table) <- c("sum_stat")
 knitr::kable(table)
-
 ```
 
 At the bottom-right, a histogram of the posterior estimates is shown.
@@ -79,7 +77,12 @@ ggplot2::ggplot(
 
 ```
 
-![Densitree output](densitree_example_output.png)
+`tracerer` can also use part of `densitree`'s functionality.
+Here is `beast2_example_output.trees` displayed by `densitree`:
+
+![densitree output](densitree_example_output.png)
+
+The same is achieved in `tracerer` with:
 
 
 ```{r fig.width=7, fig.height=7}
