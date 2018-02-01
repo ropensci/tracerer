@@ -10,6 +10,7 @@ test_that("use", {
 
 test_that("issue 4", {
 
+  skip("Issue 4")
   filename <- get_path("unplottable_anthus_aco.trees")
   trees <- parse_beast_trees(filename)
   class(trees) <- "multiPhylo"
