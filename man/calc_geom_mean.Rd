@@ -9,6 +9,10 @@ calc_geom_mean(values)
 \arguments{
 \item{values}{a numeric vector of values}
 }
+\value{
+returns the geometrics mean if all values are at least zero,
+  else returns NA
+}
 \description{
 Calculate the geometric mean
 }
