@@ -2,6 +2,8 @@
 #' @param trees_filenames one or more names of the BEAST2 .trees output files.
 #'   A BEAST2 run will create as much .trees files as there are alignments
 #' @param log_filename name of the BEAST2 .trees output file
+#' @param trees_type the data type of the created trees. Can be either
+#'   'list' or 'multiPhylo'
 #' @return a posterior
 #' @export
 #' @examples
@@ -15,7 +17,8 @@
 #' @author Richel J.C. Bilderbeek
 parse_beast_posterior <- function(
   trees_filenames,
-  log_filename
+  log_filename,
+  trees_type = "list"
 ) {
 
   if (!files_exist(trees_filenames)) {
@@ -31,7 +34,10 @@ parse_beast_posterior <- function(
   posterior <- list()
   for (i in seq_along(trees_filenames)) {
     trees_filename <- trees_filenames[i]
-    posterior[[i]] <- tracerer::parse_beast_trees(trees_filename)
+    posterior[[i]] <- tracerer::parse_beast_trees(
+      trees_filename,
+      return_type = trees_type
+    )
   }
   n_trees <- length(trees_filenames)
   posterior[[n_trees + 1]] <- tracerer::parse_beast_log(log_filename)
