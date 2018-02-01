@@ -1,9 +1,12 @@
 #' Calculate the Highest Probability Density
-#' @param propertion the proportion of numbers within the interval.
-#'   For example, use 0.95 for a 95% interval
+#' @param proportion the proportion of numbers within the interval.
+#'   For example, use 0.95 for a 95 percentage interval
 #' @param trace a numeric vector of values
-#' @author Richel J.C. Bilderbeek, after code by J. Heled
-#' From https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317
+#' @return a numeric vector, with at index 1 the lower boundary of the
+#'   interval, and at index 2 the upper boundary of the interval
+#' @seealso Java code can be found here: \url{https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317} # nolint URLs can be long
+#' @author The original Java version of the algorithm was from J. Heled,
+#'   ported to R and adapted by Richel J.C. Bilderbeek
 calc_hpd_interval <- function(trace, proportion = 0.95) {
 
   trace <- sort(trace)
