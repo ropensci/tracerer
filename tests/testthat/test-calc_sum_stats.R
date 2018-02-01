@@ -17,11 +17,24 @@ test_that("vignette", {
   testthat::expect_equivalent(sum_stats$stdev, 1.6816, tolerance = 0.0001)
 
   testthat::expect_true("variance" %in% names(sum_stats))
+  testthat::expect_equivalent(sum_stats$variance, 2.8279, tolerance = 0.0001)
+
   testthat::expect_true("mode" %in% names(sum_stats))
+  testthat::expect_equal(sum_stats$mode, "n/a")
+
   testthat::expect_true("geom_mean" %in% names(sum_stats))
+  testthat::expect_equal(sum_stats$geom_mea, "n/a")
+
   testthat::expect_true("hpd_interval_low" %in% names(sum_stats))
+  testthat::expect_equivalent(sum_stats$hpd_interval_low, -74.1527, tolerance = 0.0001)
+
   testthat::expect_true("hpd_interval_high" %in% names(sum_stats))
+  testthat::expect_equivalent(sum_stats$hpd_interval_high, -68.6852, tolerance = 0.0001)
+
   testthat::expect_true("act" %in% names(sum_stats))
+  testthat::expect_equivalent(sum_stats$act, 1000, tolerance = 0.0001)
+
   testthat::expect_true("ess" %in% names(sum_stats))
+  testthat::expect_equivalent(sum_stats$ess, 10, tolerance = 0.0001)
 
 })

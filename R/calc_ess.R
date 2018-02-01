@@ -33,7 +33,9 @@
 #'  expected_esses <- c(10, 10, 10, 10, 7, 10, 9, 6)
 #'  testit::assert(all(expected_esses - esses < 0.5))
 #' @export
-#' @author Richel J.C. Bilderbeek
+#' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
+#' @author The original Java version of the algorithm was from Remco Bouckaert,
+#'   ported to R and adapted by Richel J.C. Bilderbeek
 calc_ess <- function(trace, sample_interval) {
   if (!is.numeric(trace)) {
     stop("trace must be numeric")

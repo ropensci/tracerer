@@ -1,34 +1,37 @@
 #' Calculates the Effective Sample Sizes from a parsed BEAST2 log file
-#' @param traces a dataframe with traces with removed burn-in
+#' @param trace a numeric vector of values
 #' @param sample_interval the interval in timesteps between samples
 #' @param burn_in_fraction the fraction that needs to be removed, must be [0,1>
 #' @return the effective sample sizes
 #' @export
 #' @author Richel J.C. Bilderbeek
 calc_sum_stats <- function(
-  traces,
+  trace,
   sample_interval,
   burn_in_fraction = 0.1
 ) {
   # Remove burn-in
-  traces <- remove_burn_in(traces, burn_in_fraction = burn_in_fraction)
+  trace <- remove_burn_in(trace, burn_in_fraction = burn_in_fraction)
 
-  # use string "N.A" instead of NA
-  geom_mean <- calc_geom_mean(traces)
-  geom_mean <- ifelse(is.na(geom_mean), "N/A", geom_mean)
-  mode <- calc_mode(traces)
-  mode <- ifelse(is.na(mode), "N/A", mode)
+  # use string "n/a" instead of NA
+  geom_mean <- calc_geom_mean(trace)
+  geom_mean <- ifelse(is.na(geom_mean), "n/a", geom_mean)
+  mode <- calc_mode(trace)
+  mode <- ifelse(is.na(mode), "n/a", mode)
+
+  hpd_interval <- calc_hpd_interval(trace)
 
   data.frame(
-    mean = mean(traces),
-    stderr_mean = calc_stderr_mean(traces, sample_interval = sample_interval),
-    stdev = stats::sd(traces),
-    variance = stats::var(traces),
+    mean = mean(trace),
+    stderr_mean = calc_stderr_mean(trace, sample_interval = sample_interval),
+    stdev = stats::sd(trace),
+    variance = stats::var(trace),
     mode = mode,
     geom_mean = geom_mean,
-    hpd_interval_low = 1,
-    hpd_interval_high = 2,
-    act = calc_act(traces, sample_interval = sample_interval),
-    ess = calc_ess(traces, sample_interval = sample_interval)
+    hpd_interval_low = hpd_interval[1],
+    hpd_interval_high = hpd_interval[2],
+    act = calc_act(trace, sample_interval = sample_interval),
+    ess = calc_ess(trace, sample_interval = sample_interval),
+    stringsAsFactors = FALSE
   )
 }

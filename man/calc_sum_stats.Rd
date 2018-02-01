@@ -4,10 +4,10 @@
 \alias{calc_sum_stats}
 \title{Calculates the Effective Sample Sizes from a parsed BEAST2 log file}
 \usage{
-calc_sum_stats(traces, sample_interval, burn_in_fraction = 0.1)
+calc_sum_stats(trace, sample_interval, burn_in_fraction = 0.1)
 }
 \arguments{
-\item{traces}{a dataframe with traces with removed burn-in}
+\item{trace}{a numeric vector of values}
 
 \item{sample_interval}{the interval in timesteps between samples}
 
