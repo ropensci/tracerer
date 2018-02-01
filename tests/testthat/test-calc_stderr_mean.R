@@ -29,3 +29,17 @@ test_that("use, tree height", {
   testthat::expect_equivalent(0.144, result, tolerance = 0.01)
 
 })
+
+test_that("abuse", {
+
+  testthat::expect_error(
+    tracerer:::calc_stderr_mean("nonsense", sample_interval = 1),
+    "'trace' must be numeric"
+  )
+
+  testthat::expect_error(
+    tracerer:::calc_stderr_mean(seq(1,5), sample_interval = -123),
+    "'sample_interval' must be at least one"
+  )
+
+})

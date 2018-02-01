@@ -21,10 +21,10 @@ NULL
 calc_stderr_mean <- function(trace, sample_interval) {
 
   if (!is.numeric(trace)) {
-    stop("trace must be numeric")
+    stop("'trace' must be numeric")
   }
   if (sample_interval < 1) {
-    stop("sample interval must be at least one")
+    stop("'sample_interval' must be at least one")
   }
   calc_std_error_of_mean_cpp(trace, sample_interval) # nolint internal function
 }
