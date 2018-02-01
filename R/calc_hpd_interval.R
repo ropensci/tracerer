@@ -10,20 +10,20 @@
 calc_hpd_interval <- function(trace, proportion = 0.95) {
 
   trace <- sort(trace)
-  minRange <- Inf
-  hpdIndex <- 0 + 1
+  min_range <- Inf
+  hpd_index <- 0 + 1
   diff <- as.integer((proportion * length(trace)) + 0.5)
 
   for (i in seq(0 + 1, length(trace) - diff + 1)) {
-    minValue <- trace[i]
-    maxValue <- trace[i + diff - 1]
-    range <- abs(maxValue - minValue)
-    if (range < minRange) {
-      minRange <- range;
-      hpdIndex <- i;
+    min_value <- trace[i]
+    max_value <- trace[i + diff - 1]
+    range <- abs(max_value - min_value)
+    if (range < min_range) {
+      min_range <- range
+      hpd_index <- i
     }
   }
 
-  c(trace[hpdIndex], trace[hpdIndex + diff - 1])
+  c(trace[hpd_index], trace[hpd_index + diff - 1])
 
 }
