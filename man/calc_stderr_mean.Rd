@@ -2,10 +2,33 @@
 % Please edit documentation in R/calc_stderr_mean.R
 \name{calc_stderr_mean}
 \alias{calc_stderr_mean}
-\title{wevgowe}
+\title{Calculate the standard error of the mean}
 \usage{
-calc_stderr_mean(traces)
+calc_stderr_mean(traces, sample_interval)
+}
+\arguments{
+\item{sample_interval}{the interval in timesteps between samples}
+
+\item{trace}{the values}
+}
+\value{
+the standard error of the mean
 }
 \description{
-wevgowe
+Calculate the standard error of the mean
+}
+\examples{
+  trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
+  act <- calc_stderr_mean(
+    trace = trace,
+    sample_interval = 1
+  )
+  testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
+}
+\seealso{
+Java code can be found here: \url{https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159} # nolint URLs can be long
+}
+\author{
+The original Java version of the algorithm was from Remco Bouckaert,
+  ported to R and adapted by Richel J.C. Bilderbeek
 }

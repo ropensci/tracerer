@@ -17,9 +17,22 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// calc_std_error_of_mean_cpp
+double calc_std_error_of_mean_cpp(const std::vector<double>& sample, const int sample_interval);
+RcppExport SEXP _tracerer_calc_std_error_of_mean_cpp(SEXP sampleSEXP, SEXP sample_intervalSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const std::vector<double>& >::type sample(sampleSEXP);
+    Rcpp::traits::input_parameter< const int >::type sample_interval(sample_intervalSEXP);
+    rcpp_result_gen = Rcpp::wrap(calc_std_error_of_mean_cpp(sample, sample_interval));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_tracerer_calc_act_cpp", (DL_FUNC) &_tracerer_calc_act_cpp, 2},
+    {"_tracerer_calc_std_error_of_mean_cpp", (DL_FUNC) &_tracerer_calc_std_error_of_mean_cpp, 2},
     {NULL, NULL, 0}
 };
 

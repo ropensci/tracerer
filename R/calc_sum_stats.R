@@ -13,13 +13,16 @@ calc_sum_stats <- function(
   # Remove burn-in
   traces <- remove_burn_in(traces, burn_in_fraction = burn_in_fraction)
 
+  geom_mean <- calc_geom_mean(traces)
+  geom_mean <- ifelse(is.na(geom_mean), "N/A", geom_mean)
+
   data.frame(
     mean = mean(traces),
-    stderr_mean = calc_stderr_mean(traces),
+    stderr_mean = calc_stderr_mean(traces, sample_interval = sample_interval),
     stdev = sd(traces),
     variance = var(traces),
     mode = calc_mode(traces),
-    geom_mean = calc_geom_mean(traces),
+    geom_mean = geom_mean,
     hpd_interval_low = 1,
     hpd_interval_high = 2,
     act = calc_act(traces, sample_interval = sample_interval),

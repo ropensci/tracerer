@@ -2,7 +2,8 @@
 % Please edit documentation in R/RcppExports.R
 \name{calc_act_cpp}
 \alias{calc_act_cpp}
-\title{Does magic}
+\title{Does magic,
+from https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159 # nolint}
 \usage{
 calc_act_cpp(sample, sample_interval)
 }
@@ -15,5 +16,6 @@ calc_act_cpp(sample, sample_interval)
 the ACT
 }
 \description{
-Does magic
+Does magic,
+from https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159 # nolint
 }
