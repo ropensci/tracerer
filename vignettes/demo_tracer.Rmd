@@ -65,5 +65,18 @@ ggplot2::ggplot(
 
 ```
 
+Tracer can also show the trace of each estimated variable:
+
+![Tracer shows the trace of the posterior likelihood](tracer_trace_posterior.png)
+
+Same can be done with `tracerer`:
+
+```{r}
+ggplot2::ggplot(
+  data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
+  ggplot2::aes(x = Sample) 
+) + ggplot2::geom_line(ggplot2::aes(y = posterior))
+
+```
 
 
