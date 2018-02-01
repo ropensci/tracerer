@@ -9,9 +9,9 @@ test_that("use", {
 
 test_that("abuse", {
 
-  expect_error(
+  testthat::expect_error(
     parse_beast_trees(filename = "inva.lid"),
-    "file absent"
+    "'filename' is the name of an absent file"
   )
 
   testthat::expect_error(

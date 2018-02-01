@@ -17,7 +17,7 @@ parse_beast_trees <- function(
   if (!file.exists(filename)) {
     stop(
       "'filename' is the name of an absent file. ",
-      "Filenamee '", filename, "' not found"
+      "Filename '", filename, "' not found"
     )
   }
   if (return_type != "list" && return_type != "multiPhylo") {
