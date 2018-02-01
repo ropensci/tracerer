@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richel J.C. Bilderbeek" />
 
-<meta name="date" content="2018-01-31" />
+<meta name="date" content="2018-02-01" />
 
 <title>tracerer versus Tracer demo</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">tracerer versus Tracer demo</h1>
 <h4 class="author"><em>Richel J.C. Bilderbeek</em></h4>
-<h4 class="date"><em>2018-01-31</em></h4>
+<h4 class="date"><em>2018-02-01</em></h4>
 
 
 
@@ -136,18 +136,57 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 </table>
 <p>At the top-right, some measures of the variable <code>posterior</code> is shown. To reproduce these measures in <code>tracerer</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_sum_stats</span>(estimates<span class="op">$</span>posterior, <span class="dt">sample_interval =</span> <span class="dv">1000</span>, <span class="dt">burn_in_fraction =</span> <span class="fl">0.1</span>)
-knitr<span class="op">::</span><span class="kw">kable</span>(sum_stats)</code></pre></div>
+<span class="co">#&gt; Warning in log(values): NaNs produced</span>
+table &lt;-<span class="st"> </span><span class="kw">t</span>(sum_stats)
+<span class="kw">colnames</span>(table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;sum_stat&quot;</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre></div>
 <table>
 <thead>
 <tr class="header">
-<th align="right">mean</th>
-<th align="right">stderr_mean</th>
+<th></th>
+<th align="left">sum_stat</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">-70.58394</td>
-<td align="right">0.5317778</td>
+<td>mean</td>
+<td align="left">-70.58394</td>
+</tr>
+<tr class="even">
+<td>stderr_mean</td>
+<td align="left">0.5044887</td>
+</tr>
+<tr class="odd">
+<td>stdev</td>
+<td align="left">1.681629</td>
+</tr>
+<tr class="even">
+<td>variance</td>
+<td align="left">2.827876</td>
+</tr>
+<tr class="odd">
+<td>mode</td>
+<td align="left">N/A</td>
+</tr>
+<tr class="even">
+<td>geom_mean</td>
+<td align="left">N/A</td>
+</tr>
+<tr class="odd">
+<td>hpd_interval_low</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>hpd_interval_high</td>
+<td align="left">2</td>
+</tr>
+<tr class="odd">
+<td>act</td>
+<td align="left">1000</td>
+</tr>
+<tr class="even">
+<td>ess</td>
+<td align="left">10</td>
 </tr>
 </tbody>
 </table>

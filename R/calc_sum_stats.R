@@ -22,8 +22,8 @@ calc_sum_stats <- function(
   data.frame(
     mean = mean(traces),
     stderr_mean = calc_stderr_mean(traces, sample_interval = sample_interval),
-    stdev = sd(traces),
-    variance = var(traces),
+    stdev = stats::sd(traces),
+    variance = stats::var(traces),
     mode = mode,
     geom_mean = geom_mean,
     hpd_interval_low = 1,

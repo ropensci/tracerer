@@ -16,7 +16,10 @@ knitr::kable(table)
 
 ## ------------------------------------------------------------------------
 sum_stats <- calc_sum_stats(estimates$posterior, sample_interval = 1000, burn_in_fraction = 0.1)
-knitr::kable(sum_stats)
+table <- t(sum_stats)
+colnames(table) <- c("sum_stat")
+knitr::kable(table)
+
 
 ## ------------------------------------------------------------------------
 ggplot2::ggplot(

@@ -6,6 +6,12 @@
 \usage{
 calc_geom_mean(values)
 }
+\arguments{
+\item{values}{a numeric vector of values}
+}
 \description{
 Calculate the geometric mean
+}
+\author{
+Richel J.C. Bilderbeek
 }
