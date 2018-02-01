@@ -35,17 +35,10 @@ ggplot2::ggplot(
 ) + ggplot2::geom_line(ggplot2::aes(y = posterior))
 
 
-## ------------------------------------------------------------------------
+## ----fig.width=7, fig.height=7-------------------------------------------
 trees <- parse_beast_trees(
   get_path("beast2_example_output.trees"), 
   return_type = "multiPhylo"
 )
-phangorn::densiTree(trees)
-
-## ------------------------------------------------------------------------
-ggplot2::ggplot(
-  data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
-  ggplot2::aes(x = posterior) 
-) + ggplot2::geom_density() + ggplot2::scale_x_continuous(breaks = seq(-75,-65))
-
+phangorn::densiTree(trees, width = 2)
 
