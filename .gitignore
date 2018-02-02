@@ -7,3 +7,4 @@ tests/testthat/tmp_*
 tests/testthat/*.fasta
 tests/testthat/*.xml
 tmp_*
+tests/testthat/Rplots.pdf
