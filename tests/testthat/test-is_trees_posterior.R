@@ -25,18 +25,6 @@ test_that("can detect an invalid posterior, basic types", {
   expect_true(!is_trees_posterior(ape::rcoal(n = 2)))
 })
 
-test_that("can detect an invalid posterior, vector", {
-  # Putting posteriors in a vector must yield an invalid BEAST posterior
-  filename <- get_path("beast2_example_output.trees")
-  posterior <- parse_beast_trees(
-    filename
-  )
-  not_posteriors <- c(posterior, posterior)
-  expect_equal(length(not_posteriors), 20)
-  expect_false(is_trees_posterior(not_posteriors))
-})
-
-
 test_that("can detect an invalid posterior, list", {
   # Putting posteriors in a list must yield an invalid BEAST posterior
   filename <- get_path("beast2_example_output.trees")

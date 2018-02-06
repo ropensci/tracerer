@@ -1,7 +1,5 @@
 #' Parses a BEAST2 .trees output file
 #' @param filename name of the BEAST2 .trees output file
-#' @param return_type the data type of the returned value. Can be either
-#'   'list' or 'multiPhylo'
 #' @return the phylogenies in the posterior
 #' @export
 #' @examples
@@ -10,8 +8,7 @@
 #'   testit::assert(is_trees_posterior(posterior))
 #' @author Richel J.C. Bilderbeek
 parse_beast_trees <- function(
-  filename,
-  return_type = "list"
+  filename
 ) {
 
   if (!file.exists(filename)) {
@@ -19,9 +16,6 @@ parse_beast_trees <- function(
       "'filename' is the name of an absent file. ",
       "Filename '", filename, "' not found"
     )
-  }
-  if (return_type != "list" && return_type != "multiPhylo") {
-    stop("'return_type' must be either 'list' or 'multiPhylo'")
   }
 
   trees <- tryCatch({
@@ -34,8 +28,6 @@ parse_beast_trees <- function(
 
   testit::assert(length(trees) != 1 || !is.na(trees))
 
-  if (return_type == "multiPhylo") {
-    class(trees) <- "multiPhylo"
-  }
+  class(trees) <- "multiPhylo"
   trees
 }

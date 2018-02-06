@@ -35,8 +35,7 @@ parse_beast_posterior <- function(
   for (i in seq_along(trees_filenames)) {
     trees_filename <- trees_filenames[i]
     posterior[[i]] <- tracerer::parse_beast_trees(
-      trees_filename,
-      return_type = trees_type
+      trees_filename
     )
   }
   n_trees <- length(trees_filenames)

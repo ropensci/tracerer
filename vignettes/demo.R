@@ -36,8 +36,7 @@ ggplot2::ggplot(
 
 ## ----fig.width=7, fig.height=7-------------------------------------------
 trees <- parse_beast_trees(
-  get_path("beast2_example_output.trees"), 
-  return_type = "multiPhylo"
+  get_path("beast2_example_output.trees")
 )
 phangorn::densiTree(trees, width = 2)
 

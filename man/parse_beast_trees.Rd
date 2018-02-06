@@ -4,13 +4,10 @@
 \alias{parse_beast_trees}
 \title{Parses a BEAST2 .trees output file}
 \usage{
-parse_beast_trees(filename, return_type = "list")
+parse_beast_trees(filename)
 }
 \arguments{
 \item{filename}{name of the BEAST2 .trees output file}
-
-\item{return_type}{the data type of the returned value. Can be either
-'list' or 'multiPhylo'}
 }
 \value{
 the phylogenies in the posterior
