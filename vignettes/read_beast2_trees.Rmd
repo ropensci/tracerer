@@ -23,14 +23,14 @@ library(tracerer)
 Check if the example file can be found:
 
 ```{r}
-trees_file <- get_path("read_beast2_trees_example.trees")
+trees_file <- get_path("beast2_example_output.trees")
 testit::assert(file.exists(trees_file))
 ```
 
 Parse the posterior:
 
 ```{r}
-posterior_trees <- read_beast2_trees(trees_file)
+posterior_trees <- parse_beast_trees(trees_file)
 ```
 
 Investigating the posterior:
@@ -59,7 +59,6 @@ for (p in posterior_trees) {
 Or we plot all at once:
 
 ```{r fig.width = 7, fig.height = 7}
-class(posterior_trees) <- "multiPhylo"
 phangorn::densiTree(
   posterior_trees, 
   type = "cladogram", 

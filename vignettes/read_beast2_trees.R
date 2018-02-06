@@ -2,11 +2,11 @@
 library(tracerer)
 
 ## ------------------------------------------------------------------------
-trees_file <- get_path("read_beast2_trees_example.trees")
+trees_file <- get_path("beast2_example_output.trees")
 testit::assert(file.exists(trees_file))
 
 ## ------------------------------------------------------------------------
-posterior_trees <- read_beast2_trees(trees_file)
+posterior_trees <- parse_beast_trees(trees_file)
 
 ## ------------------------------------------------------------------------
 names(posterior_trees)
@@ -21,7 +21,6 @@ for (p in posterior_trees) {
 }
 
 ## ----fig.width = 7, fig.height = 7---------------------------------------
-class(posterior_trees) <- "multiPhylo"
 phangorn::densiTree(
   posterior_trees, 
   type = "cladogram", 

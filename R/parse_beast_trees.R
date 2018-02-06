@@ -28,6 +28,7 @@ parse_beast_trees <- function(
 
   testit::assert(length(trees) != 1 || !is.na(trees))
 
+
   class(trees) <- "multiPhylo"
   trees
 }
