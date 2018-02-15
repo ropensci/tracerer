@@ -20,6 +20,7 @@ Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 }
 \seealso{
 Use \code{\link{remove_burn_in}} to remove the burn-in
+  of a trace
 }
 \author{
 Richel J.C. Bilderbeek

@@ -5,6 +5,7 @@
 #' @return the effective sample sizes
 #' @export
 #' @seealso Use \code{\link{remove_burn_in}} to remove the burn-in
+#'   of a trace
 #' @author Richel J.C. Bilderbeek
 calc_sum_stats <- function(
   trace,

@@ -27,6 +27,10 @@ Parses BEAST2 output files to a posterior
   )
   testit::assert(is_posterior(posterior))
 }
+\seealso{
+Use \code{\link{remove_burn_ins}} to remove the burn-ins from
+  the posterior's estimates (\code{posterior$estimates})
+}
 \author{
 Richel J.C. Bilderbeek
 }

@@ -25,6 +25,10 @@ Parses a BEAST2 .log output file
   )
   testit::assert(names(estimates) == expected_names)
 }
+\seealso{
+Use \code{\link{remove_burn_ins}} to remove the burn-in from
+  the returned parameter estimates
+}
 \author{
 Richel J.C. Bilderbeek
 }

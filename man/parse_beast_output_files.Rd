@@ -30,6 +30,10 @@ Parse all BEAST2 output files
   testit::assert("beast2_example_output_trees" \%in\% names(out))
   testit::assert("operators" \%in\% names(out))
 }
+\seealso{
+Use \code{\link{remove_burn_ins}} to remove the burn-in from
+  \code{out$estimates}
+}
 \author{
 Richel J.C. Bilderbeek
 }
