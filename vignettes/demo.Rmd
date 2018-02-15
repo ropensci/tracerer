@@ -49,7 +49,7 @@ At the top-right, some measures of the variable `posterior` is shown.
 To reproduce these measures in `tracerer`:
 
 ```{r}
-sum_stats <- calc_sum_stats(
+sum_stats <- calc_summary_stats(
   estimates$posterior, 
   sample_interval = 1000
 )
