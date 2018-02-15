@@ -4,7 +4,8 @@
 \alias{parse_beast_output_files}
 \title{Parse all BEAST2 output files}
 \usage{
-parse_beast_output_files(log_filename, trees_filenames, state_filename)
+parse_beast_output_files(log_filename, trees_filenames, state_filename,
+  burn_in_fraction = 0.1)
 }
 \arguments{
 \item{log_filename}{name of the BEAST2 .log file}
@@ -13,6 +14,9 @@ parse_beast_output_files(log_filename, trees_filenames, state_filename)
 BEAST2 will create one .trees file per alignment}
 
 \item{state_filename}{name of the BEAST2 .xml.state file created}
+
+\item{burn_in_fraction}{the fraction of the parameter estimate that needs
+to be removed, must be [0,1>}
 }
 \description{
 Parse all BEAST2 output files

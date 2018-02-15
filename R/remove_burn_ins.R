@@ -6,13 +6,13 @@
 #' @author Richel J.C. Bilderbeek
 remove_burn_ins <- function(traces, burn_in_fraction) {
   if (!is.data.frame(traces)) {
-    stop("traces must be a data.frame")
+    stop("'traces' must be a data.frame")
   }
   if (burn_in_fraction < 0.0) {
-    stop("burn_in_fraction must be at least zero")
+    stop("'burn_in_fraction' must be at least zero")
   }
   if (burn_in_fraction > 1.0) {
-    stop("burn_in_fraction must be at most one")
+    stop("'burn_in_fraction' must be one at most")
   }
   n <- nrow(traces)
   first_index <- as.integer(1 + (n * burn_in_fraction))

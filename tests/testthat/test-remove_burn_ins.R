@@ -26,17 +26,17 @@ test_that("remove_burn_ins: abuse", {
 
   expect_error(
     remove_burn_ins(traces = v, burn_in_fraction  = -0.1),
-    "burn_in_fraction must be at least zero"
+    "'burn_in_fraction' must be at least zero"
   )
 
   expect_error(
     remove_burn_ins(traces = v, burn_in_fraction  = 1.1),
-    "burn_in_fraction must be at most one"
+    "'burn_in_fraction' must be one at most"
   )
 
   expect_error(
     remove_burn_ins(traces = "not a valid trace", burn_in_fraction  = 0.1),
-    "traces must be a data.frame"
+    "'traces' must be a data.frame"
   )
 
 })
