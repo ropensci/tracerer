@@ -134,7 +134,10 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 </tbody>
 </table>
 <p>At the top-right, some measures of the variable <code>posterior</code> is shown. To reproduce these measures in <code>tracerer</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_sum_stats</span>(estimates<span class="op">$</span>posterior, <span class="dt">sample_interval =</span> <span class="dv">1000</span>, <span class="dt">burn_in_fraction =</span> <span class="fl">0.1</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_sum_stats</span>(
+  estimates<span class="op">$</span>posterior, 
+  <span class="dt">sample_interval =</span> <span class="dv">1000</span>
+)
 table &lt;-<span class="st"> </span><span class="kw">t</span>(sum_stats)
 <span class="kw">colnames</span>(table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;sum_stat&quot;</span>)
 knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre></div>
@@ -148,19 +151,19 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 <tbody>
 <tr class="odd">
 <td>mean</td>
-<td align="left">-70.79491</td>
+<td align="left">-70.58394</td>
 </tr>
 <tr class="even">
 <td>stderr_mean</td>
-<td align="left">0.5145441</td>
+<td align="left">0.5044887</td>
 </tr>
 <tr class="odd">
 <td>stdev</td>
-<td align="left">1.637269</td>
+<td align="left">1.681629</td>
 </tr>
 <tr class="even">
 <td>variance</td>
-<td align="left">2.680651</td>
+<td align="left">2.827876</td>
 </tr>
 <tr class="odd">
 <td>mode</td>
@@ -176,7 +179,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 </tr>
 <tr class="even">
 <td>hpd_interval_high</td>
-<td align="left">-69.0399</td>
+<td align="left">-68.68523</td>
 </tr>
 <tr class="odd">
 <td>act</td>
@@ -184,7 +187,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 </tr>
 <tr class="even">
 <td>ess</td>
-<td align="left">9</td>
+<td align="left">10</td>
 </tr>
 </tbody>
 </table>

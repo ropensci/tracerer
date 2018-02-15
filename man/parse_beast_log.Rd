@@ -4,7 +4,7 @@
 \alias{parse_beast_log}
 \title{Parses a BEAST2 .log output file}
 \usage{
-parse_beast_log(filename, burn_in_fraction = 0.1)
+parse_beast_log(filename, burn_in_fraction = 0)
 }
 \arguments{
 \item{filename}{name of the BEAST2 .log output file}

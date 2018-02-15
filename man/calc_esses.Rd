@@ -10,8 +10,6 @@ calc_esses(traces, sample_interval)
 \item{traces}{a dataframe with traces with removed burn-in}
 
 \item{sample_interval}{the interval in timesteps between samples}
-
-\item{burn_in_fraction}{the fraction that needs to be removed, must be [0,1>}
 }
 \value{
 the effective sample sizes

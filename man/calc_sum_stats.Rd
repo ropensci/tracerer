@@ -4,20 +4,22 @@
 \alias{calc_sum_stats}
 \title{Calculates the Effective Sample Sizes from a parsed BEAST2 log file}
 \usage{
-calc_sum_stats(trace, sample_interval, burn_in_fraction = 0.1)
+calc_sum_stats(trace, sample_interval)
 }
 \arguments{
-\item{trace}{a numeric vector of values}
+\item{trace}{a numeric vector of values. Assumes the burn-in
+is removed.}
 
 \item{sample_interval}{the interval in timesteps between samples}
-
-\item{burn_in_fraction}{the fraction that needs to be removed, must be [0,1>}
 }
 \value{
 the effective sample sizes
 }
 \description{
 Calculates the Effective Sample Sizes from a parsed BEAST2 log file
+}
+\seealso{
+Use \code{\link{remove_burn_in}} to remove the burn-in
 }
 \author{
 Richel J.C. Bilderbeek

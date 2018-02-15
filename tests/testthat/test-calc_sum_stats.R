@@ -2,11 +2,12 @@ context("calc_sum_stats")
 
 test_that("vignette", {
 
-  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
+
   sum_stats <- calc_sum_stats(
     estimates$posterior,
-    sample_interval = 1000,
-    burn_in_fraction = 0.1
+    sample_interval = 1000
   )
   testthat::expect_true("mean" %in% names(sum_stats))
   testthat::expect_equivalent(sum_stats$mean, -70.5839, tolerance = 0.00001)
