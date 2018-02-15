@@ -4,12 +4,14 @@
 \alias{remove_burn_ins}
 \title{Removed the burn-ins from a data frame}
 \usage{
-remove_burn_ins(traces, burn_in_fraction)
+remove_burn_ins(traces, burn_in_fraction = 0.1)
 }
 \arguments{
 \item{traces}{a data frame with traces}
 
-\item{burn_in_fraction}{the fraction that needs to be removed, must be [0,1>}
+\item{burn_in_fraction}{the fraction that needs to be removed,
+must be \code{[0,1>}. Its default value of 10% is the same
+as of Tracer}
 }
 \value{
 the data frame with the burn-in removed
