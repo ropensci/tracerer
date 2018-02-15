@@ -4,16 +4,13 @@
 \alias{parse_beast_posterior}
 \title{Parses BEAST2 output files to a posterior}
 \usage{
-parse_beast_posterior(trees_filenames, log_filename, trees_type = "list")
+parse_beast_posterior(trees_filenames, log_filename)
 }
 \arguments{
 \item{trees_filenames}{one or more names of the BEAST2 .trees output files.
 A BEAST2 run will create as much .trees files as there are alignments}
 
 \item{log_filename}{name of the BEAST2 .trees output file}
-
-\item{trees_type}{the data type of the created trees. Can be either
-'list' or 'multiPhylo'}
 }
 \value{
 a posterior
