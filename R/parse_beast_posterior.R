@@ -45,14 +45,12 @@ parse_beast_posterior <- function(
     )
   }
   n_trees <- length(trees_filenames)
-  posterior[[n_trees + 1]] <- tracerer::parse_beast_log(log_filename)
+  posterior[[n_trees + 1]] <- tracerer::parse_beast_log(
+    log_filename, burn_in_fraction = burn_in_fraction
+  )
   names(posterior) <- c(
     paste0(basename(tools::file_path_sans_ext(trees_filenames)), "_trees"),
     "estimates"
-  )
-  posterior$estimates <- remove_burn_ins(
-    traces = posterior$estimates,
-    burn_in_fraction = burn_in_fraction
   )
   posterior
 }

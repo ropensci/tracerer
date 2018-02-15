@@ -2,11 +2,12 @@ context("calc_esses")
 
 test_that("calc_esses: use", {
 
-  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
+
   df <- calc_esses(
     traces = estimates,
-    sample_interval = 1000,
-    burn_in_fraction = 0.1
+    sample_interval = 1000
   )
   df
 

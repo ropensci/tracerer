@@ -1,17 +1,18 @@
 #' Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 #' @param traces a dataframe with traces with removed burn-in
 #' @param sample_interval the interval in timesteps between samples
-#' @param burn_in_fraction the fraction that needs to be removed, must be [0,1>
 #' @return the effective sample sizes
 #' @examples
 #'   # Parse an example log file
-#'   estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+#'   estimates <- parse_beast_log(
+#'     get_path("beast2_example_output.log"),
+#'     burn_in_fraction = 0.1
+#'   )
 #'
 #'   # Calculate the effective sample sizes of all parameter estimates
 #'   esses <- calc_esses(
 #'     estimates,
-#'     sample_interval = 1000,
-#'     burn_in_fraction = 0.1
+#'     sample_interval = 1000
 #'   )
 #'
 #'   expected <- c(10, 10, 10, 10, 7, 10, 9, 6)
@@ -20,8 +21,7 @@
 #' @author Richel J.C. Bilderbeek
 calc_esses <- function(
   traces,
-  sample_interval,
-  burn_in_fraction = 0.1
+  sample_interval
 ) {
 
   if (!is.data.frame(traces)) {
@@ -35,12 +35,6 @@ calc_esses <- function(
   Sample <- NULL; rm(Sample) # nolint use uppercase variable name just like BEAST2
   # Remove the Sample column from the dataframe
   traces <- subset(traces, select = -c(Sample )) # nolint use uppercase variable name just like BEAST2
-
-  # Remove the burn-ins
-  traces <- remove_burn_ins(
-    traces,
-    burn_in_fraction = burn_in_fraction
-  )
 
   esses <- rep(NA, ncol(traces))
 

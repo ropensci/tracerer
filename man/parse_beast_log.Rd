@@ -4,10 +4,13 @@
 \alias{parse_beast_log}
 \title{Parses a BEAST2 .log output file}
 \usage{
-parse_beast_log(filename)
+parse_beast_log(filename, burn_in_fraction = 0.1)
 }
 \arguments{
 \item{filename}{name of the BEAST2 .log output file}
+
+\item{burn_in_fraction}{the fraction of the parameter estimate that needs
+to be removed, must be [0,1>}
 }
 \value{
 data frame with all the parameter estimates

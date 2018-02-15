@@ -8,8 +8,10 @@ knitr::opts_chunk$set(
 library(tracerer)
 
 ## ------------------------------------------------------------------------
-estimates <- parse_beast_log(get_path("beast2_example_output.log"))
-esses <- calc_esses(estimates, sample_interval = 1000, burn_in_fraction = 0.1)
+estimates <- parse_beast_log(
+  get_path("beast2_example_output.log"), burn_in_fraction = 0.1
+)
+esses <- calc_esses(estimates, sample_interval = 1000)
 table <- t(esses)
 colnames(table) <- c("ESS")
 knitr::kable(table)

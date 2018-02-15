@@ -4,7 +4,7 @@
 \alias{calc_esses}
 \title{Calculates the Effective Sample Sizes from a parsed BEAST2 log file}
 \usage{
-calc_esses(traces, sample_interval, burn_in_fraction = 0.1)
+calc_esses(traces, sample_interval)
 }
 \arguments{
 \item{traces}{a dataframe with traces with removed burn-in}
@@ -21,13 +21,15 @@ Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 }
 \examples{
   # Parse an example log file
-  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- parse_beast_log(
+    get_path("beast2_example_output.log"),
+    burn_in_fraction = 0.1
+  )
 
   # Calculate the effective sample sizes of all parameter estimates
   esses <- calc_esses(
     estimates,
-    sample_interval = 1000,
-    burn_in_fraction = 0.1
+    sample_interval = 1000
   )
 
   expected <- c(10, 10, 10, 10, 7, 10, 9, 6)
