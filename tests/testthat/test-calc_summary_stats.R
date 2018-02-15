@@ -1,11 +1,11 @@
-context("calc_sum_stats")
+context("calc_summary_stats")
 
 test_that("vignette", {
 
   estimates_all <- parse_beast_log(get_path("beast2_example_output.log"))
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
 
-  sum_stats <- calc_sum_stats(
+  sum_stats <- calc_summary_stats(
     estimates$posterior,
     sample_interval = 1000
   )

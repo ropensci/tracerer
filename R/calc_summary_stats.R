@@ -7,7 +7,7 @@
 #' @seealso Use \code{\link{remove_burn_in}} to remove the burn-in
 #'   of a trace
 #' @author Richel J.C. Bilderbeek
-calc_sum_stats <- function(
+calc_summary_stats <- function(
   trace,
   sample_interval
 ) {

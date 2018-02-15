@@ -18,7 +18,7 @@ colnames(table) <- c("ESS")
 knitr::kable(table)
 
 ## ------------------------------------------------------------------------
-sum_stats <- calc_sum_stats(
+sum_stats <- calc_summary_stats(
   estimates$posterior, 
   sample_interval = 1000
 )
