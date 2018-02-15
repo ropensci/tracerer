@@ -4,16 +4,13 @@
 \alias{parse_beast_posterior}
 \title{Parses BEAST2 output files to a posterior}
 \usage{
-parse_beast_posterior(trees_filenames, log_filename, burn_in_fraction = 0.1)
+parse_beast_posterior(trees_filenames, log_filename)
 }
 \arguments{
 \item{trees_filenames}{one or more names of the BEAST2 .trees output files.
 A BEAST2 run will create as much .trees files as there are alignments}
 
 \item{log_filename}{name of the BEAST2 .trees output file}
-
-\item{burn_in_fraction}{the fraction of the parameter estimate that needs
-to be removed, must be [0,1>}
 }
 \value{
 a posterior

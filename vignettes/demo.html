@@ -85,8 +85,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Most promently, at the left, the effective sample sizes (ESSes) are shown.</p>
 <p>The show the ESSes using <code>tracerer</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(
-  <span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>), <span class="dt">burn_in_fraction =</span> <span class="fl">0.1</span>
+  <span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
 )
+estimates &lt;-<span class="st"> </span><span class="kw">remove_burn_ins</span>(estimates, <span class="dt">burn_in_fraction =</span> <span class="fl">0.1</span>) 
 esses &lt;-<span class="st"> </span><span class="kw">calc_esses</span>(estimates, <span class="dt">sample_interval =</span> <span class="dv">1000</span>)
 table &lt;-<span class="st"> </span><span class="kw">t</span>(esses)
 <span class="kw">colnames</span>(table) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ESS&quot;</span>)

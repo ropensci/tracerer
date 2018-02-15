@@ -2,8 +2,6 @@
 #' @param trees_filenames one or more names of the BEAST2 .trees output files.
 #'   A BEAST2 run will create as much .trees files as there are alignments
 #' @param log_filename name of the BEAST2 .trees output file
-#' @param burn_in_fraction the fraction of the parameter estimate that needs
-#'   to be removed, must be [0,1>
 #' @return a posterior
 #' @export
 #' @examples
@@ -17,8 +15,7 @@
 #' @author Richel J.C. Bilderbeek
 parse_beast_posterior <- function(
   trees_filenames,
-  log_filename,
-  burn_in_fraction = 0.1
+  log_filename
 ) {
 
   if (!files_exist(trees_filenames)) {
@@ -30,12 +27,6 @@ parse_beast_posterior <- function(
     stop("'log_filename' must be the name of an existing file. ",
       "File with name '", log_filename, "' not found")
   }
-  if (burn_in_fraction < 0.0) {
-    stop("'burn_in_fraction' must be at least zero")
-  }
-  if (burn_in_fraction > 1.0) {
-    stop("'burn_in_fraction' must be one at most")
-  }
 
   posterior <- list()
   for (i in seq_along(trees_filenames)) {
@@ -46,7 +37,7 @@ parse_beast_posterior <- function(
   }
   n_trees <- length(trees_filenames)
   posterior[[n_trees + 1]] <- tracerer::parse_beast_log(
-    log_filename, burn_in_fraction = burn_in_fraction
+    log_filename
   )
   names(posterior) <- c(
     paste0(basename(tools::file_path_sans_ext(trees_filenames)), "_trees"),
