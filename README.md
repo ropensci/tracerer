@@ -10,7 +10,7 @@ to work with BEAST2 output files.
 
 ![tracerer logo](pics/tracerer_logo.png)
 
-`tracerer` is part of the [babette](https://github.com/richelbilderbeek/babette) package suite:
+`tracerer` is part of the [rbeast2](https://github.com/richelbilderbeek/rbeast2) package suite:
 
  * [beautier](https://github.com/richelbilderbeek/beautier) creates BEAST2 input (`.xml`) files.
  * [beastier](https://github.com/richelbilderbeek/beastier) runs BEAST2
@@ -78,7 +78,7 @@ Sure, just add an Issue. Or send an email.
 
 Article about `tracerer`:
 
- * Bilderbeek, Richel J.C., Etienne, Rampal S., "babette: [unknown subtitle]" *In preparation*.
+ * Bilderbeek, Richel J.C., Etienne, Rampal S., "rbeast2: [unknown subtitle]" *In preparation*.
 
 FASTA files `anthus_aco.fas` and `anthus_nd2.fas` from:
  
