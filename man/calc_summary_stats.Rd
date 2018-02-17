@@ -2,13 +2,14 @@
 % Please edit documentation in R/calc_summary_stats.R
 \name{calc_summary_stats}
 \alias{calc_summary_stats}
-\title{Calculates the Effective Sample Sizes from a parsed BEAST2 log file}
+\title{Calculates the Effective Sample Sizes of one estimated variable's trace.}
 \usage{
-calc_summary_stats(trace, sample_interval)
+calc_summary_stats(traces, sample_interval)
 }
 \arguments{
-\item{trace}{a numeric vector of values. Assumes the burn-in
-is removed.}
+\item{traces}{one or more traces, supplies as either a numeric
+vector or data frame or numeric vector of values.
+Assumes the burn-in is removed.}
 
 \item{sample_interval}{the interval in timesteps between samples}
 }
@@ -16,11 +17,33 @@ is removed.}
 the effective sample sizes
 }
 \description{
-Calculates the Effective Sample Sizes from a parsed BEAST2 log file
+Calculates the Effective Sample Sizes of one estimated variable's trace.
+}
+\examples{
+  estimates_all <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
+
+  # From a single variable's trace
+  sum_stats_posterior <- calc_summary_stats(
+    estimates$posterior,
+    sample_interval = 1000
+  )
+
+  testit::assert("mean" \%in\% names(sum_stats_posterior))
+
+  # From all variables' traces
+  sum_stats <- calc_summary_stats(
+    estimates,
+    sample_interval = 1000
+  )
+
+  testit::assert("mean" \%in\% colnames(sum_stats))
 }
 \seealso{
-Use \code{\link{remove_burn_in}} to remove the burn-in
-  of a trace
+Use \code{\link{calc_summary_stats_trace}} to calculate the
+  ESS of one trace (stored as a numeric vector). Use
+  \code{\link{calc_summary_stats_traces}} to calculate the
+  ESSes of more traces (stored as a data frame).
 }
 \author{
 Richel J.C. Bilderbeek
