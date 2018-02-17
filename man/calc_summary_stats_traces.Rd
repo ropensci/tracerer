@@ -8,10 +8,10 @@
 calc_summary_stats_traces(traces, sample_interval)
 }
 \arguments{
-\item{sample_interval}{the interval in timesteps between samples}
-
-\item{trace}{a data frame with traces of estimated parameters.
+\item{traces}{a data frame with traces of estimated parameters.
 Assumes the burn-ins are removed.}
+
+\item{sample_interval}{the interval in timesteps between samples}
 }
 \value{
 the effective sample sizes

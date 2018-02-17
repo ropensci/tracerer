@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richel J.C. Bilderbeek" />
 
-<meta name="date" content="2018-02-15" />
+<meta name="date" content="2018-02-17" />
 
 <title>tracerer demo</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">tracerer demo</h1>
 <h4 class="author"><em>Richel J.C. Bilderbeek</em></h4>
-<h4 class="date"><em>2018-02-15</em></h4>
+<h4 class="date"><em>2018-02-17</em></h4>
 
 
 
@@ -135,7 +135,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 </tbody>
 </table>
 <p>At the top-right, some measures of the variable <code>posterior</code> is shown. To reproduce these measures in <code>tracerer</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_sum_stats</span>(
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_summary_stats</span>(
   estimates<span class="op">$</span>posterior, 
   <span class="dt">sample_interval =</span> <span class="dv">1000</span>
 )
@@ -189,6 +189,135 @@ knitr<span class="op">::</span><span class="kw">kable</span>(table)</code></pre>
 <tr class="even">
 <td>ess</td>
 <td align="left">10</td>
+</tr>
+</tbody>
+</table>
+<p>Unlike Tracer, in <code>tracerer</code> all summary statistics can be obtained at once:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sum_stats &lt;-<span class="st"> </span><span class="kw">calc_summary_stats</span>(
+  estimates, 
+  <span class="dt">sample_interval =</span> <span class="dv">1000</span>
+)
+knitr<span class="op">::</span><span class="kw">kable</span>(sum_stats)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">mean</th>
+<th align="right">stderr_mean</th>
+<th align="right">stdev</th>
+<th align="right">variance</th>
+<th align="left">mode</th>
+<th align="left">geom_mean</th>
+<th align="right">hpd_interval_low</th>
+<th align="right">hpd_interval_high</th>
+<th align="right">act</th>
+<th align="right">ess</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>posterior</td>
+<td align="right">-70.5839432</td>
+<td align="right">0.5044887</td>
+<td align="right">1.6816291</td>
+<td align="right">2.8278764</td>
+<td align="left">n/a</td>
+<td align="left">n/a</td>
+<td align="right">-74.1526820</td>
+<td align="right">-68.6852294</td>
+<td align="right">1000.000</td>
+<td align="right">10.000000</td>
+</tr>
+<tr class="even">
+<td>likelihood</td>
+<td align="right">-60.1725009</td>
+<td align="right">0.3964208</td>
+<td align="right">1.3214025</td>
+<td align="right">1.7461047</td>
+<td align="left">n/a</td>
+<td align="left">n/a</td>
+<td align="right">-62.4090389</td>
+<td align="right">-58.7371284</td>
+<td align="right">1000.000</td>
+<td align="right">10.000000</td>
+</tr>
+<tr class="odd">
+<td>prior</td>
+<td align="right">-10.4114423</td>
+<td align="right">0.5424505</td>
+<td align="right">1.8081684</td>
+<td align="right">3.2694729</td>
+<td align="left">n/a</td>
+<td align="left">n/a</td>
+<td align="right">-14.1703653</td>
+<td align="right">-7.2820933</td>
+<td align="right">1000.000</td>
+<td align="right">10.000000</td>
+</tr>
+<tr class="even">
+<td>treeLikelihood</td>
+<td align="right">-60.1725009</td>
+<td align="right">0.3964208</td>
+<td align="right">1.3214025</td>
+<td align="right">1.7461047</td>
+<td align="left">n/a</td>
+<td align="left">n/a</td>
+<td align="right">-62.4090389</td>
+<td align="right">-58.7371284</td>
+<td align="right">1000.000</td>
+<td align="right">10.000000</td>
+</tr>
+<tr class="odd">
+<td>TreeHeight</td>
+<td align="right">0.9744748</td>
+<td align="right">0.1439937</td>
+<td align="right">0.3916244</td>
+<td align="right">0.1533697</td>
+<td align="left">n/a</td>
+<td align="left">0.91041547166058</td>
+<td align="right">0.4529637</td>
+<td align="right">1.8159958</td>
+<td align="right">1502.121</td>
+<td align="right">6.657254</td>
+</tr>
+<tr class="even">
+<td>BirthDeath</td>
+<td align="right">-3.5036870</td>
+<td align="right">0.5424505</td>
+<td align="right">1.8081684</td>
+<td align="right">3.2694729</td>
+<td align="left">n/a</td>
+<td align="left">n/a</td>
+<td align="right">-7.2626100</td>
+<td align="right">-0.3743380</td>
+<td align="right">1000.000</td>
+<td align="right">10.000000</td>
+</tr>
+<tr class="odd">
+<td>birthRate2</td>
+<td align="right">1.4470488</td>
+<td align="right">0.2134411</td>
+<td align="right">0.6713951</td>
+<td align="right">0.4507714</td>
+<td align="left">n/a</td>
+<td align="left">1.28823302868404</td>
+<td align="right">0.3909076</td>
+<td align="right">2.8041208</td>
+<td align="right">1122.942</td>
+<td align="right">8.905181</td>
+</tr>
+<tr class="even">
+<td>relativeDeathRate2</td>
+<td align="right">0.4937568</td>
+<td align="right">0.0650235</td>
+<td align="right">0.1709096</td>
+<td align="right">0.0292101</td>
+<td align="left">n/a</td>
+<td align="left">0.466468860930895</td>
+<td align="right">0.2496224</td>
+<td align="right">0.7107459</td>
+<td align="right">1608.296</td>
+<td align="right">6.217762</td>
 </tr>
 </tbody>
 </table>

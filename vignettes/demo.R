@@ -27,6 +27,13 @@ colnames(table) <- c("sum_stat")
 knitr::kable(table)
 
 ## ------------------------------------------------------------------------
+sum_stats <- calc_summary_stats(
+  estimates, 
+  sample_interval = 1000
+)
+knitr::kable(sum_stats)
+
+## ------------------------------------------------------------------------
 ggplot2::ggplot(
   data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
   ggplot2::aes(posterior) 

@@ -93,7 +93,7 @@ calc_summary_stats_trace <- function(
 
 #' Calculates the Effective Sample Sizes of the traces of multiple
 #'   estimated variables.
-#' @param trace a data frame with traces of estimated parameters.
+#' @param traces a data frame with traces of estimated parameters.
 #'   Assumes the burn-ins are removed.
 #' @param sample_interval the interval in timesteps between samples
 #' @return the effective sample sizes
