@@ -12,6 +12,7 @@ test_that("detect posterior", {
     trees_filename = trees_filename,
     log_filename = log_filename
   )
+  names(posterior)
   testthat::expect_true(is_posterior(posterior))
 
 })
