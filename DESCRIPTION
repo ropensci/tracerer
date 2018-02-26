@@ -1,7 +1,7 @@
 Package: tracerer
 Type: Package
 Title: Tracer for R
-Version: 0.9.0
+Version: 1.1
 Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl> [aut, cre]
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description:
