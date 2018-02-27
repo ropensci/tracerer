@@ -10,7 +10,7 @@ to work with BEAST2 output files.
 
 ![tracerer logo](pics/tracerer_logo.png)
 
-`tracerer` is part of the [rbeast2](https://github.com/richelbilderbeek/rbeast2) package suite:
+`tracerer` is part of the [babette](https://github.com/richelbilderbeek/babette) package suite:
 
  * [beautier](https://github.com/richelbilderbeek/beautier) creates BEAST2 input (`.xml`) files.
  * [beastier](https://github.com/richelbilderbeek/beastier) runs BEAST2
