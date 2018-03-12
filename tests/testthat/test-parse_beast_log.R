@@ -2,7 +2,7 @@ context("parse_beast_log")
 
 test_that("parse_beast_log: use", {
 
-  filename <- get_path("beast2_example_output.log")
+  filename <- get_tracerer_path("beast2_example_output.log")
 
   estimates <- tracerer::parse_beast_log(
     filename = filename

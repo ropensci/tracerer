@@ -18,7 +18,7 @@ the effective sample size
 Calculates the Effective Sample Size
 }
 \examples{
-  filename <- get_path("beast2_example_output.log")
+  filename <- get_tracerer_path("beast2_example_output.log")
 
  # Parse the file as-is and conclude the sampling interval
  df <- parse_beast_log(filename)

@@ -19,7 +19,7 @@ the effective sample sizes
 Calculates the Effective Sample Sizes of one estimated variable's trace.
 }
 \examples{
-  estimates_all <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
 
   sum_stats <- calc_summary_stats_trace(

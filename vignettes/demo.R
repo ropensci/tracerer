@@ -9,7 +9,7 @@ library(tracerer)
 
 ## ------------------------------------------------------------------------
 estimates <- parse_beast_log(
-  get_path("beast2_example_output.log")
+  get_tracerer_path("beast2_example_output.log")
 )
 estimates <- remove_burn_ins(estimates, burn_in_fraction = 0.1) 
 esses <- calc_esses(estimates, sample_interval = 1000)
@@ -49,7 +49,7 @@ ggplot2::ggplot(
 
 ## ----fig.width=7, fig.height=7-------------------------------------------
 trees <- parse_beast_trees(
-  get_path("beast2_example_output.trees")
+  get_tracerer_path("beast2_example_output.trees")
 )
 phangorn::densiTree(trees, width = 2)
 

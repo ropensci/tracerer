@@ -20,7 +20,7 @@ Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 \examples{
   # Parse an example log file
   estimates_all <- parse_beast_log(
-    get_path("beast2_example_output.log")
+    get_tracerer_path("beast2_example_output.log")
   )
 
   # Remove burn-ins

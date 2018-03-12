@@ -6,7 +6,7 @@
   acceptances}
 \usage{
 
-  parse_beast_state_operators(filename = get_path("beast2_example_output.xml.state"))
+  parse_beast_state_operators(filename = get_tracerer_path("beast2_example_output.xml.state"))
 }
 \arguments{
 \item{filename}{name of the BEAST2 .xml.state output file}
@@ -19,7 +19,7 @@ Parses a BEAST2 .xml.state output file to get only the operators
   acceptances
 }
 \examples{
-  xml_state_filename <- get_path("beast2_example_output.xml.state")
+  xml_state_filename <- get_tracerer_path("beast2_example_output.xml.state")
   estimates <- parse_beast_state_operators(filename = xml_state_filename)
   expected_names <- c("operator", "p", "accept", "reject", "acceptFC",
     "rejectFC", "rejectIv", "rejectOp")

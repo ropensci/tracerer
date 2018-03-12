@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richel J.C. Bilderbeek" />
 
-<meta name="date" content="2018-02-15" />
+<meta name="date" content="2018-03-12" />
 
 <title>Demonstration of estimating the effective sample size of an MCMC</title>
 
@@ -70,12 +70,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Demonstration of estimating the effective sample size of an MCMC</h1>
 <h4 class="author"><em>Richel J.C. Bilderbeek</em></h4>
-<h4 class="date"><em>2018-02-15</em></h4>
+<h4 class="date"><em>2018-03-12</em></h4>
 
 
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tracerer)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log_file &lt;-<span class="st"> </span><span class="kw">get_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log_file &lt;-<span class="st"> </span><span class="kw">get_tracerer_path</span>(<span class="st">&quot;beast2_example_output.log&quot;</span>)
 estimates &lt;-<span class="st"> </span><span class="kw">parse_beast_log</span>(log_file)
 knitr<span class="op">::</span><span class="kw">kable</span>(estimates)</code></pre></div>
 <table>

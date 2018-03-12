@@ -2,10 +2,10 @@ context("is_posterior")
 
 test_that("detect posterior", {
 
-  trees_filename <- get_path("beast2_example_output.trees")
+  trees_filename <- get_tracerer_path("beast2_example_output.trees")
   testit::assert(file.exists(trees_filename))
 
-  log_filename <- get_path("beast2_example_output.log")
+  log_filename <- get_tracerer_path("beast2_example_output.log")
   testit::assert(file.exists(log_filename))
 
   posterior <- tracerer::parse_beast_posterior(

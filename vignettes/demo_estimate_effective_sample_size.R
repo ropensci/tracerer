@@ -2,7 +2,7 @@
 library(tracerer)
 
 ## ------------------------------------------------------------------------
-log_file <- get_path("beast2_example_output.log")
+log_file <- get_tracerer_path("beast2_example_output.log")
 estimates <- parse_beast_log(log_file)
 knitr::kable(estimates)
 

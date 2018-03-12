@@ -11,7 +11,7 @@ test_that("use", {
 
 test_that("use, posterior", {
 
-  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_act(trace$posterior, sample_interval = 1000)
@@ -21,7 +21,7 @@ test_that("use, posterior", {
 
 test_that("use, tree height", {
 
-  estimates <- parse_beast_log(get_path("beast2_example_output.log"))
+  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_act(trace$TreeHeight, sample_interval = 1000)

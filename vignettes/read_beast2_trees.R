@@ -2,7 +2,7 @@
 library(tracerer)
 
 ## ------------------------------------------------------------------------
-trees_file <- get_path("beast2_example_output.trees")
+trees_file <- get_tracerer_path("beast2_example_output.trees")
 testit::assert(file.exists(trees_file))
 
 ## ------------------------------------------------------------------------

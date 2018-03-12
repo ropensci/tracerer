@@ -2,7 +2,7 @@ context("parse_beast_state_operators")
 
 test_that("column names are correct", {
 
-  xml_state_filename <- get_path("beast2_example_output.xml.state")
+  xml_state_filename <- get_tracerer_path("beast2_example_output.xml.state")
   estimates <- parse_beast_state_operators(filename = xml_state_filename)
   expected_names <- c("operator", "p", "accept", "reject", "acceptFC",
     "rejectFC", "rejectIv", "rejectOp")
@@ -11,7 +11,7 @@ test_that("column names are correct", {
 
 test_that("example", {
 
-  xml_state_filename <- get_path("beast2_example_output.xml.state")
+  xml_state_filename <- get_tracerer_path("beast2_example_output.xml.state")
   estimates <- parse_beast_state_operators(filename = xml_state_filename)
   expected_operators <- c("treeScaler.t", "treeRootScaler.t",
     "UniformOperator.t", "SubtreeSlide.t", "narrow.t", "wide.t",

@@ -5,9 +5,9 @@
 #' @param  state_filename name of the BEAST2 .xml.state file created
 #' @export
 #' @examples
-#'   trees_filenames <- get_path("beast2_example_output.trees")
-#'   log_filename <- get_path("beast2_example_output.log")
-#'   state_filename <- get_path("beast2_example_output.xml.state")
+#'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")
+#'   log_filename <- get_tracerer_path("beast2_example_output.log")
+#'   state_filename <- get_tracerer_path("beast2_example_output.xml.state")
 #'   out <- parse_beast_output_files(
 #'     log_filename = log_filename,
 #'     trees_filenames = trees_filenames,

@@ -3,7 +3,7 @@
 #' @return data frame with all the parameter estimates
 #' @export
 #' @examples
-#'   log_filename <- get_path("beast2_example_output.log")
+#'   log_filename <- get_tracerer_path("beast2_example_output.log")
 #'   estimates <- parse_beast_log(filename = log_filename)
 #'   expected_names <- c(
 #'     "Sample", "posterior", "likelihood",

@@ -3,7 +3,7 @@
 #' @param sample_interval the interval in timesteps between samples
 #' @return the effective sample size
 #' @examples
-#'   filename <- get_path("beast2_example_output.log")
+#'   filename <- get_tracerer_path("beast2_example_output.log")
 #'
 #'  # Parse the file as-is and conclude the sampling interval
 #'  df <- parse_beast_log(filename)

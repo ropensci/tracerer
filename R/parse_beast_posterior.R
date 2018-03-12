@@ -5,8 +5,8 @@
 #' @return a posterior
 #' @export
 #' @examples
-#'   trees_filenames <- get_path("beast2_example_output.trees")
-#'   log_filename <- get_path("beast2_example_output.log")
+#'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")
+#'   log_filename <- get_tracerer_path("beast2_example_output.log")
 #'   posterior <- parse_beast_posterior(
 #'     trees_filenames = trees_filenames,
 #'     log_filename = log_filename
