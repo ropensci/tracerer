@@ -3,6 +3,10 @@
 #' @param filename name of the BEAST2 .xml.state output file
 #' @return data frame with all the operators' success rates
 #' @export
+#' @usage
+#'   parse_beast_state_operators <- function(
+#'     filename = get_tracerer_path("beast2_example_output.xml.state")
+#'   )
 #' @examples
 #'   xml_state_filename <- get_tracerer_path("beast2_example_output.xml.state")
 #'   estimates <- parse_beast_state_operators(filename = xml_state_filename)
