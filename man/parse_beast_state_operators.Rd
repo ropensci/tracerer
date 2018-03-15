@@ -5,7 +5,7 @@
 \title{Parses a BEAST2 .xml.state output file to get only the operators
   acceptances}
 \usage{
-parse_beast_state_operators <- function(
+parse_beast_state_operators(
     filename = get_tracerer_path("beast2_example_output.xml.state")
   )
 }

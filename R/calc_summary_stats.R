@@ -119,6 +119,7 @@ calc_summary_stats_traces <- function(
     stop("'traces' must be a data frame")
   }
   # Remove column 'Samples' iff present
+  Sample <- NULL # To prevent 'Undefined global functions or variables'
   traces <- subset(traces, select = -Sample) # nolint use uppercase variable name just like BEAST2
 
   n_sum_stats <- 10

@@ -4,7 +4,7 @@
 #' @return data frame with all the operators' success rates
 #' @export
 #' @usage
-#'   parse_beast_state_operators <- function(
+#'   parse_beast_state_operators(
 #'     filename = get_tracerer_path("beast2_example_output.xml.state")
 #'   )
 #' @examples
