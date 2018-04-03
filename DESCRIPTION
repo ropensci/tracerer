@@ -17,7 +17,8 @@ Imports:
   phangorn,
   rBEAST,
   Rcpp,
-  stringr
+  stringr,
+  testit
 Suggests:
   geiger,
   ggplot2,
@@ -25,7 +26,6 @@ Suggests:
   rbenchmark,
   reshape2,
   rmarkdown,
-  testit,
   testthat
 Remotes:
   jimhester/covr,
