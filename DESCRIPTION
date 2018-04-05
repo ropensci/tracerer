@@ -16,17 +16,16 @@ Description: 'BEAST2' (<http://www.beast2.org>) is a widely used
 License: GPL-3 | file LICENSE
 LazyData: TRUE
 Imports:
-  ape,
   jsonlite,
-  phangorn,
   rBEAST,
   Rcpp,
-  stringr,
   testit
 Suggests:
+  ape,
   geiger,
   ggplot2,
   knitr,
+  phangorn,
   rbenchmark,
   reshape2,
   rmarkdown,
