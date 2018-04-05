@@ -7,6 +7,7 @@
 #' @seealso Java code can be found here: \url{https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from J. Heled,
 #'   ported to R and adapted by Richel J.C. Bilderbeek
+#' @noRd
 calc_hpd_interval <- function(trace, proportion = 0.95) {
 
   trace <- sort(trace)

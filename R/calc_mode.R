@@ -9,6 +9,7 @@
 #'
 #'   # For a uniform distribution, NA is returned
 #'   testit::assert(is.na(tracerer:::calc_mode(c(1, 2))))
+#' @noRd
 calc_mode <- function(values) {
   unique_values <- unique(values)
   occurrances <- tabulate(match(values, unique_values))
