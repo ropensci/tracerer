@@ -55,9 +55,9 @@ calc_esses <- function(
     }
   }
   else {
-    library(doParallel}
+    library(doParallel)
     registerDoParallel(cores=cores)
-    foreach (i in seq_along(traces)) {
+    foreach (i=1:length(seq_along(traces))) %dopar% {
       trace <- as.numeric(t(traces[i]))
       esses[i] <- tracerer::calc_ess(
         trace, sample_interval = sample_interval
