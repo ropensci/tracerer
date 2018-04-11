@@ -19,6 +19,7 @@ Imports:
   jsonlite,
   rBEAST,
   Rcpp,
+  testit,
   doParallel
 Suggests:
   ape,
