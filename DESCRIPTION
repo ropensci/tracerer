@@ -19,7 +19,8 @@ Imports:
   jsonlite,
   rBEAST,
   Rcpp,
-  testit
+  testit,
+  doParallel
 Suggests:
   ape,
   geiger,

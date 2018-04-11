@@ -1,6 +1,7 @@
 #' Calculates the Effective Sample Sizes from a parsed BEAST2 log file
 #' @param traces a dataframe with traces with removed burn-in
 #' @param sample_interval the interval in timesteps between samples
+#' @param cores the number of cores you would like to use to process esses - can only be 1 if operating system is Windows
 #' @return the effective sample sizes
 #' @examples
 #'   # Parse an example log file
@@ -25,7 +26,8 @@
 #' @author Richel J.C. Bilderbeek
 calc_esses <- function(
   traces,
-  sample_interval
+  sample_interval,
+  cores
 ) {
 
   if (!is.data.frame(traces)) {
@@ -35,18 +37,36 @@ calc_esses <- function(
     stop("sample interval must be at least one")
   }
 
+  if (cores <= 0) {
+    stop("cores must be >= 1")
+  }
+  
   # Remove warning: no visible binding for global variable 'Sample'
   Sample <- NULL; rm(Sample) # nolint use uppercase variable name just like BEAST2
   # Remove the Sample column from the dataframe
   traces <- subset(traces, select = -c(Sample )) # nolint use uppercase variable name just like BEAST2
 
   esses <- rep(NA, ncol(traces))
-
-  for (i in seq_along(traces)) {
-    trace <- as.numeric(t(traces[i]))
-    esses[i] <- tracerer::calc_ess(
-      trace, sample_interval = sample_interval
-    )
+  
+  # Determine the operating system. If Windows, do not allow more than 1 core.
+  sysinf <- Sys.info()
+  if (!is.null(sysinf)){
+    os <- sysinf['sysname']
+    if (os == 'Windows'){
+      if (cores > 1) {
+        stop("Operating System is Windows, which only supports 1 core with doParallel::foreach") # stop if Operating System = Windows and more than 1 core is specified.
+      }
+    }
+  }
+  else {
+    library(doParallel)
+    registerDoParallel(cores=cores)
+    foreach (i=1:length(seq_along(traces))) %dopar% {
+      trace <- as.numeric(t(traces[i]))
+      esses[i] <- tracerer::calc_ess(
+        trace, sample_interval = sample_interval
+      )
+    }
   }
 
   df <- traces[1, ]
