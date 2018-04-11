@@ -37,6 +37,10 @@ calc_esses <- function(
     stop("sample interval must be at least one")
   }
 
+  if (cores <= 0) {
+    stop("cores must be >= 1")
+  }
+  
   # Remove warning: no visible binding for global variable 'Sample'
   Sample <- NULL; rm(Sample) # nolint use uppercase variable name just like BEAST2
   # Remove the Sample column from the dataframe
