@@ -1,9 +1,9 @@
 # tracerer
 
-Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
----|---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tracerer)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tracerer/branch/master)
-develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tracerer)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tracerer/branch/develop)
+Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![AppVeyor logo](pics/AppVeyor.png)](https://www.appveyor.com)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
+---|---|---|---
+master|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tracerer)|[![Build status](https://ci.appveyor.com/api/projects/status/6ulxqop64tgbujch/branch/master?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/beautier/branch/master)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tracerer/branch/master)
+develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tracerer)|[![Build status](https://ci.appveyor.com/api/projects/status/6ulxqop64tgbujch/branch/develop?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/beautier/branch/develop)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tracerer/branch/develop)
 
 `tracerer`, 'Tracer for R' is an R package 
 to work with BEAST2 output files. 
