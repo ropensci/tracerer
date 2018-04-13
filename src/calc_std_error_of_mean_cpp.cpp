@@ -19,7 +19,8 @@ double calc_std_error_of_mean_cpp(const std::vector<double>& trace, const int sa
   // acs: auto correlations
   std::vector<double> acs(max_lag, 0.0);
 
-  for (int i = 0; i != trace.size(); ++i)
+  const int trace_length = trace.size();
+  for (int i = 0; i != trace_length; ++i)
   {
     sum += trace[i];
     // calculate mean
