@@ -33,7 +33,6 @@ Suggests:
 Remotes:
   jimhester/covr,
   jimhester/lintr,
-  olli0601/rBEAST,
   MangoTheCat/goodpractice,
   KlausVigo/phangorn
 VignetteBuilder: knitr
