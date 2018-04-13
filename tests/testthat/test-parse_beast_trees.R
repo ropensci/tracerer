@@ -5,6 +5,7 @@ test_that("use", {
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
   testthat::expect_true(is_trees_posterior(posterior))
+  testthat::expect_equal(length(posterior), 11)
 })
 
 
