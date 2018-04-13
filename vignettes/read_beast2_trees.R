@@ -10,7 +10,7 @@ posterior_trees <- parse_beast_trees(trees_file)
 
 ## ------------------------------------------------------------------------
 names(posterior_trees)
-testit::assert(length(posterior_trees) == 10)
+testit::assert(length(posterior_trees) == 11)
 
 ## ------------------------------------------------------------------------
 testit::assert(class(posterior_trees[[1]]) == "phylo")
