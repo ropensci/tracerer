@@ -22,11 +22,11 @@ Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 
 ## Example
 
-```
+```{r}
 library(tracerer)
 
 # Obtain an example log file its name
-filename <- get_path("beast2_example_output.log")
+filename <- get_tracerer_path("beast2_example_output.log")
 
 # Parse that log file
 beast_log_full <- parse_beast_log(filename)
