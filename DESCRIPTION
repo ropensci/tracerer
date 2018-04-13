@@ -17,7 +17,6 @@ License: GPL-3 | file LICENSE
 LazyData: TRUE
 Imports:
   jsonlite,
-  rBEAST,
   Rcpp,
   testit
 Suggests:
