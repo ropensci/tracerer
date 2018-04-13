@@ -46,7 +46,7 @@ parse_beast_trees <- function(
 parse_beast_trees_impl_2 <- function(
   filename
 ) {
-  beast2out.read.trees(filename)
+	ape::read.nexus(filename)
 }
 
 

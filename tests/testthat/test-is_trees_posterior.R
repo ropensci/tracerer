@@ -15,7 +15,7 @@ test_that("can create a posterior", {
 test_that("can create a posterior with length 10", {
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
-  expect_equal(length(posterior), 10)
+  expect_equal(length(posterior), 11)
 })
 
 test_that("can detect an invalid posterior, basic types", {
