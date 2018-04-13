@@ -19,7 +19,7 @@ parse_beast_trees <- function(
   }
 
   trees <- tryCatch({
-      beast2out.read.trees(filename)
+      parse_beast_trees_impl_2(filename)
     },
     error = function(cond) {
       stop("invalid file")
@@ -31,6 +31,22 @@ parse_beast_trees <- function(
 
   class(trees) <- "multiPhylo"
   trees
+}
+
+#' Parses a BEAST2 .trees output file
+#' @param filename name of the BEAST2 .trees output file
+#' @return the phylogenies in the posterior
+#' @export
+#' @examples
+#'   trees_filename <- get_tracerer_path("beast2_example_output.trees")
+#'   posterior <- parse_beast_trees(trees_filename)
+#'   testit::assert(is_trees_posterior(posterior))
+#' @author Richel J.C. Bilderbeek
+#' @noRd
+parse_beast_trees_impl_2 <- function(
+  filename
+) {
+  beast2out.read.trees(filename)
 }
 
 
