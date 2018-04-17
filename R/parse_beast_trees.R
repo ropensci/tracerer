@@ -30,5 +30,6 @@ parse_beast_trees <- function(
 
 
   class(trees) <- "multiPhylo"
-  trees
+  # Use c to strip the state names and convert it to a pure multiPhylo
+  c(trees)
 }
