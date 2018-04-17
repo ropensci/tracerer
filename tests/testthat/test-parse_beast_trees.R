@@ -19,7 +19,10 @@ test_that("issue 4", {
 })
 
 
-test_that("https://github.com/richelbilderbeek/babette/issues/10", {
+test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
+
+  # Must be a clean multiPhylo
+  # https://github.com/richelbilderbeek/babette/issues/10
 
   filename <- get_tracerer_path("unplottable_anthus_aco.trees")
   trees <- parse_beast_trees(filename)
