@@ -19,6 +19,18 @@ test_that("issue 4", {
 })
 
 
+test_that("https://github.com/richelbilderbeek/babette/issues/10", {
+
+  skip("Expose bug")
+  filename <- get_tracerer_path("unplottable_anthus_aco.trees")
+  trees <- parse_beast_trees(filename)
+  testit::assert(
+    all(grepl(pattern = "STATE_", x = names(trees)) == FALSE)
+  )
+})
+
+
+
 test_that("abuse", {
 
   testthat::expect_error(
