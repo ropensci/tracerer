@@ -2,7 +2,7 @@
 
 ## Which version of BEAUti do you use as a guideline?
 
-Version 2.4.7.
+Version 2.4.8.
 
 ## How can I indicate a feature that I miss?
 
@@ -38,3 +38,19 @@ FASTA files `anthus_aco.fas` and `anthus_nd2.fas` from:
  * Van Els, Paul, and Heraldo V. Norambuena. "A revision of species limits in Neotropical pipits Anthus based on multilocus genetic and vocal data." Ibis.
 
 Thanks to Paul van Els.
+
+## Why the logo?
+
+Initially, the logo was a low-tech remake of Tracer, from the game Overwatch by Blizzard. 
+To prevent problems with Blizzard, a different logo was picked.
+
+The current logo shows an ant, an animal that leaves a trace of pheromones.
+The any is drawn by Jose Scholten, who kindly allowed her work to
+be used for free, by attribution.
+
+## How did you convert the fuzzy white background to one single color?
+
+```
+convert ant.png -fuzz 15% -fill white -opaque white ant_mono_background.png
+convert ant_mono_background.png -background white -alpha remove ant_mono_background_2.png
+```
