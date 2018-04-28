@@ -45,7 +45,7 @@ Initially, the logo was a low-tech remake of Tracer, from the game Overwatch by 
 To prevent problems with Blizzard, a different logo was picked.
 
 The current logo shows an ant, an animal that leaves a trace of pheromones.
-The any is drawn by Jose Scholten, who kindly allowed her work to
+The any is drawn by Jose Scholte, who kindly allowed her work to
 be used for free, by attribution.
 
 ## How did you convert the fuzzy white background to one single color?
