@@ -5,6 +5,8 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![AppVeyor
 master|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/tracerer)|[![Build status](https://ci.appveyor.com/api/projects/status/6ulxqop64tgbujch/branch/master?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tracerer/branch/master)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tracerer/branch/master)
 develop|[![Build Status](https://travis-ci.org/richelbilderbeek/tracerer.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/tracerer)|[![Build status](https://ci.appveyor.com/api/projects/status/6ulxqop64tgbujch/branch/develop?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tracerer/branch/develop)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tracerer/branch/develop)
 
+[![DOI](https://zenodo.org/badge/114987588.svg)](https://zenodo.org/badge/latestdoi/114987588)
+
 `tracerer`, 'Tracer for R' is an R package 
 to work with BEAST2 output files. 
 
