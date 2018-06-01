@@ -20,6 +20,7 @@ Imports:
   Rcpp,
   testit
 Suggests:
+    spelling,
   ape,
   geiger,
   ggplot2,
@@ -40,3 +41,4 @@ RoxygenNote: 6.0.1
 URL: https://github.com/richelbilderbeek/tracerer
 BugReports: https://github.com/richelbilderbeek/tracerer
 LinkingTo: Rcpp
+Language: en-US

@@ -48,7 +48,7 @@ Every state is a phylogeny:
 testit::assert(class(posterior_trees[[1]]) == "phylo")
 ```
 
-We can plot these all seperately:
+We can plot these all separately:
 
 ```{r}
 for (p in posterior_trees) {
