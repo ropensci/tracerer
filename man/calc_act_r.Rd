@@ -2,8 +2,8 @@
 % Please edit documentation in R/calc_act.R
 \name{calc_act_r}
 \alias{calc_act_r}
-\title{Calculate the auto-correlation time using only R. Consider using calc_act
-instead, as it is orders of magnitude faster}
+\title{Calculate the auto-correlation time using only R. Consider using
+\link{calc_act} instead, as it is orders of magnitude faster}
 \usage{
 calc_act_r(trace, sample_interval)
 }
@@ -16,8 +16,8 @@ calc_act_r(trace, sample_interval)
 the auto_correlation time
 }
 \description{
-Calculate the auto-correlation time using only R. Consider using calc_act
-instead, as it is orders of magnitude faster
+Calculate the auto-correlation time using only R. Consider using
+\link{calc_act} instead, as it is orders of magnitude faster
 }
 \examples{
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))

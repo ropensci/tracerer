@@ -18,7 +18,7 @@ to work with BEAST2 output files.
  * [beastier](https://github.com/richelbilderbeek/beastier) runs BEAST2
  * [tracerer](https://github.com/richelbilderbeek/tracerer) pastes BEAST2 output (`.log`, `.trees`, etc) files.
 
-Use [BEASTmasteR](https://github.com/nmatzke/BEASTmasteR) for tip-dating analyses using fossils as dated terminal taxa.
+Use [BEASTmasteR](https://github.com/nmatzke/BEASTmasteR) for tip-dating analyzes using fossils as dated terminal taxa.
 
 Use [RBeast](https://github.com/beast-dev/RBeast) for other things.
 

@@ -3,7 +3,7 @@
 \name{calc_act_cpp}
 \alias{calc_act_cpp}
 \title{Calculate the auto correlation time
-from https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159 # nolint}
+from \url{https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159} # nolint}
 \usage{
 calc_act_cpp(sample, sample_interval)
 }
@@ -17,7 +17,7 @@ the auto correlation time
 }
 \description{
 Calculate the auto correlation time
-from https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159 # nolint
+from \url{https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159} # nolint
 }
 \author{
 Richel J.C. Bilderbeek

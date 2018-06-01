@@ -1,5 +1,5 @@
-#' Calculate the auto-correlation time using only R. Consider using calc_act
-#' instead, as it is orders of magnitude faster
+#' Calculate the auto-correlation time using only R. Consider using
+#' \link{calc_act} instead, as it is orders of magnitude faster
 #' @param trace the values
 #' @param sample_interval the interval in timesteps between samples
 #' @return the auto_correlation time
