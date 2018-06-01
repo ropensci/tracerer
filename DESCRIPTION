@@ -23,6 +23,7 @@ Suggests:
   ape,
   geiger,
   ggplot2,
+  hunspell,
   knitr,
   phangorn,
   rbenchmark,
