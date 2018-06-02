@@ -13,7 +13,7 @@ calc_act_r(trace, sample_interval)
 \item{sample_interval}{the interval in timesteps between samples}
 }
 \value{
-the auto_correlation time
+the auto correlation time
 }
 \description{
 Calculate the auto-correlation time using only R. Consider using

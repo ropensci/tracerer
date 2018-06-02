@@ -2,7 +2,7 @@
 #' \link{calc_act} instead, as it is orders of magnitude faster
 #' @param trace the values
 #' @param sample_interval the interval in timesteps between samples
-#' @return the auto_correlation time
+#' @return the auto correlation time
 #' @examples
 #'   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
 #'   act <- calc_act_r(

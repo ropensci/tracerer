@@ -10,7 +10,8 @@ is_posterior(x)
 \item{x}{the input}
 }
 \value{
-TRUE or FALSE
+TRUE if the input contains all information of
+  a BEAST2 posterior. Returns FALSE otherwise.
 }
 \description{
 Determines if the input is a BEAST2 posterior

@@ -1,6 +1,7 @@
 #' Determines if the input is a BEAST2 posterior
 #' @param x the input
-#' @return TRUE or FALSE
+#' @return TRUE if the input contains all information of
+#'   a BEAST2 posterior. Returns FALSE otherwise.
 #' @author Richel J.C. Bilderbeek
 #' @examples
 #'   trees_filename <- get_tracerer_path("beast2_example_output.trees")

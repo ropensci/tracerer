@@ -1,5 +1,9 @@
-#' Extract the JSON lines out of a .xml.state file with the operators
+#' Extract the JSON lines out of a \code{.xml.state} with
+#'   the unparsed BEAST2 MCMC operator acceptances
+#' file with the operators
 #' @param filename name of the BEAST2 .xml.state output file
+#' @return the JSON lines of a \code{.xml.state} file with
+#'   the unparsed BEAST2 MCMC operator acceptances
 #' @export
 #' @author Richel J.C. Bilderbeek
 extract_operators_lines <- function(filename) {

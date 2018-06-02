@@ -2,15 +2,23 @@
 % Please edit documentation in R/extract_operators_lines.R
 \name{extract_operators_lines}
 \alias{extract_operators_lines}
-\title{Extract the JSON lines out of a .xml.state file with the operators}
+\title{Extract the JSON lines out of a \code{.xml.state} with
+  the unparsed BEAST2 MCMC operator acceptances
+file with the operators}
 \usage{
 extract_operators_lines(filename)
 }
 \arguments{
 \item{filename}{name of the BEAST2 .xml.state output file}
 }
+\value{
+the JSON lines of a \code{.xml.state} file with
+  the unparsed BEAST2 MCMC operator acceptances
+}
 \description{
-Extract the JSON lines out of a .xml.state file with the operators
+Extract the JSON lines out of a \code{.xml.state} with
+  the unparsed BEAST2 MCMC operator acceptances
+file with the operators
 }
 \author{
 Richel J.C. Bilderbeek

@@ -1,6 +1,7 @@
 #' Calculate the mode of values
 #' If the disribution is bi or multimodal or uniform, NA is returned
 #' @param values numeric vector to calculate the mode of
+#' @return the mode of the trace
 #' @author Richel J.C. Bilderbeek
 #' @examples
 #'   # In a unimodal distribution, find the value that occurs most

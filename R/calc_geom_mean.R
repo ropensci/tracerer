@@ -1,6 +1,6 @@
 #' Calculate the geometric mean
 #' @param values a numeric vector of values
-#' @return returns the geometrics mean if all values are at least zero,
+#' @return returns the geometric mean if all values are at least zero,
 #'   else returns NA
 #' @author Richel J.C. Bilderbeek
 #' @noRd

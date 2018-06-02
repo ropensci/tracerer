@@ -2,15 +2,18 @@
 % Please edit documentation in R/cs_std_dev.R
 \name{cs_std_dev}
 \alias{cs_std_dev}
-\title{Corrected Sample standard deviation}
+\title{Calculate the corrected sample standard deviation.}
 \usage{
 cs_std_dev(values)
 }
 \arguments{
 \item{values}{numeric values}
 }
+\value{
+the corrected sample standard deviation
+}
 \description{
-Corrected Sample standard deviation
+Calculate the corrected sample standard deviation.
 }
 \author{
 Richel J.C. Bilderbeek
