@@ -80,7 +80,7 @@ Sure, just add an Issue. Or send an email.
 
 Article about `babette`:
 
- * Bilderbeek, Richel J.C., Etienne, Rampal S., "babette: BEAUti 2, BEAST2 and Tracer for R". bioRxiv 271866; doi: https://doi.org/10.1101/271866
+ * Bilderbeek, Richèl J.C., Etienne, Rampal S., "babette: BEAUti 2, BEAST2 and Tracer for R". bioRxiv 271866; doi: https://doi.org/10.1101/271866
 
 FASTA files `anthus_aco.fas` and `anthus_nd2.fas` from:
  
