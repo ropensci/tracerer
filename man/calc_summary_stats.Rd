@@ -16,7 +16,7 @@ vector or, (2) a data frame of numeric values.}
 the summary statistics of the traces. If one numeric
   vector is supplied, a list is returned with the elements
   listed below. If the traces are supplied as a data frame,
-  a data frame is returned with the elemens listed
+  a data frame is returned with the elements listed
   below as column names.\cr
   The elements are:\cr
   \itemize{
