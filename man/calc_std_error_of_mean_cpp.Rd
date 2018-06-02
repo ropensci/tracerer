@@ -4,12 +4,10 @@
 \alias{calc_std_error_of_mean_cpp}
 \title{Calculates the standard error of the mean}
 \usage{
-calc_std_error_of_mean_cpp(sample, sample_interval)
+calc_std_error_of_mean_cpp(sample)
 }
 \arguments{
 \item{sample}{numeric vector of values}
-
-\item{sample_interval}{sample interval}
 }
 \value{
 the standard error of the mean

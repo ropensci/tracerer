@@ -3,12 +3,10 @@
 #include <cmath>
 #include <stdexcept>
 
-double calc_std_error_of_mean_cpp(const std::vector<double>& trace, const int sample_interval)
+double calc_std_error_of_mean_cpp(
+  const std::vector<double>& trace
+)
 {
-  if (sample_interval < 1) {
-    throw std::invalid_argument("sample interval must be at least one");
-  }
-
   // A constant I found in the original class
   const int max_lag = 2000;
 

@@ -78,7 +78,7 @@ calc_summary_stats_trace <- function(
 
   data.frame(
     mean = mean(trace),
-    stderr_mean = calc_stderr_mean(trace, sample_interval = sample_interval),
+    stderr_mean = calc_stderr_mean(trace),
     stdev = stats::sd(trace),
     variance = stats::var(trace),
     mode = mode,

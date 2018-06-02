@@ -3,10 +3,7 @@ context("calc_stderr_mean")
 test_that("use", {
 
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-  stderr_mean <- calc_stderr_mean(
-    trace = trace,
-    sample_interval = 1
-  )
+  stderr_mean <- calc_stderr_mean(trace)
   testthat::expect_equal(stderr_mean, expected = 0.4347425, tolerance = 0.0001)
 })
 
@@ -15,7 +12,7 @@ test_that("use, posterior", {
   estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
-  result <- tracerer:::calc_stderr_mean(trace$posterior, sample_interval = 1000)
+  result <- tracerer:::calc_stderr_mean(trace$posterior)
   testthat::expect_equivalent(0.5045, result, tolerance = 0.01)
 
 })
@@ -25,7 +22,7 @@ test_that("use, tree height", {
   estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
-  result <- tracerer:::calc_stderr_mean(trace$TreeHeight, sample_interval = 1000)
+  result <- tracerer:::calc_stderr_mean(trace$TreeHeight)
   testthat::expect_equivalent(0.144, result, tolerance = 0.01)
 
 })
@@ -33,13 +30,8 @@ test_that("use, tree height", {
 test_that("abuse", {
 
   testthat::expect_error(
-    tracerer:::calc_stderr_mean("nonsense", sample_interval = 1),
+    tracerer:::calc_stderr_mean("nonsense"),
     "'trace' must be numeric"
-  )
-
-  testthat::expect_error(
-    tracerer:::calc_stderr_mean(seq(1,5), sample_interval = -123),
-    "'sample_interval' must be at least one"
   )
 
 })

@@ -4,12 +4,10 @@
 \alias{calc_stderr_mean}
 \title{Calculate the standard error of the mean}
 \usage{
-calc_stderr_mean(trace, sample_interval)
+calc_stderr_mean(trace)
 }
 \arguments{
 \item{trace}{the values}
-
-\item{sample_interval}{the interval in timesteps between samples}
 }
 \value{
 the standard error of the mean
@@ -19,10 +17,7 @@ Calculate the standard error of the mean
 }
 \examples{
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-  stderr_mean <- calc_stderr_mean(
-    trace = trace,
-    sample_interval = 1
-  )
+  stderr_mean <- calc_stderr_mean(trace)
   testthat::expect_equal(stderr_mean, expected = 0.4347425, tolerance = 0.01)
 }
 \seealso{

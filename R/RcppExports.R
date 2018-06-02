@@ -13,10 +13,9 @@ calc_act_cpp <- function(sample, sample_interval) {
 
 #' Calculates the standard error of the mean
 #' @param sample numeric vector of values
-#' @param sample_interval sample interval
 #' @return the standard error of the mean
 #' @author Richel J.C. Bilderbeek
-calc_std_error_of_mean_cpp <- function(sample, sample_interval) {
-    .Call('_tracerer_calc_std_error_of_mean_cpp', PACKAGE = 'tracerer', sample, sample_interval)
+calc_std_error_of_mean_cpp <- function(sample) {
+    .Call('_tracerer_calc_std_error_of_mean_cpp', PACKAGE = 'tracerer', sample)
 }
 
