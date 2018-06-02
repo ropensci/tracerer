@@ -7,6 +7,15 @@ test_that("use", {
   testthat::expect_equal(stderr_mean, expected = 0.4347425, tolerance = 0.0001)
 })
 
+test_that("equivalent to suggestion of @bjoelle", {
+
+  skip("No, the BEAST2 implementation is different")
+  trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
+  stderr_mean_beast <- calc_stderr_mean(trace)
+  stderr_mean_bjoelle <- stats::sd(trace) / sqrt(length(trace))
+  testthat::expect_equal(stderr_mean_beast, stderr_mean_bjoelle)
+})
+
 test_that("use, posterior", {
 
   estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
