@@ -1,14 +1,34 @@
 #' Calculates the Effective Sample Sizes of one estimated variable's trace.
-#' @param traces one or more traces, supplies as either a numeric
-#'   vector or data frame or numeric vector of values.
-#'   Assumes the burn-in is removed.
+#' @param traces one or more traces, supplies as either, (1) a numeric
+#'   vector or, (2) a data frame of numeric values.
 #' @param sample_interval the interval in timesteps between samples
-#' @return the effective sample sizes
+#' @return the summary statistics of the traces. If one numeric
+#'   vector is supplied, a list is returned with the elements
+#'   listed below. If the traces are supplied as a data frame,
+#'   a data frame is returned with the elemens listed
+#'   below as column names.\cr
+#'   The elements are:\cr
+#'   \itemize{
+#'     \item{\code{mean}: mean}
+#'     \item{\code{stderr_mean}: standard error of the mean}
+#'     \item{\code{stdev}: standard deviation}
+#'     \item{\code{variance}: variance}
+#'     \item{\code{mode}: mode}
+#'     \item{\code{geom_mean}: geometric mean}
+#'     \item{\code{hpd_interval_low}: lower bound of 95\% highest posterior density}
+#'     \item{\code{hpd_interval_high}: upper bound of 95\% highest posterior density}
+#'     \item{\code{act}: auto correlation time}
+#'     \item{\code{ess}: effective sample size}
+#'   }
 #' @export
+#' @note This function assumes the burn-in is removed.
+#'   Use \code{\link{remove_burn_in}} (on a vector) or
+#'   \code{\link{remove_burn_ins}} (on a data frame) to remove
+#'   the burn-in.
 #' @seealso Use \code{\link{calc_summary_stats_trace}} to calculate the
-#'   ESS of one trace (stored as a numeric vector). Use
+#'   summary statistics of one trace (stored as a numeric vector). Use
 #'   \code{\link{calc_summary_stats_traces}} to calculate the
-#'   ESSes of more traces (stored as a data frame).
+#'   summary statistics of more traces (stored as a data frame).
 #' @examples
 #'   estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
 #'   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
