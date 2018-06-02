@@ -2,7 +2,15 @@
 #' @param trees_filenames one or more names of the BEAST2 .trees output files.
 #'   A BEAST2 run will create as much .trees files as there are alignments
 #' @param log_filename name of the BEAST2 .trees output file
-#' @return a posterior
+#' @return a list with the following elements:\cr
+#'   \itemize{
+#'     item{\code{estimates}: parameter estimates}
+#'     item{
+#'       \code{[alignment_id]_trees}: the phylogenies in the
+#'       BEAST2 posterior. \code{[alignment_id]} is the ID
+#'       of the alignment.
+#'     }
+#'   }
 #' @export
 #' @examples
 #'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")

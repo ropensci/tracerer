@@ -3,6 +3,18 @@
 #' @param trees_filenames name(s) of the BEAST2 .trees file(s) created.
 #'   BEAST2 will create one .trees file per alignment
 #' @param  state_filename name of the BEAST2 .xml.state file created
+#' @return a list with the following elements:\cr
+#'   \itemize{
+#'     item{\code{estimates}: parameter estimates}
+#'     item{
+#'       \code{[alignment_id]_trees}: the phylogenies in the
+#'       BEAST2 posterior. \code{[alignment_id]} is the ID
+#'       of the alignment.
+#'     }
+#'     item{\code{operators}: the BEAST2 MCMC operator
+#'       acceptances
+#'     }
+#'   }
 #' @export
 #' @examples
 #'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")

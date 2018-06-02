@@ -13,7 +13,15 @@ A BEAST2 run will create as much .trees files as there are alignments}
 \item{log_filename}{name of the BEAST2 .trees output file}
 }
 \value{
-a posterior
+a list with the following elements:\cr
+  \itemize{
+    item{\code{estimates}: parameter estimates}
+    item{
+      \code{[alignment_id]_trees}: the phylogenies in the
+      BEAST2 posterior. \code{[alignment_id]} is the ID
+      of the alignment.
+    }
+  }
 }
 \description{
 Parses BEAST2 output files to a posterior
