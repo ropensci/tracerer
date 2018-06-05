@@ -30,7 +30,7 @@ When loading `beast2_example_output.log` in Tracer, the following is displayed:
 
 ![Tracer output](tracer_example_output.png)
 
-Most promently, at the left, the effective sample sizes (ESSes) are shown.
+Most prominently, at the left, the effective sample sizes (ESSes) are shown.
 
 The show the ESSes using `tracerer`:
 
