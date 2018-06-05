@@ -93,10 +93,10 @@ ggplot2::ggplot(
 
 ```
 
-`tracerer` can also use part of `densitree`'s functionality.
-Here is `beast2_example_output.trees` displayed by `densitree`:
+`tracerer` can also use part of `DensiTree`'s functionality.
+Here is `beast2_example_output.trees` displayed by `DensiTree`:
 
-![densitree output](densitree_example_output.png)
+![DensiTree output](densitree_example_output.png)
 
 The same is achieved in `tracerer` with:
 

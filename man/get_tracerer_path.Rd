@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_path.R
 \name{get_tracerer_path}
 \alias{get_tracerer_path}
-\title{Get the full path of a file in the 'inst/extdata' folder}
+\title{Get the full path of a file in the \code{inst/extdata} folder}
 \usage{
 get_tracerer_path(filename)
 }
@@ -13,7 +13,7 @@ get_tracerer_path(filename)
 the full path to the filename
 }
 \description{
-Get the full path of a file in the 'inst/extdata' folder
+Get the full path of a file in the \code{inst/extdata} folder
 }
 \examples{
   testit::assert(is.character(get_tracerer_path("beast2_example_output.log")))
