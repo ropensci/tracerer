@@ -1,10 +1,10 @@
 ---
-title: "Profile calc_act"
+title: "Profile the calculation of the autocorrelation time"
 author: "Richel J.C. Bilderbeek"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Profile calc_act}
+  %\VignetteIndexEntry{Profile the calculation of the autocorrelation time}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

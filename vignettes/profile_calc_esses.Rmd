@@ -1,10 +1,10 @@
 ---
-title: "Profile calc_esses"
+title: "Profile the calculation of effective sample sizes"
 author: "Richel J.C. Bilderbeek"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Profile calc_esses}
+  %\VignetteIndexEntry{Profile the calculation of effective sample sizes}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
