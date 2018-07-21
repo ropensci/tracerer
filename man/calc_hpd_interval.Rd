@@ -34,7 +34,7 @@ Calculate the Highest Probability Density of an MCMC trace that
   testthat::expect_equivalent(1.816, hpd_interval[2], tolerance = 0.01)
 }
 \seealso{
-The function \link[remove_burn_in](remove_burn_in) removes
+The function \code{\link{remove_burn_in}} removes
   a burn-in.
   The Java code that inspired this function can be found here:
   \url{https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317} # nolint URLs can be long
