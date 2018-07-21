@@ -29,4 +29,6 @@ These are packages associated with 'tracerer':
     into a single workflow
   }
 }
+If something is (still) missing from \code{tracerer},
+the \code{coda} package may have the functionality you need.
 }
