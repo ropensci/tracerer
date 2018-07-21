@@ -1,7 +1,10 @@
 #' Calculates the Effective Sample Sizes of one estimated variable's trace.
 #' @param traces one or more traces, supplies as either, (1) a numeric
 #'   vector or, (2) a data frame of numeric values.
-#' @param sample_interval the interval in timesteps between samples
+#' @param sample_interval the interval (the number of state
+#'   transitions between samples) of the MCMC run that produced the trace.
+#'   Using a different \code{sample_interval} than the actually used
+#'   sampling interval will result in bogus return values.
 #' @return the summary statistics of the traces. If one numeric
 #'   vector is supplied, a list is returned with the elements
 #'   listed below. If the traces are supplied as a data frame,

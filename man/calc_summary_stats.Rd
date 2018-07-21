@@ -10,7 +10,10 @@ calc_summary_stats(traces, sample_interval)
 \item{traces}{one or more traces, supplies as either, (1) a numeric
 vector or, (2) a data frame of numeric values.}
 
-\item{sample_interval}{the interval in timesteps between samples}
+\item{sample_interval}{the interval (the number of state
+transitions between samples) of the MCMC run that produced the trace.
+Using a different \code{sample_interval} than the actually used
+sampling interval will result in bogus return values.}
 }
 \value{
 the summary statistics of the traces. If one numeric
