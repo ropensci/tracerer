@@ -2,7 +2,7 @@
 
 ## Which version of BEAUti do you use as a guideline?
 
-Version 2.4.8.
+Version 2.5.0, as can be found in the [install_beast2](https://github.com/richelbilderbeek/beastier/blob/master/R/install_beast2.R) function.
 
 ## How can I indicate a feature that I miss?
 
@@ -47,10 +47,3 @@ To prevent problems with Blizzard, a different logo was picked.
 The current logo shows an ant, an animal that leaves a trace of pheromones.
 The any is drawn by Jose Scholte, who kindly allowed her work to
 be used for free, by attribution.
-
-## How did you convert the fuzzy white background to one single color?
-
-```
-convert ant.png -fuzz 15% -fill white -opaque white ant_mono_background.png
-convert ant_mono_background.png -background white -alpha remove ant_mono_background_2.png
-```
