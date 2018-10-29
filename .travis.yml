@@ -27,6 +27,7 @@ after_success:
   - Rscript -e 'covr::codecov()'
   - Rscript -e 'goodpractice::gp()'
   - proselint *.md | egrep -v "typography\.symbols\.curly_quotes"
+  - cd scripts; ./build_cran
   # Disabled until CERT_UNTRUSTED is fixed
   #- ./check_dead_links
 
