@@ -5,9 +5,10 @@ os:
   - osx
   - linux
 
-# Workaround to get OSX build working,
-# from https://github.com/travis-ci/travis-ci/issues/10295
-fortran: false
+# Setting this to false is a workaround to get OSX build working,
+# from https://github.com/travis-ci/travis-ci/issues/10295,
+# but I do need Fortran:
+fortran: true
 
 r_packages:
   - devtools
