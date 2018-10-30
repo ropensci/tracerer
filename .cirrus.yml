@@ -1,6 +1,0 @@
-osx_instance:
-  image: high-sierra-xcode-10.0
-
-task:
-  script: 
-    - echo "Hello from MacOS"
