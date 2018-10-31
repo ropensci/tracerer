@@ -37,6 +37,9 @@ after_success:
   - Rscript -e 'goodpractice::gp()'
   - proselint *.md | egrep -v "typography\.symbols\.curly_quotes"
   - cd scripts; ./build_cran
+  - # No local files created
+  - egrep -oR "\"~" --include={*.R,*.Rmd}
+  - if [[ $(egrep -R "\"~" --include={*.R,*.Rmd}) ]]; then exit 1; fi
   # Disabled until CERT_UNTRUSTED is fixed
   #- ./check_dead_links
 
