@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tracerer 1.4.4 (2018-11-01)
+## tracerer 1.5.2 (2018-11-01)
 
 ### NEW FEATURES
 
@@ -11,6 +11,7 @@ Newest versions at top.
 ### MINOR IMPROVEMENTS
 
   * Tested to work on macOS
+  * Tests to not create local temporary files
 
 ### BUG FIXES
 
