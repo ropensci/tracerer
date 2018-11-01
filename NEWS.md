@@ -2,6 +2,24 @@
 
 Newest versions at top.
 
+## tracerer 1.4.4 (2018-11-01)
+
+### NEW FEATURES
+
+  * None
+
+### MINOR IMPROVEMENTS
+
+  * Tested to work on macOS
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 1.4.3 (2018-05-17)
 
 ### NEW FEATURES
