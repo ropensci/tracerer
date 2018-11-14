@@ -55,7 +55,7 @@ calc_esses <- function(
   testit::assert(names(df) == names(traces))
 
   # Round off values to nearest integers
-  df[1, ] <- as.integer(df[1, ] + 0.5)
+  df[1, ] <- as.integer(as.numeric(df[1, ]) + 0.5)
 
   df
 }
