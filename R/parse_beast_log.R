@@ -18,7 +18,7 @@ parse_beast_log <- function(
   filename
 ) {
   if (!file.exists(filename)) {
-    stop("file absent")
+    stop("file absent. Could not find file with path '", filename, "'.")
   }
 
   estimates <- utils::read.csv(

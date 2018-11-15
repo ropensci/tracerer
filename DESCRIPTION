@@ -35,7 +35,7 @@ Suggests:
   spelling,
   testthat
 VignetteBuilder: knitr
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 URL: https://github.com/richelbilderbeek/tracerer
 BugReports: https://github.com/richelbilderbeek/tracerer
 LinkingTo: Rcpp

@@ -19,6 +19,7 @@ parse_beast_trees <- function(
   }
 
   trees <- tryCatch({
+      # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
       ape::read.nexus(filename)
     },
     error = function(cond) {
