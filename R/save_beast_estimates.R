@@ -1,6 +1,8 @@
 #' Save the BEAST2 estimates as a BEAST2 \code{.log} file.
 #' There will be some differences: a BEAST2 \code{.log} file also saves
 #' the model as comments and formats the numbers in a way non-standard to R
+#' @param estimates a data frame of BEAST2 parameter estimates
+#' @param filename name of the \code{.log} file to save to
 #' @return nothing
 #' @seealso Use \code{\link{parse_beast_log}} to read a BEAST2 \code{.log} file
 #' @author Richel J.C. Bilderbeek

@@ -20,6 +20,10 @@ Parses a BEAST2 .trees output file
   posterior <- parse_beast_trees(trees_filename)
   testit::assert(is_trees_posterior(posterior))
 }
+\seealso{
+Use \code{\link{save_beast_trees}} to save the phylogenies
+  to a \code{.trees} file.
+}
 \author{
 Richel J.C. Bilderbeek
 }
