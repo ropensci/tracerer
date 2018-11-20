@@ -9,7 +9,7 @@ the model as comments and formats the numbers in a way non-standard to R}
 save_beast_trees(trees, filename)
 }
 \arguments{
-\item{trees}{BEAST2 posterior trees, of type \code{\link[ape]{multiPhylo}}}
+\item{trees}{BEAST2 posterior trees, of type \code{ape::multiPhylo}}
 
 \item{filename}{name of the \code{.trees} file to save to}
 }

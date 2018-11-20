@@ -33,6 +33,7 @@ Suggests:
   reshape2,
   rmarkdown,
   spelling,
+  stringr,
   testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
