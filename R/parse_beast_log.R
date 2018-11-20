@@ -1,6 +1,6 @@
-#' Parses a BEAST2 .log output file
+#' Parses a BEAST2 \code{.log} output file
 #' @param filename name of the BEAST2 .log output file
-#' @return data frame with all the parameter estimates
+#' @return data frame with the parameter estimates
 #' @export
 #' @examples
 #'   log_filename <- get_tracerer_path("beast2_example_output.log")
@@ -12,7 +12,9 @@
 #'   )
 #'   testit::assert(names(estimates) == expected_names)
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-in from
-#'   the returned parameter estimates
+#'   the returned parameter estimates.
+#'   Use \code{\link{save_beast_estimates}} to save the estimates
+#'   to a \code{.log} file.
 #' @author Richel J.C. Bilderbeek
 parse_beast_log <- function(
   filename

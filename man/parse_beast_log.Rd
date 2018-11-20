@@ -2,7 +2,7 @@
 % Please edit documentation in R/parse_beast_log.R
 \name{parse_beast_log}
 \alias{parse_beast_log}
-\title{Parses a BEAST2 .log output file}
+\title{Parses a BEAST2 \code{.log} output file}
 \usage{
 parse_beast_log(filename)
 }
@@ -10,10 +10,10 @@ parse_beast_log(filename)
 \item{filename}{name of the BEAST2 .log output file}
 }
 \value{
-data frame with all the parameter estimates
+data frame with the parameter estimates
 }
 \description{
-Parses a BEAST2 .log output file
+Parses a BEAST2 \code{.log} output file
 }
 \examples{
   log_filename <- get_tracerer_path("beast2_example_output.log")
@@ -27,7 +27,9 @@ Parses a BEAST2 .log output file
 }
 \seealso{
 Use \code{\link{remove_burn_ins}} to remove the burn-in from
-  the returned parameter estimates
+  the returned parameter estimates.
+  Use \code{\link{save_beast_estimates}} to save the estimates
+  to a \code{.log} file.
 }
 \author{
 Richel J.C. Bilderbeek
