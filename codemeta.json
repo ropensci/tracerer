@@ -228,10 +228,10 @@
     "https://www.appveyor.com",
     "https://www.codecov.io",
     "https://travis-ci.org/ropensci/tracerer",
-    "https://ci.appveyor.com/project/richelbilderbeek/tracerer",
+    "https://ci.appveyor.com/project/ropensci/tracerer",
     "https://codecov.io/github/ropensci/tracerer/branch/master",
     "https://travis-ci.org/ropensci/tracerer",
-    "https://ci.appveyor.com/project/richelbilderbeek/tracerer",
+    "https://ci.appveyor.com/project/ropensci/tracerer",
     "https://codecov.io/github/ropensci/tracerer/branch/develop"
   ],
   "citation": [
