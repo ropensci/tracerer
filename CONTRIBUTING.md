@@ -49,7 +49,7 @@ Pull Requests should follow the same guidelines as 'Submitting code'.
 To get started working on `tracerer` do:
 
 ```
-git clone https://github.com/richelbilderbeek/tracerer
+git clone https://github.com/ropensci/tracerer
 ```
 
 Development is done on the `develop` branch. 

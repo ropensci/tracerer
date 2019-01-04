@@ -43,5 +43,5 @@ after_failure:
   - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
   - Rscript -e 'goodpractice::gp()'
-  - cat /home/travis/build/richelbilderbeek/tracerer/..Rcheck/00install.out
-  - cat /home/travis/build/richelbilderbeek/tracerer/..Rcheck/00check.log
+  - cat /home/travis/build/ropensci/tracerer/..Rcheck/00install.out
+  - cat /home/travis/build/ropensci/tracerer/..Rcheck/00check.log
