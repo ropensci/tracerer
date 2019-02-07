@@ -35,5 +35,12 @@ parse_beast_trees <- function(
 
   class(trees) <- "multiPhylo"
   # Use c to strip the state names and convert it to a pure multiPhylo
-  c(trees)
+  trees <- c(trees)
+
+  # Check if it matches the file
+  n_trees_in_file <- tracerer::count_trees_in_file(filename)
+  n_trees_in_output <- length(trees)
+  testit::assert(n_trees_in_file == n_trees_in_output)
+
+  trees
 }

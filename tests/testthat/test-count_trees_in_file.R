@@ -25,4 +25,3 @@ test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
   expected <- length(parse_beast_trees(trees_filename))
   expect_equal(created, expected)
 })
-
