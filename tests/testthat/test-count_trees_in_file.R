@@ -20,7 +20,7 @@ test_that("issue 4", {
 
 test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
 
-  filename <- get_tracerer_path("unplottable_anthus_aco.trees")
+  trees_filename <- get_tracerer_path("unplottable_anthus_aco.trees")
   created <- count_trees_in_file(trees_filename)
   expected <- length(parse_beast_trees(trees_filename))
   expect_equal(created, expected)
