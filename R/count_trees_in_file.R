@@ -1,6 +1,6 @@
 #' Count the number of trees in a \code{.trees} file
 #' @inheritParams default_params_doc
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 count_trees_in_file <- function(trees_filename) {
   if (!file.exists(trees_filename)) {

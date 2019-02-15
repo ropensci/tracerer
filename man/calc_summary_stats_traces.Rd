@@ -36,5 +36,5 @@ Use \code{\link{remove_burn_ins}} to remove the burn-ins
   of all traces
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

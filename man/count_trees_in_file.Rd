@@ -13,5 +13,5 @@ count_trees_in_file(trees_filename)
 Count the number of trees in a \code{.trees} file
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -51,7 +51,7 @@
 #'   )
 #'
 #'   testit::assert("mean" %in% colnames(sum_stats))
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 calc_summary_stats <- function(
   traces,
   sample_interval
@@ -83,7 +83,7 @@ calc_summary_stats <- function(
 #'   )
 #'
 #'   testit::assert("mean" %in% names(sum_stats))
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 calc_summary_stats_trace <- function(
   trace,
   sample_interval
@@ -133,7 +133,7 @@ calc_summary_stats_trace <- function(
 #'   )
 #'
 #'   testit::assert("mean" %in% colnames(sum_stats))
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 calc_summary_stats_traces <- function(
   traces,
   sample_interval

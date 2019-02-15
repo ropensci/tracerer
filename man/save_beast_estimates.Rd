@@ -25,5 +25,5 @@ the model as comments and formats the numbers in a way non-standard to R
 Use \code{\link{parse_beast_log}} to read a BEAST2 \code{.log} file
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

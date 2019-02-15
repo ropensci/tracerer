@@ -32,5 +32,5 @@ Use \code{\link{remove_burn_ins}} to remove the burn-in from
   to a \code{.log} file.
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

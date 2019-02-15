@@ -30,7 +30,7 @@
 #'   testit::assert("operators" %in% names(out))
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-in from
 #'   \code{out$estimates}
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 parse_beast_output_files <- function(
   log_filename,
   trees_filenames,

@@ -6,7 +6,7 @@
 //' Calculates the standard error of the mean
 //' @param sample numeric vector of values
 //' @return the standard error of the mean
-//' @author Richel J.C. Bilderbeek
+//' @author Richèl J.C. Bilderbeek
 // [[Rcpp::export]]
 double calc_std_error_of_mean_cpp(
   const std::vector<double>& sample

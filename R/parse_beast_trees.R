@@ -9,7 +9,7 @@
 #' @seealso
 #'   Use \code{\link{save_beast_trees}} to save the phylogenies
 #'   to a \code{.trees} file.
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 parse_beast_trees <- function(
   filename
 ) {

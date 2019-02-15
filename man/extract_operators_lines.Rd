@@ -21,5 +21,5 @@ Extract the JSON lines out of a \code{.xml.state} with
 file with the operators
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -106,7 +106,7 @@ NULL
 #'   testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
 #' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
-#'   ported to R and adapted by Richel J.C. Bilderbeek
+#'   ported to R and adapted by Richèl J.C. Bilderbeek
 calc_act <- function(trace, sample_interval) {
   if (!is.numeric(trace)) {
     stop("trace must be numeric")

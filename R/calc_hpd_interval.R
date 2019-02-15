@@ -12,7 +12,7 @@
 #'   The Java code that inspired this function can be found here:
 #'   \url{https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from J. Heled,
-#'   ported to R and adapted by Richel J.C. Bilderbeek
+#'   ported to R and adapted by Richèl J.C. Bilderbeek
 #' @examples
 #'   estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
 #'   tree_height_trace <- remove_burn_in(

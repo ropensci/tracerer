@@ -17,7 +17,7 @@
 #'     "WilsonBalding.t", "BirthRateScaler.t", "DeathRateScaler.t")
 #'   testit::assert(names(estimates) == expected_names)
 #'   #testit::assert(estimates$operator == expected_operators)
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 parse_beast_state_operators <- function(
     filename = get_tracerer_path("beast2_example_output.xml.state")
 ) {

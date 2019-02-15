@@ -5,7 +5,7 @@
 #' @param filename name of the \code{.log} file to save to
 #' @return nothing
 #' @seealso Use \code{\link{parse_beast_log}} to read a BEAST2 \code{.log} file
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 save_beast_estimates <- function(
   estimates,

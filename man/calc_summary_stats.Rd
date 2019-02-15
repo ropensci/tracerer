@@ -71,5 +71,5 @@ Use \code{\link{calc_summary_stats_trace}} to calculate the
   summary statistics of more traces (stored as a data frame).
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

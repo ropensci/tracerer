@@ -25,5 +25,5 @@ Use \code{\link{save_beast_trees}} to save the phylogenies
   to a \code{.trees} file.
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

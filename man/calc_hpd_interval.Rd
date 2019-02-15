@@ -41,5 +41,5 @@ The function \code{\link{remove_burn_in}} removes
 }
 \author{
 The original Java version of the algorithm was from J. Heled,
-  ported to R and adapted by Richel J.C. Bilderbeek
+  ported to R and adapted by Richèl J.C. Bilderbeek
 }

@@ -31,5 +31,5 @@ Parses a BEAST2 .xml.state output file to get only the operators
   #testit::assert(estimates$operator == expected_operators)
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

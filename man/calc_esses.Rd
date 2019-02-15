@@ -38,5 +38,5 @@ Calculates the Effective Sample Sizes from a parsed BEAST2 log file
   testit::assert(all(esses == expected))
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

@@ -18,13 +18,13 @@ See [CONTRIBUTING](CONTRIBUTING.md), at 'Submitting bugs'
 
 ## How can I indicate something else?
 
-Submit an Issue. Or send an email to Richel Bilderbeek.
+Submit an Issue. Or send an email to Richèl Bilderbeek.
 
 ## How do I reference to this work?
 
 Cite:
 
- * Bilderbeek, Richel J.C., Etienne, Rampal S., "babette: BEAUti 2, BEAST2 and Tracer for R". bioRxiv 271866; doi: https://doi.org/10.1101/271866
+ * Bilderbeek, Richèl J.C., Etienne, Rampal S., "babette: BEAUti 2, BEAST2 and Tracer for R". bioRxiv 271866; doi: https://doi.org/10.1101/271866
 
 ## What is the idea behind the logo?
 

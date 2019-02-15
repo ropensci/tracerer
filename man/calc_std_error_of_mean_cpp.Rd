@@ -16,5 +16,5 @@ the standard error of the mean
 Calculates the standard error of the mean
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

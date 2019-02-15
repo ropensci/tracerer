@@ -13,7 +13,7 @@
 #'
 #'   # Check that the result goes from two to ten
 #'   testit::assert(w == seq(2, 10))
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 remove_burn_in <- function(trace, burn_in_fraction) {
   if (!is.numeric(trace)) {
     stop("'trace' must be numeric")

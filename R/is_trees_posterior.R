@@ -2,7 +2,7 @@
 #' as parsed by parse_beast_trees
 #' @param x the input
 #' @return TRUE or FALSE
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @export
 is_trees_posterior <- function(x) {
   class(x) == "multiPhylo"

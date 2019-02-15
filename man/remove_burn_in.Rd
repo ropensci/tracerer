@@ -29,5 +29,5 @@ Removed the burn-in from a trace
   testit::assert(w == seq(2, 10))
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

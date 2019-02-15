@@ -8,7 +8,7 @@
 //' @param sample sample
 //' @param sample_interval sample interval
 //' @return the auto correlation time
-//' @author Richel J.C. Bilderbeek
+//' @author Richèl J.C. Bilderbeek
 // [[Rcpp::export]]
 double calc_act_cpp(const std::vector<double>& sample, const int sample_interval);
 

@@ -16,5 +16,5 @@ the corrected sample standard deviation
 Calculate the corrected sample standard deviation.
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

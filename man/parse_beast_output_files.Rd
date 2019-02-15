@@ -49,5 +49,5 @@ Use \code{\link{remove_burn_ins}} to remove the burn-in from
   \code{out$estimates}
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

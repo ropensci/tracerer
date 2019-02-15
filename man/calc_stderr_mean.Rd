@@ -25,5 +25,5 @@ Java code can be found here: \url{https://github.com/beast-dev/beast-mcmc/blob/8
 }
 \author{
 The original Java version of the algorithm was from Remco Bouckaert,
-  ported to R and adapted by Richel J.C. Bilderbeek
+  ported to R and adapted by Richèl J.C. Bilderbeek
 }

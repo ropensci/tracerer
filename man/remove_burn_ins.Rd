@@ -20,5 +20,5 @@ the data frame with the burn-in removed
 Removed the burn-ins from a data frame
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

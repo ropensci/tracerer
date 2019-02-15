@@ -5,7 +5,7 @@
 #' @return the JSON lines of a \code{.xml.state} file with
 #'   the unparsed BEAST2 MCMC operator acceptances
 #' @export
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 extract_operators_lines <- function(filename) {
 
   if (!file.exists(filename)) {

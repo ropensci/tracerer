@@ -2,7 +2,7 @@
 #' @param x the input
 #' @return TRUE if the input contains all information of
 #'   a BEAST2 posterior. Returns FALSE otherwise.
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 #' @examples
 #'   trees_filename <- get_tracerer_path("beast2_example_output.trees")
 #'   log_filename <- get_tracerer_path("beast2_example_output.log")

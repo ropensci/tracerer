@@ -15,7 +15,7 @@
 #'   the returned parameter estimates.
 #'   Use \code{\link{save_beast_estimates}} to save the estimates
 #'   to a \code{.log} file.
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 parse_beast_log <- function(
   filename
 ) {

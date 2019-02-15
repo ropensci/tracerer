@@ -33,5 +33,5 @@ Get the full paths of files in the \code{inst/extdata} folder
 for one file, use \code{\link{get_tracerer_path}}
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

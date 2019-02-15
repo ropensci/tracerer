@@ -26,5 +26,5 @@ Determines if the input is a BEAST2 posterior
   testit::assert(is_posterior(posterior))
 }
 \author{
-Richel J.C. Bilderbeek
+Richèl J.C. Bilderbeek
 }

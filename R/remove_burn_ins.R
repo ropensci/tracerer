@@ -5,7 +5,7 @@
 #'   as of Tracer
 #' @return the data frame with the burn-in removed
 #' @export
-#' @author Richel J.C. Bilderbeek
+#' @author Richèl J.C. Bilderbeek
 remove_burn_ins <- function(
   traces,
   burn_in_fraction = 0.1
