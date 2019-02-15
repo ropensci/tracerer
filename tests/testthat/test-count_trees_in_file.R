@@ -8,6 +8,13 @@ test_that("use", {
   expect_equal(created, expected)
 })
 
+test_that("abuse", {
+  expect_error(
+    count_trees_in_file("abs.ent"),
+    "'trees_filename' absent"
+  )
+})
+
 
 test_that("issue 4", {
 
