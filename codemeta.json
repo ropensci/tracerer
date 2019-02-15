@@ -222,7 +222,6 @@
   ],
   "releaseNotes": "https://github.com/ropensci/tracerer/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/tracerer/blob/master/README.md",
-  "fileSize": "861.882KB",
   "contIntegration": [
     "https://travis-ci.org",
     "https://www.appveyor.com",
@@ -262,5 +261,9 @@
       }
     }
   ],
-  "keywords": ["r", "r-package", "rstats"]
+  "keywords": [
+    "r",
+    "r-package",
+    "rstats"
+  ]
 }
