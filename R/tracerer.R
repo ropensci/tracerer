@@ -17,9 +17,14 @@
 #'     BEAST2 from R
 #'   }
 #'   \item{
+#'     The package \code{mauricer} manages
+#'     BEAST2 packages from R
+#'   }
+#'   \item{
 #'     The package \code{babette} combines the
 #'     functionality of \code{beautier},
-#'     \code{beastier} and \code{tracerer}
+#'     \code{beastier}, \code{tracerer} and
+#'     \code{mauricer} and 
 #'     into a single workflow
 #'   }
 #' }
