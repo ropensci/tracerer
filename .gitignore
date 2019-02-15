@@ -1,7 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-inst/doc
 tests/testthat/*.trees
 tests/testthat/tmp_*
 tests/testthat/*.fasta
