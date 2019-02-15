@@ -14,18 +14,18 @@ to work with BEAST2 output files.
 
 ![tracerer logo](pics/tracerer_logo.png)
 
-`tracerer` is part of the [babette](https://github.com/ropensci/babette) package suite:
+`tracerer` is part of the [`babette`](https://github.com/ropensci/babette) package suite:
 
- * [beautier](https://github.com/ropensci/beautier) creates BEAST2 input (`.xml`) files.
- * [beastier](https://github.com/ropensci/beastier) runs BEAST2
- * [tracerer](https://github.com/ropensci/tracerer) pastes BEAST2 output (`.log`, `.trees`, etc) files.
+ * [`beautier`](https://github.com/ropensci/beautier) creates BEAST2 input (`.xml`) files.
+ * [`beastier`](https://github.com/ropensci/beastier) runs BEAST2
+ * [`tracerer`](https://github.com/ropensci/tracerer) pastes BEAST2 output (`.log`, `.trees`, etc) files.
 
 Related R packages:
 
- * [lumier](https://github.com/ropensci/lumier): Shiny app to help create the function call needed
- * [mauricer](https://github.com/ropensci/mauricer): install BEAST2 packages
- * [BEASTmasteR](https://github.com/nmatzke/BEASTmasteR): tip-dating using fossils as dated terminal taxa
- * [RBeast](https://github.com/beast-dev/RBeast): misc other things
+ * [`lumier`](https://github.com/ropensci/lumier): Shiny app to help create the function call needed
+ * [`mauricer`](https://github.com/ropensci/mauricer): install BEAST2 packages
+ * [`BEASTmasteR`](https://github.com/nmatzke/BEASTmasteR): tip-dating using fossils as dated terminal taxa
+ * [`RBeast`](https://github.com/beast-dev/RBeast): misc other things
 
 ## Example
 
@@ -85,7 +85,7 @@ Sure, just add an Issue. Or send an email.
 
 Article about `babette`:
 
- * Bilderbeek, Richèl JC, and Rampal S. Etienne. "babette: BEAUti 2, BEAST 2 and Tracer for R." Methods in Ecology and Evolution (2018). https://doi.org/10.1111/2041-210X.13032
+ * Bilderbeek, Richèl JC, and Rampal S. Etienne. "`babette`: BEAUti 2, BEAST 2 and Tracer for R." Methods in Ecology and Evolution (2018). https://doi.org/10.1111/2041-210X.13032
 
 FASTA files `anthus_aco.fas` and `anthus_nd2.fas` from:
  
