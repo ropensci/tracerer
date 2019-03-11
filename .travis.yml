@@ -19,7 +19,6 @@ r_github_packages:
   - jimhester/covr
   - jimhester/lintr
   - MangoTheCat/goodpractice
-  - KlausVigo/phangorn
   - ropensci/spelling
 
 before_install:
