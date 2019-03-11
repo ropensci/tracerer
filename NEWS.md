@@ -2,6 +2,25 @@
 
 Newest versions at top.
 
+## tracerer 2.0.1 (2019-03-08)
+
+### NEW FEATURES
+
+  * `tracerer` has passed rOpenSci peer review
+  * `tracerer` is on CRAN
+
+### MINOR IMPROVEMENTS
+
+  * None
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 1.5.2 (2018-11-01)
 
 ### NEW FEATURES
