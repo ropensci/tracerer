@@ -18,6 +18,18 @@ test_that("issue 4", {
   )
 })
 
+test_that("mcbette issue #8", {
+
+  if (1 == 2) {
+    # The file lacks 'End;' as the last line
+    filename <- get_tracerer_path("mcbette_issue_8.trees")
+    trees <- parse_beast_trees(filename)
+    expect_silent(
+      phangorn::densiTree(trees)
+    )
+  }
+})
+
 
 test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
 
