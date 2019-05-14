@@ -25,8 +25,11 @@ parse_beast_trees <- function(
       # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
       ape::read.nexus(filename)
     },
-    error = function(cond) {
-      stop("invalid file")
+    error = function(e) {
+      stop(
+        "invalid file '", filename, "' \n",
+        "error message: ", e$message
+      )
     }
   )
 
