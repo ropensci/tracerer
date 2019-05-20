@@ -18,6 +18,18 @@ test_that("use", {
   expect_equal(trees_1, trees_2)
 })
 
+test_that("use", {
+
+  trees_filename <- tempfile(fileext = ".trees")
+  trees <- c(ape::rcoal(n = 10))
+  for (i in seq(100000)) {
+    trees <- c(trees, ape::rcoal(n = 10))
+  }
+  save_beast_trees(trees = trees, filename = trees_filename)
+  readLines(trees_filename)
+  expect_true(is_trees_file(trees_filename))
+})
+
 test_that("abuse", {
 
   trees <- c(ape::read.tree(text = "((A,B),C);"))
