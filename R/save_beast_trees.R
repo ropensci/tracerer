@@ -20,4 +20,6 @@ save_beast_trees <- function(
     stop("'filename' must have at least one character")
   }
   ape::write.nexus(phy = trees, file = filename)
+
+  testit::assert(is_trees_file(filename))
 }

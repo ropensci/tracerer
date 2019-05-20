@@ -10,7 +10,7 @@ is_trees_file(trees_filename, verbose = FALSE)
 \item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
 }
 \value{
-the phylogenies in the posterior
+TRUE if \code{trees_filename} is a valid \code{.trees} file
 }
 \description{
 Measure if a file a valid BEAST2 \code{.trees} file
@@ -21,8 +21,7 @@ Measure if a file a valid BEAST2 \code{.trees} file
   testit::assert(is_trees_posterior(posterior))
 }
 \seealso{
-Use \code{\link{save_beast_trees}} to save the phylogenies
-  to a \code{.trees} file.
+Most of the work is done by \link[ape]{read.nexus}
 }
 \author{
 Richèl J.C. Bilderbeek

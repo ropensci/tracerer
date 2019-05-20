@@ -13,6 +13,10 @@ test_that("abuse", {
     count_trees_in_file("abs.ent"),
     "'trees_filename' absent"
   )
+  expect_error(
+    count_trees_in_file(get_tracerer_path("mcbette_issue_8.trees")),
+    "'trees_filename' invalid"
+  )
 })
 
 

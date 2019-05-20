@@ -1,14 +1,13 @@
 #' Measure if a file a valid BEAST2 \code{.trees} file
 #' @inheritParams default_params_doc
-#' @return the phylogenies in the posterior
+#' @return TRUE if \code{trees_filename} is a valid \code{.trees} file
 #' @export
 #' @examples
 #'   trees_filename <- get_tracerer_path("beast2_example_output.trees")
 #'   posterior <- parse_beast_trees(trees_filename)
 #'   testit::assert(is_trees_posterior(posterior))
 #' @seealso
-#'   Use \code{\link{save_beast_trees}} to save the phylogenies
-#'   to a \code{.trees} file.
+#'   Most of the work is done by \link[ape]{read.nexus}
 #' @author Richèl J.C. Bilderbeek
 is_trees_file <- function(
   trees_filename,
@@ -20,6 +19,18 @@ is_trees_file <- function(
       "Filename '", trees_filename, "' not found"
     )
   }
+
+  # Do not warn about 'incomplete final line found on ...'
+  lines <- readLines(trees_filename, warn = FALSE)
+  last_line <- lines[length(lines)]
+  # BEAST2 saves as 'End;', where ape saves as 'END;'
+  if (last_line != "End;" && last_line != "END;") {
+    if (verbose) {
+        print("Error message: last line should be 'End;'")
+    }
+    return(FALSE)
+  }
+
   is_valid <- FALSE
 
   tryCatch({

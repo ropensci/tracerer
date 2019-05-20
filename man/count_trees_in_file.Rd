@@ -9,8 +9,16 @@ count_trees_in_file(trees_filename)
 \arguments{
 \item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
 }
+\value{
+the number of trees
+}
 \description{
 Count the number of trees in a \code{.trees} file
+}
+\seealso{
+if the \code{.trees} file is invalid,
+  use \link{is_trees_file} with \code{verbose = TRUE}
+  for the reason
 }
 \author{
 Richèl J.C. Bilderbeek

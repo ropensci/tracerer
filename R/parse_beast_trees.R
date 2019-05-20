@@ -22,6 +22,7 @@ parse_beast_trees <- function(
 
   trees <- tryCatch({
       # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
+      # Do not use force.multi, as STATE_ will be lost
       ape::read.nexus(filename)
     },
     error = function(e) {
@@ -32,6 +33,7 @@ parse_beast_trees <- function(
     }
   )
 
+  testit::assert(is_trees_file(filename)) # nolint tracerer function
   testit::assert(length(trees) != 1 || !is.na(trees))
 
 
