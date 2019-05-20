@@ -13,7 +13,6 @@
 parse_beast_trees <- function(
   filename
 ) {
-
   if (!file.exists(filename)) {
     stop(
       "'filename' is the name of an absent file. ",
