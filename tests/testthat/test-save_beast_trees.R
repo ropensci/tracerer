@@ -18,16 +18,22 @@ test_that("use", {
   expect_equal(trees_1, trees_2)
 })
 
-test_that("use", {
+test_that("stress-test", {
 
-  trees_filename <- tempfile(fileext = ".trees")
-  trees <- c(ape::rcoal(n = 10))
-  for (i in seq(100000)) {
-    trees <- c(trees, ape::rcoal(n = 10))
+  # 'save_beast_trees' can hold 16384 trees
+  # and store it as a 4.915468 Mb file without problems
+  if (beastier::is_on_travis()) {
+    trees_filename <- tempfile(fileext = ".trees")
+    trees <- c(ape::rcoal(n = 10))
+    for (i in seq(14)) {
+      print(i)
+      trees <- c(trees, trees)
+      save_beast_trees(trees = trees, filename = trees_filename)
+      expect_true(is_trees_file(trees_filename))
+      print(paste(length(trees), "trees"))
+      print(paste(file.size(trees_filename) / 1000000, "Mb"))
+    }
   }
-  save_beast_trees(trees = trees, filename = trees_filename)
-  readLines(trees_filename)
-  expect_true(is_trees_file(trees_filename))
 })
 
 test_that("abuse", {
