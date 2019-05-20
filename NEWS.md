@@ -2,6 +2,26 @@
 
 Newest versions at top.
 
+## tracerer 2.0.2 (To be released)
+
+### NEW FEATURES
+
+  * Increased error checking in saving and loading `.trees` files
+
+### MINOR IMPROVEMENTS
+
+  * None
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
+
+
 ## tracerer 2.0.1 (2019-03-08)
 
 ### NEW FEATURES
