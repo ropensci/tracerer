@@ -22,7 +22,7 @@ test_that("stress-test", {
 
   # 'save_beast_trees' can hold 16384 trees
   # and store it as a 4.915468 Mb file without problems
-  if (beastier::is_on_travis()) {
+  if (1 == 2) {
     trees_filename <- tempfile(fileext = ".trees")
     trees <- c(ape::rcoal(n = 10))
     for (i in seq(14)) {
