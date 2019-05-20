@@ -9,6 +9,8 @@
 #' @seealso
 #'   Use \code{\link{save_beast_trees}} to save the phylogenies
 #'   to a \code{.trees} file.
+#'   Use \link{is_trees_file} with \code{verbose = TRUE} to find out
+#'   why a file is invalid
 #' @author Richèl J.C. Bilderbeek
 parse_beast_trees <- function(
   filename

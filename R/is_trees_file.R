@@ -8,6 +8,14 @@
 #'   testit::assert(is_trees_posterior(posterior))
 #' @seealso
 #'   Most of the work is done by \link[ape]{read.nexus}
+#' @examples
+#' library(testthat)
+#'
+#' expect_true(is_trees_file(get_tracerer_path("beast2_example_output.trees")))
+#' expect_true(is_trees_file(get_tracerer_path("unplottable_anthus_aco.trees")))
+#' expect_true(is_trees_file(get_tracerer_path("anthus_2_4_a.trees")))
+#' expect_true(is_trees_file(get_tracerer_path("anthus_2_4_b.trees")))
+#' expect_false(is_trees_file(get_tracerer_path("mcbette_issue_8.trees")))
 #' @author Richèl J.C. Bilderbeek
 is_trees_file <- function(
   trees_filename,

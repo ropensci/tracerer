@@ -8,6 +8,8 @@ is_trees_file(trees_filename, verbose = FALSE)
 }
 \arguments{
 \item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
+
+\item{verbose}{set to TRUE for more output}
 }
 \value{
 TRUE if \code{trees_filename} is a valid \code{.trees} file
@@ -19,6 +21,13 @@ Measure if a file a valid BEAST2 \code{.trees} file
   trees_filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(trees_filename)
   testit::assert(is_trees_posterior(posterior))
+library(testthat)
+
+expect_true(is_trees_file(get_tracerer_path("beast2_example_output.trees")))
+expect_true(is_trees_file(get_tracerer_path("unplottable_anthus_aco.trees")))
+expect_true(is_trees_file(get_tracerer_path("anthus_2_4_a.trees")))
+expect_true(is_trees_file(get_tracerer_path("anthus_2_4_b.trees")))
+expect_false(is_trees_file(get_tracerer_path("mcbette_issue_8.trees")))
 }
 \seealso{
 Most of the work is done by \link[ape]{read.nexus}
