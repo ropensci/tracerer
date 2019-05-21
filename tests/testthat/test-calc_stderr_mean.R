@@ -8,8 +8,11 @@ test_that("use", {
 })
 
 test_that("equivalent to suggestion of @bjoelle", {
-
-  skip("No, the BEAST2 implementation is different")
+  return()
+  # @bjoelle suggested to use 'stats::sd(trace) / sqrt(length(trace))'
+  # instead of using 'calc_stderr_mean', as her suggestion is
+  # indeed simpler. Too bad, the BEAST2 implementation is different
+  # (as used by 'calc_stderr_mean') is different and leading
   trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
   stderr_mean_beast <- calc_stderr_mean(trace)
   stderr_mean_bjoelle <- stats::sd(trace) / sqrt(length(trace))
