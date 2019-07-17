@@ -8,6 +8,15 @@ test_that("use", {
   expect_equal(length(posterior), 11)
 })
 
+test_that("detect missing 'End;'", {
+
+  filename <- get_tracerer_path("missing_end.trees")
+  expect_error(
+    parse_beast_trees(filename),
+    "Expect 'End;' \\(BEAST2\\) or 'END;' \\(ape::write.nexus\\) at the end of .trees file" # nolint indeed a long error message
+  )
+})
+
 
 test_that("issue 4", {
 
@@ -56,7 +65,7 @@ test_that("abuse", {
     parse_beast_trees(
       filename = get_tracerer_path("beast2_example_output.log")
     ),
-    "invalid file"
+    "Expect 'End;' \\(BEAST2\\) or 'END;' \\(ape::write.nexus\\) at the end of .trees file" # nolint indeed a long error message
   )
 
 })
