@@ -19,9 +19,9 @@ Description: 'BEAST2' (<http://www.beast2.org>) is a widely used
 License: GPL-3 | file LICENSE
 LazyData: TRUE
 Imports:
-  jsonlite,
-  Rcpp,
-  testit
+    jsonlite,
+    Rcpp,
+    testit
 Suggests:
     ape,
     geiger,
