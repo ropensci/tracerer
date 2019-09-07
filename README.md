@@ -6,11 +6,10 @@
 [![](http://cranlogs.r-pkg.org/badges/tracerer)](https://CRAN.R-project.org/package=tracerer)
 [![DOI](https://zenodo.org/badge/114987588.svg)](https://zenodo.org/badge/latestdoi/114987588)
 
-Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![AppVeyor logo](pics/AppVeyor.png)](https://www.appveyor.com)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
----|---|---|---
-master|[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=master)](https://travis-ci.org/ropensci/tracerer)|[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/tracerer?branch=master&svg=true)](https://ci.appveyor.com/project/ropensci/tracerer)|[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=master)](https://codecov.io/github/ropensci/tracerer/branch/master)
-develop|[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=develop)](https://travis-ci.org/ropensci/tracerer)|[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/tracerer?branch=develop&svg=true)](https://ci.appveyor.com/project/ropensci/tracerer)|[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/ropensci/tracerer/branch/develop)
-
+Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)                                                         | [![AppVeyor logo](pics/AppVeyor.png)](https://www.appveyor.com)                                                                                                                            |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
+---------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------
+`master` |[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=master)](https://travis-ci.org/ropensci/tracerer) | [![Build status](https://ci.appveyor.com/api/projects/status/jyhck66d6yrbr12h/branch/master?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tracerer-on-windows/branch/master) |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=master)](https://codecov.io/github/ropensci/tracerer/branch/master)
+`develop`|[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=develop)](https://travis-ci.org/ropensci/tracerer)| None                                                                                                                                                                                       |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/ropensci/tracerer/branch/develop)
 
 `tracerer`, 'Tracer for R' is an R package 
 to work with BEAST2 output files. 
@@ -21,14 +20,15 @@ to work with BEAST2 output files.
 
  * [`beautier`](https://github.com/ropensci/beautier) creates BEAST2 input (`.xml`) files.
  * [`beastier`](https://github.com/ropensci/beastier) runs BEAST2
+ * [`mauricer`](https://github.com/ropensci/mauricer): install BEAST2 packages
  * [`tracerer`](https://github.com/ropensci/tracerer) pastes BEAST2 output (`.log`, `.trees`, etc) files.
 
 Related R packages:
 
  * [`lumier`](https://github.com/ropensci/lumier): Shiny app to help create the function call needed
- * [`mauricer`](https://github.com/ropensci/mauricer): install BEAST2 packages
  * [`BEASTmasteR`](https://github.com/nmatzke/BEASTmasteR): tip-dating using fossils as dated terminal taxa
  * [`RBeast`](https://github.com/beast-dev/RBeast): misc other things
+ * [`tracerer_on_windows`](https://github.com/richelbilderbeek/tracerer_on_windows): verifies `tracerer` builds on Windows
 
 ## Example
 
