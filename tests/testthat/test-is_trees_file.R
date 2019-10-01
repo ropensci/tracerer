@@ -38,3 +38,13 @@ test_that("use on invalid file, with added verbosity", {
   )
 
 })
+
+test_that("use on absent file", {
+
+  # The file lacks 'End;' as the last line
+  expect_error(
+    is_trees_file(tempfile(pattern = "absent")),
+    "'trees_filename' is the name of an absent file"
+  )
+
+})

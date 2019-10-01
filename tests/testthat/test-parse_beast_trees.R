@@ -27,16 +27,23 @@ test_that("issue 4", {
   )
 })
 
-test_that("mcbette issue #8", {
+test_that("Last line must be End or END, mcbette issue #8", {
 
-  if (1 == 2) {
-    # The file lacks 'End;' as the last line
-    filename <- get_tracerer_path("mcbette_issue_8.trees")
-    trees <- parse_beast_trees(filename)
-    expect_silent(
-      phangorn::densiTree(trees)
-    )
-  }
+  filename <- get_tracerer_path("mcbette_issue_8.trees")
+  expect_error(
+    parse_beast_trees(filename),
+    "Expect 'End;' .BEAST2. or 'END;' .ape::write.nexus. at the end of .trees"
+  )
+})
+
+test_that("Invalid file that does end with End", {
+
+  filename <- tempfile(pattern = ".trees")
+  writeLines(text = c("invalid", "End;"), con = filename, sep = "\n")
+  expect_error(
+    parse_beast_trees(filename),
+    "invalid file"
+  )
 })
 
 
