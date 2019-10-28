@@ -28,7 +28,7 @@ parse_beast_posterior <- function(
   log_filename
 ) {
 
-  if (!files_exist(trees_filenames)) {
+  if (!all(file.exists(trees_filenames))) {
     stop("'trees_filenames' must be the name of one or more existing files. ",
       "File(s) with name(s) '", trees_filenames, "' not found")
   }
