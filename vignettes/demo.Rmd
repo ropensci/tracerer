@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+![](tracerer_logo.png)
 
 `tracerer`: 'Tracer for R' is an R package that does the same as
 Tracer does, from within R. 
