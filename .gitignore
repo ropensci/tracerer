@@ -9,3 +9,4 @@ tests/testthat/*.xml
 tmp_*
 tests/testthat/Rplots.pdf
 scripts/build/
+doc
