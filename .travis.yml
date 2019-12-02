@@ -32,7 +32,6 @@ before_script:
   - # Java
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R CMD javareconf; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
-  - ./install_beast2
   # proselint
   - sudo pip install proselint
   # markdown-link-check, disabled until CERT_UNTRUSTED is fixed
@@ -52,8 +51,5 @@ after_success:
   #- ./check_dead_links
 
 after_failure:
-  - Rscript -e 'lintr::lint_package()'
-  - Rscript -e 'covr::codecov()'
-  - Rscript -e 'goodpractice::gp()'
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00install.out
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00check.log
