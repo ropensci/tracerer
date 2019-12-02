@@ -1,5 +1,6 @@
 language: r
 dist: bionic
+cache: packages
 
 matrix:
   include:
@@ -7,10 +8,8 @@ matrix:
     os: linux
   - r: devel
     os: linux
-  - r: release
-    os: osx
-
-cache: packages
+  #- r: release
+  #  os: osx
 
 r_packages:
   - devtools
