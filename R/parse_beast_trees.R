@@ -29,8 +29,9 @@ parse_beast_trees <- function(
   if (last_line != "End;" && last_line != "END;") {
     stop(
       "Expect 'End;' (BEAST2) or 'END;' (ape::write.nexus) at the ",
-      "end of .trees file \n",
-      "Actual value: ", last_line
+      "end of .trees file. \n",
+      "Actual value: '", last_line, "'. \n",
+      "Filename: '", filename, "'"
     )
   }
 
