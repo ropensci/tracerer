@@ -58,6 +58,17 @@ parse_beast_trees <- function(
   # Check if it matches the file
   n_trees_in_file <- tracerer::count_trees_in_file(filename)
   n_trees_in_output <- length(trees)
+  if (n_trees_in_file != n_trees_in_output) {
+    stop(
+      "Different number of trees parsed than expected. ",
+      "n_trees_in_file: ", n_trees_in_file, ". ",
+      "n_trees_in_output: ", n_trees_in_output, ". ",
+      "inference_model$mcmc$treelog$filename: ",
+      inference_model$mcmc$treelog$filename, ". ",
+      "File content: ",
+      paste0(readLines(inference_model$mcmc$treelog$filename), collapse = "\n")
+    )
+  }
   testit::assert(n_trees_in_file == n_trees_in_output)
 
   trees
