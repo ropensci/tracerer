@@ -63,10 +63,10 @@ parse_beast_trees <- function(
       "Different number of trees parsed than expected. ",
       "n_trees_in_file: ", n_trees_in_file, ". ",
       "n_trees_in_output: ", n_trees_in_output, ". ",
-      "inference_model$mcmc$treelog$filename: ",
-      inference_model$mcmc$treelog$filename, ". ",
+      "filename: ",
+      filename, ". ",
       "File content: ",
-      paste0(readLines(inference_model$mcmc$treelog$filename), collapse = "\n")
+      paste0(readLines(filename), collapse = "\n")
     )
   }
   testit::assert(n_trees_in_file == n_trees_in_output)
