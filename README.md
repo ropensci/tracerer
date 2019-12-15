@@ -6,7 +6,7 @@
 [![](http://cranlogs.r-pkg.org/badges/tracerer)](https://CRAN.R-project.org/package=tracerer)
 [![DOI](https://zenodo.org/badge/114987588.svg)](https://zenodo.org/badge/latestdoi/114987588)
 
-Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)                                                         | [![AppVeyor logo](pics/AppVeyor.png)](https://www.appveyor.com)                                                                                                                            |[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
+Branch   |[![Travis CI logo](man/figures/TravisCI.png)](https://travis-ci.org)                                                  | [![AppVeyor logo](man/figures/AppVeyor.png)](https://www.appveyor.com)                                                                                                                     |[![Codecov logo](man/figures/Codecov.png)](https://www.codecov.io)
 ---------|----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------
 `master` |[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=master)](https://travis-ci.org/ropensci/tracerer) | [![Build status](https://ci.appveyor.com/api/projects/status/jyhck66d6yrbr12h/branch/master?svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tracerer-on-windows/branch/master) |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=master)](https://codecov.io/github/ropensci/tracerer/branch/master)
 `develop`|[![Build Status](https://travis-ci.org/ropensci/tracerer.svg?branch=develop)](https://travis-ci.org/ropensci/tracerer)| None                                                                                                                                                                                       |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/ropensci/tracerer/branch/develop)
@@ -14,7 +14,7 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)         
 `tracerer`, 'Tracer for R' is an R package 
 to work with BEAST2 output files. 
 
-![tracerer logo](pics/tracerer_logo.png)
+![tracerer logo](man/figures/tracerer_logo.png)
 
 `tracerer` is part of the [`babette`](https://github.com/ropensci/babette) package suite:
 
