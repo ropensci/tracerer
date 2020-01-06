@@ -2,6 +2,25 @@
 
 Newest versions at top.
 
+## tracerer 2.0.3 (2020-01-06)
+
+### NEW FEATURES
+
+  * None
+
+### MINOR IMPROVEMENTS
+
+  * Documentation at [rOpenSci](https://docs.ropensci.org/tracerer) to
+    shows pictures
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 2.0.2 (2019-12-02)
 
 ### NEW FEATURES
@@ -20,8 +39,6 @@ Newest versions at top.
 ### DEPRECATED AND DEFUNCT
 
   * None
-
-
 
 ## tracerer 2.0.1 (2019-03-08)
 
