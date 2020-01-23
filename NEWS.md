@@ -2,6 +2,24 @@
 
 Newest versions at top.
 
+## tracerer 2.0.4 (unreleased)
+
+### NEW FEATURES
+
+  * None
+
+### MINOR IMPROVEMENTS
+
+  * Removed needless dependency on the geiger package
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 2.0.3 (2020-01-06)
 
 ### NEW FEATURES
