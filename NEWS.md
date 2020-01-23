@@ -10,7 +10,7 @@ Newest versions at top.
 
 ### MINOR IMPROVEMENTS
 
-  * Removed needless dependency on the geiger package
+  * Removed needless dependency on `geiger`
 
 ### BUG FIXES
 
