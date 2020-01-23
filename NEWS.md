@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tracerer 2.0.4 (unreleased)
+## tracerer 2.0.4 (2020-01-23)
 
 ### NEW FEATURES
 
