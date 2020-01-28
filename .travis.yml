@@ -22,8 +22,6 @@ before_install:
   # PDF
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo tlmgr update --self; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo tlmgr install inconsolata; fi
-  # No idea
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install libgit2; fi
 
 before_script:
   - # Java
