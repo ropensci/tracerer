@@ -2,6 +2,24 @@
 
 Newest versions at top.
 
+## tracerer 2.0.5 (unreleased)
+
+### NEW FEATURES
+
+  * None
+
+### MINOR IMPROVEMENTS
+
+  * Use https of BEAST2 website
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 2.0.4 (2020-01-23)
 
 ### NEW FEATURES
