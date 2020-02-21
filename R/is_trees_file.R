@@ -48,7 +48,7 @@ is_trees_file <- function(
     },
     error = function(e) {
       if (verbose) {
-        print(paste("Error message:", e$message))
+        message("Error message: ", e$message)
       }
     }
   )

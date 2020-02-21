@@ -17,22 +17,22 @@ test_that("use on invalid file", {
 test_that("use on invalid file, with added verbosity", {
 
   # The file lacks 'End;' as the last line
-  expect_output(
+  expect_message(
     tracerer::is_trees_file(trees_filename = get_tracerer_path("mcbette_issue_8.trees"), verbose = TRUE),
     "last line should be 'End;'"
   )
 
-  expect_output(
+  expect_message(
     is_trees_file(get_tracerer_path("beast2_example_output.log"), verbose = TRUE),
     "last line should be 'End;'"
   )
 
-  expect_output(
+  expect_message(
     is_trees_file(get_tracerer_path("beast2_example_output.xml"), verbose = TRUE),
     "last line should be 'End;'"
   )
 
-  expect_output(
+  expect_message(
     is_trees_file(get_tracerer_path("beast2_example_output.xml.state"), verbose = TRUE),
     "last line should be 'End;'"
   )
@@ -54,7 +54,7 @@ test_that("evil file", {
   text <- c("nonsense", "End;")
   writeLines(text, trees_filename)
 
-  expect_output(
+  expect_message(
     is_trees_file(trees_filename, verbose = TRUE),
     "Error message: argument of length 0"
   )
