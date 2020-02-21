@@ -34,7 +34,7 @@ is_trees_file <- function(
   # BEAST2 saves as 'End;', where ape saves as 'END;'
   if (last_line != "End;" && last_line != "END;") {
     if (verbose) {
-        print("last line should be 'End;'")
+        message("last line should be 'End;'")
     }
     return(FALSE)
   }
