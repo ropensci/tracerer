@@ -10,6 +10,7 @@ Newest versions at top.
 
 ### MINOR IMPROVEMENTS
 
+  * Use `message` instead of `print`
   * Use https of BEAST2 website
 
 ### BUG FIXES
