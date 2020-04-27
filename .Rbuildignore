@@ -2,7 +2,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis.yml$
-^.lintr$
+^\.lintr$
+^\.github$
 ^Codecov\.png$
 ^TravisCI\.png$
 ^install_beast2$
@@ -11,6 +12,7 @@
 ^scripts$
 ^code_of_conduct\.md$
 ^CONTRIBUTING\.md$
+^LICENSE$
 ^faq.md$
 ^check_dead_links$
 ^appveyor\.yml$
