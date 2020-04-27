@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tracerer 2.0.5 (unreleased)
+## tracerer 2.1
 
 ### NEW FEATURES
 
@@ -15,7 +15,7 @@ Newest versions at top.
 
 ### BUG FIXES
 
-  * None
+  * `calc_summary_stats` shows median. Thanks to Hongkai Zhang, @HKyleZhang
 
 ### DEPRECATED AND DEFUNCT
 

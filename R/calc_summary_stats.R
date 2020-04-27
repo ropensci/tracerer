@@ -57,9 +57,12 @@ calc_summary_stats <- function(
   sample_interval
 ) {
   if(is.data.frame(traces)) {
-    calc_summary_stats_traces(traces, sample_interval = sample_interval)
+    tracerer::calc_summary_stats_traces(traces, sample_interval = sample_interval)
   } else if (is.vector(traces, mode = "numeric")) {
-    calc_summary_stats_trace(traces, sample_interval = sample_interval)
+    tracerer::calc_summary_stats_trace(
+      trace = traces,
+      sample_interval = sample_interval
+    )
   } else {
     stop("'traces' must be a either a numeric vector or a data frame")
   }
@@ -104,6 +107,7 @@ calc_summary_stats_trace <- function(
     stderr_mean = calc_stderr_mean(trace),
     stdev = stats::sd(trace),
     variance = stats::var(trace),
+    median = stats::median(trace),
     mode = mode,
     geom_mean = geom_mean,
     hpd_interval_low = hpd_interval[1],
@@ -145,7 +149,7 @@ calc_summary_stats_traces <- function(
   Sample <- NULL # To prevent 'Undefined global functions or variables'
   traces <- subset(traces, select = -Sample) # nolint use uppercase variable name just like BEAST2
 
-  n_sum_stats <- 10
+  n_sum_stats <- 11
 
   df <- data.frame(matrix(NA, nrow = length(colnames(traces)), ncol = n_sum_stats))
   colnames(df) <- names(calc_summary_stats_trace(traces[, 1], sample_interval))

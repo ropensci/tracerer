@@ -3,7 +3,6 @@
 \docType{package}
 \name{tracerer}
 \alias{tracerer}
-\alias{tracerer-package}
 \title{\code{tracerer}: A package to parse BEAST2 output files.}
 \description{
 \code{tracerer} allows to parse BEAST2 input files, using
