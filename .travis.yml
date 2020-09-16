@@ -18,8 +18,6 @@ r_github_packages:
   - ropensci/spelling
 
 before_install:
-  # From https://stackoverflow.com/a/20042195
-  - Rscript -e "update.packages(checkBuilt = TRUE, ask = FALSE)"
   # PDF
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo tlmgr update --self; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo tlmgr install inconsolata; fi
