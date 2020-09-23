@@ -7,8 +7,9 @@ matrix:
     os: linux
   - r: devel
     os: linux
-  - r: release
-    os: osx
+  # No OSX, due to 'sudo tlmgr update --self' taking too long
+  #- r: release
+  #  os: osx
 
 r_github_packages:
   - jimhester/covr
