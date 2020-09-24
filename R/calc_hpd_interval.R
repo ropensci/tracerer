@@ -14,15 +14,14 @@
 #' @author The original Java version of the algorithm was from J. Heled,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
 #' @examples
-#'   estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
-#'   tree_height_trace <- remove_burn_in(
-#'     estimates$TreeHeight,
-#'     burn_in_fraction = 0.1
-#'   )
+#' estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+#' tree_height_trace <- remove_burn_in(
+#'   estimates$TreeHeight,
+#'   burn_in_fraction = 0.1
+#' )
 #'
-#'   hpd_interval <- calc_hpd_interval(tree_height_trace, proportion = 0.95)
-#'   testthat::expect_equivalent(0.453, hpd_interval[1], tolerance = 0.01)
-#'   testthat::expect_equivalent(1.816, hpd_interval[2], tolerance = 0.01)
+#' # Values will be 0.453 and 1.816
+#' hpd_interval <- calc_hpd_interval(tree_height_trace, proportion = 0.95)
 #' @export
 calc_hpd_interval <- function(trace, proportion = 0.95) {
 

@@ -9,7 +9,6 @@
 #' @seealso
 #'   Most of the work is done by \link[ape]{read.nexus}
 #' @examples
-#' library(testthat)
 #'
 #' expect_true(is_trees_file(get_tracerer_path("beast2_example_output.trees")))
 #' expect_true(is_trees_file(get_tracerer_path("unplottable_anthus_aco.trees")))
