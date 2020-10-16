@@ -43,11 +43,11 @@ after_success:
   # Do a CRAN build
   - cd scripts; ./build_cran
   # Download thesis
-  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
+  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 
 after_failure:
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00install.out
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00check.log
   # Download thesis
-  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
+  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
 
