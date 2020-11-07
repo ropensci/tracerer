@@ -36,7 +36,8 @@ Suggests:
     testthat (>= 2.1.0)
 VignetteBuilder: knitr
 RoxygenNote: 7.1.0
-URL: https://docs.ropensci.org/tracerer/, https://github.com/ropensci/tracerer/
+URL: https://docs.ropensci.org/tracerer/ (website)
+    https://github.com/ropensci/tracerer/
 BugReports: https://github.com/ropensci/tracerer/issues
 LinkingTo: Rcpp
 Language: en-US
