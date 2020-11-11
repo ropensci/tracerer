@@ -26,12 +26,12 @@ test_that("stress-test", {
     trees_filename <- tempfile(fileext = ".trees")
     trees <- c(ape::rcoal(n = 10))
     for (i in seq(14)) {
-      print(i)
+      message(i)
       trees <- c(trees, trees)
       save_beast_trees(trees = trees, filename = trees_filename)
       expect_true(is_trees_file(trees_filename))
-      print(paste(length(trees), "trees"))
-      print(paste(file.size(trees_filename) / 1000000, "Mb"))
+      message(paste(length(trees), "trees"))
+      message(paste(file.size(trees_filename) / 1000000, "Mb"))
     }
   }
 })
