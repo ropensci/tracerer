@@ -2,6 +2,24 @@
 
 Newest versions at top.
 
+## tracerer 2.2 (unreleased)
+
+### NEW FEATURES
+
+  * Use the GitHub Actions continuous integration service
+
+### MINOR IMPROVEMENTS
+
+  * None
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
 ## tracerer 2.1 (2020-04-27)
 
 ### NEW FEATURES
