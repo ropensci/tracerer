@@ -45,11 +45,11 @@ after_success:
   # Do a CRAN build
   - cd scripts; ./build_cran
   # Download and delete thesis
-  - wget -q https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf ; rm Complete_thesis.pdf
+  - wget -q https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf ; rm Complete_thesis.pdf
 
 after_failure:
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00install.out
   - cat /home/travis/build/ropensci/tracerer/..Rcheck/00check.log
   # Download and delete thesis
-  - wget -q https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf ; rm Complete_thesis.pdf
+  - wget -q https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf ; rm Complete_thesis.pdf
 
