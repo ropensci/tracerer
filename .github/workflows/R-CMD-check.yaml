@@ -43,5 +43,5 @@ jobs:
       - name: Lint
         run: lintr::expect_lint_free()
         shell: Rscript {0}
-        if: matrix.os == 'macos-latest'
+        if: matrix.os == 'ubuntu-latest'
 
