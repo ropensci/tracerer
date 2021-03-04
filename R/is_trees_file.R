@@ -3,18 +3,15 @@
 #' @return TRUE if \code{trees_filename} is a valid \code{.trees} file
 #' @export
 #' @examples
-#'   trees_filename <- get_tracerer_path("beast2_example_output.trees")
-#'   posterior <- parse_beast_trees(trees_filename)
-#'   testit::assert(is_trees_posterior(posterior))
+#' # TRUE
+#' is_trees_file(get_tracerer_path("beast2_example_output.trees"))
+#' is_trees_file(get_tracerer_path("unplottable_anthus_aco.trees"))
+#' is_trees_file(get_tracerer_path("anthus_2_4_a.trees"))
+#' is_trees_file(get_tracerer_path("anthus_2_4_b.trees"))
+#' # FALSE
+#' is_trees_file(get_tracerer_path("mcbette_issue_8.trees"))
 #' @seealso
 #'   Most of the work is done by \link[ape]{read.nexus}
-#' @examples
-#' # TRUE
-#' is_trees_file(get_tracerer_path("beast2_example_output.trees")))
-#' is_trees_file(get_tracerer_path("unplottable_anthus_aco.trees")))
-#' is_trees_file(get_tracerer_path("anthus_2_4_a.trees")))
-#' is_trees_file(get_tracerer_path("anthus_2_4_b.trees")))
-#' is_trees_file(get_tracerer_path("mcbette_issue_8.trees")))
 #' @author Richèl J.C. Bilderbeek
 is_trees_file <- function(
   trees_filename,
