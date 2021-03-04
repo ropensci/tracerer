@@ -20,12 +20,8 @@ Calculate the auto-correlation time using only R. Consider using
 \link{calc_act} instead, as it is orders of magnitude faster
 }
 \examples{
-  trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
-  act <- calc_act_r(
-    trace = trace,
-    sample_interval = 1
-  )
-  testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
+trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
+calc_act_r(trace = trace, sample_interval = 1) # 38.18202
 }
 \seealso{
 Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
