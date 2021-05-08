@@ -27,6 +27,7 @@ Suggests:
     ggplot2,
     hunspell,
     knitr,
+    markdown,
     phangorn,
     rbenchmark,
     reshape2,
