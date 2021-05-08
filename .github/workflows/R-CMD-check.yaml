@@ -49,6 +49,6 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
 
       - name: Lint
-        if: runner.os == 'Linux'
-        run: lintr::expect_lint_free()
-        shell: Rscript {0}
+        run: Rscript -e 'lintr::lint_package()'
+        if: matrix.os == 'ubuntu-latest'
+
