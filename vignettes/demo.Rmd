@@ -102,7 +102,6 @@ Here is `beast2_example_output.trees` displayed by `DensiTree`:
 
 The same is achieved in `tracerer` with:
 
-
 ```{r fig.width=7, fig.height=7}
 trees <- parse_beast_trees(
   get_tracerer_path("beast2_example_output.trees")
