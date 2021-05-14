@@ -21,5 +21,5 @@ save_beast_trees <- function(
   }
   ape::write.nexus(phy = trees, file = filename)
 
-  testit::assert(is_trees_file(filename))
+  testit::assert(tracerer::is_trees_file(filename))
 }

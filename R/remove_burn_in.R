@@ -15,9 +15,7 @@
 #'   testit::assert(w == seq(2, 10))
 #' @author Richèl J.C. Bilderbeek
 remove_burn_in <- function(trace, burn_in_fraction) {
-  if (!is.numeric(trace)) {
-    stop("'trace' must be numeric")
-  }
+  tracerer::check_trace(trace)
   if (burn_in_fraction < 0.0) {
     stop("'burn_in_fraction' must be at least zero")
   }

@@ -14,9 +14,6 @@ NULL
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
 calc_stderr_mean <- function(trace) {
-
-  if (!is.numeric(trace)) {
-    stop("'trace' must be numeric")
-  }
+  tracerer::check_trace(trace)
   calc_std_error_of_mean_cpp(trace) # nolint internal function
 }

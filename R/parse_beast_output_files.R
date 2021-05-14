@@ -40,7 +40,7 @@ parse_beast_output_files <- function(
     trees_filenames = trees_filenames,
     log_filename = log_filename
   )
-  out$operators <- parse_beast_state_operators(
+  out$operators <- tracerer::parse_beast_state_operators(
     state_filename
   )
   out

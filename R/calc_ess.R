@@ -37,9 +37,7 @@
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
 calc_ess <- function(trace, sample_interval) {
-  if (!is.numeric(trace)) {
-    stop("trace must be numeric")
-  }
+  tracerer::check_trace(trace)
   if (sample_interval < 1) {
     stop("sample interval must be at least one")
   }

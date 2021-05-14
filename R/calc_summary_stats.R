@@ -98,16 +98,16 @@ calc_summary_stats_trace <- function(
     stop("'trace' must be a numeric vector")
   }
   # use string "n/a" instead of NA
-  geom_mean <- calc_geom_mean(trace)
+  geom_mean <- tracerer::calc_geom_mean(trace)
   geom_mean <- ifelse(is.na(geom_mean), "n/a", geom_mean)
-  mode <- calc_mode(trace)
+  mode <- tracerer::calc_mode(trace)
   mode <- ifelse(is.na(mode), "n/a", mode)
 
-  hpd_interval <- calc_hpd_interval(trace)
+  hpd_interval <- tracerer::calc_hpd_interval(trace)
 
   data.frame(
     mean = mean(trace),
-    stderr_mean = calc_stderr_mean(trace),
+    stderr_mean = tracerer::calc_stderr_mean(trace),
     stdev = stats::sd(trace),
     variance = stats::var(trace),
     median = stats::median(trace),
@@ -157,11 +157,13 @@ calc_summary_stats_traces <- function(
   df <- data.frame(
     matrix(NA, nrow = length(colnames(traces)), ncol = n_sum_stats)
   )
-  colnames(df) <- names(calc_summary_stats_trace(traces[, 1], sample_interval))
+  colnames(df) <- names(
+    tracerer::calc_summary_stats_trace(traces[, 1], sample_interval)
+  )
   rownames(df) <- names(traces)
 
   for (i in seq_along(colnames(traces))) {
-    df[i, ] <- calc_summary_stats_trace(traces[, i], sample_interval)
+    df[i, ] <- tracerer::calc_summary_stats_trace(traces[, i], sample_interval)
   }
   df
 }
