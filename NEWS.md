@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tracerer 2.2 (unreleased)
+## tracerer 2.2
 
 ### NEW FEATURES
 
@@ -10,7 +10,7 @@ Newest versions at top.
 
 ### MINOR IMPROVEMENTS
 
-  * None
+  * Update documentation
 
 ### BUG FIXES
 
@@ -18,7 +18,8 @@ Newest versions at top.
 
 ### DEPRECATED AND DEFUNCT
 
-  * None
+  * `parse_beast_log` will be deprecated and gives a warning. 
+    Use `parse_beast_tracelog_file` instead"
 
 ## tracerer 2.1 (2020-04-27)
 
