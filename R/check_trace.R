@@ -6,6 +6,6 @@
 #' check_trace(seq(1, 2))
 check_trace <- function(trace) {
   if (!is.numeric(trace)) {
-    stop("trace must be numeric")
+    stop("'trace' must be numeric")
   }
 }

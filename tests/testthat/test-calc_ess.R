@@ -56,7 +56,7 @@ test_that("calc_ess: abuse", {
 
   expect_error(
     calc_ess(trace = "not numeric", sample_interval = 1),
-    "trace must be numeric"
+    "'trace' must be numeric"
   )
 
   expect_error(

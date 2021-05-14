@@ -13,7 +13,7 @@ test_that("abuse", {
 
   testthat::expect_error(
     calc_act_r(trace = "not numeric", sample_interval = 1),
-    "trace must be numeric"
+    "'trace' must be numeric"
   )
 
   testthat::expect_error(
