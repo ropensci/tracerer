@@ -7,7 +7,8 @@
 count_trees_in_file(trees_filename)
 }
 \arguments{
-\item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
+\item{trees_filename}{name of a BEAST2 posterior \code{.trees} file,
+as can be read using \link{parse_beast_trees}}
 }
 \value{
 the number of trees

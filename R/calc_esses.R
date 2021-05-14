@@ -4,7 +4,7 @@
 #' @return the effective sample sizes
 #' @examples
 #'   # Parse an example log file
-#'   estimates_all <- parse_beast_log(
+#'   estimates_all <- parse_beast_tracelog_file(
 #'     get_tracerer_path("beast2_example_output.log")
 #'   )
 #'

@@ -2,7 +2,7 @@ context("calc_esses")
 
 test_that("calc_esses: use", {
 
-  estimates_all <- parse_beast_log(
+  estimates_all <- parse_beast_tracelog_file(
     get_tracerer_path("beast2_example_output.log")
   )
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)

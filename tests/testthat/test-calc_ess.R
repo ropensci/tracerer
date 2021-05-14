@@ -5,7 +5,7 @@ test_that("exanple usage", {
   filename <- get_tracerer_path("beast2_example_output.log")
 
   # Parse the file as-is and conclude the sampling interval
-  df <- tracerer::parse_beast_log(
+  df <- parse_beast_tracelog_file(
     filename = filename
   )
   sample_interval <- df$Sample[2] - df$Sample[1] # nolint use uppercase variable name just like BEAST2
@@ -34,7 +34,9 @@ test_that("exanple usage", {
 
 test_that("use, posterior", {
 
-  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates <- parse_beast_tracelog_file(
+    get_tracerer_path("beast2_example_output.log")
+  )
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_ess(trace$posterior, sample_interval = 1000)
@@ -44,7 +46,9 @@ test_that("use, posterior", {
 
 test_that("use, tree height", {
 
-  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates <- parse_beast_tracelog_file(
+    get_tracerer_path("beast2_example_output.log")
+  )
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_ess(trace$TreeHeight, sample_interval = 1000)

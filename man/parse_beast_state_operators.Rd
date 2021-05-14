@@ -2,33 +2,31 @@
 % Please edit documentation in R/parse_beast_state.R
 \name{parse_beast_state_operators}
 \alias{parse_beast_state_operators}
-\title{Parses a BEAST2 .xml.state output file to get only the operators
+\title{Parses a BEAST2 state \code{.xml.state} output file to get only the operators
   acceptances}
 \usage{
 parse_beast_state_operators(
-    filename = get_tracerer_path("beast2_example_output.xml.state")
-  )
+  state_filename = get_tracerer_path("beast2_example_output.xml.state"),
+  filename = "deprecated"
+)
 }
 \arguments{
-\item{filename}{name of the BEAST2 .xml.state output file}
+\item{state_filename}{name of the BEAST2 state \code{.xml.state} output file}
+
+\item{filename}{deprecated name of the BEAST2 .xml.state output file,
+use \code{state_filename} instead}
 }
 \value{
 data frame with all the operators' success rates
 }
 \description{
-Parses a BEAST2 .xml.state output file to get only the operators
+Parses a BEAST2 state \code{.xml.state} output file to get only the operators
   acceptances
 }
 \examples{
-  xml_state_filename <- get_tracerer_path("beast2_example_output.xml.state")
-  estimates <- parse_beast_state_operators(filename = xml_state_filename)
-  expected_names <- c("operator", "p", "accept", "reject", "acceptFC",
-    "rejectFC", "rejectIv", "rejectOp")
-  expected_operator <- c("treeScaler.t", "treeRootScaler.t",
-    "UniformOperator.t", "SubtreeSlide.t", "narrow.t", "wide.t",
-    "WilsonBalding.t", "BirthRateScaler.t", "DeathRateScaler.t")
-  testit::assert(names(estimates) == expected_names)
-  #testit::assert(estimates$operator == expected_operators)
+parse_beast_state_operators(
+  state_filename = get_tracerer_path("beast2_example_output.xml.state")
+)
 }
 \author{
 Richèl J.C. Bilderbeek

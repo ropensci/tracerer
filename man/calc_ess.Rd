@@ -21,7 +21,7 @@ Calculates the Effective Sample Size
   filename <- get_tracerer_path("beast2_example_output.log")
 
  # Parse the file as-is and conclude the sampling interval
- df <- parse_beast_log(filename)
+ df <- parse_beast_tracelog_file(filename)
  sample_interval <- df$Sample[2] - df$Sample[1] # nolint BEAST2 style
 
  # Only keep the parameter estimates,

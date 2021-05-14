@@ -6,14 +6,37 @@
 This function does nothing.
 It is intended to inherit function argument documentation.}
 \usage{
-default_params_doc(sample_interval, trace, trees_filename, verbose)
+default_params_doc(
+  log_filename,
+  sample_interval,
+  state_filename,
+  trace,
+  tracelog_filename,
+  trees_filename,
+  trees_filenames,
+  verbose
+)
 }
 \arguments{
+\item{log_filename}{deprecated name
+of the BEAST2 tracelog \code{.log} output file.
+Use \code{tracelog_filename} instead}
+
 \item{sample_interval}{the interval in timesteps between samples}
+
+\item{state_filename}{name of the BEAST2 state \code{.xml.state} output file}
 
 \item{trace}{the values}
 
-\item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
+\item{tracelog_filename}{name of the BEAST2 tracelog \code{.log} output file,
+as can be read using \link{parse_beast_tracelog_file}}
+
+\item{trees_filename}{name of a BEAST2 posterior \code{.trees} file,
+as can be read using \link{parse_beast_trees}}
+
+\item{trees_filenames}{the names of one or more a BEAST2
+posterior \code{.trees} file.
+Each \code{.trees} file can be read using \link{parse_beast_trees}}
 
 \item{verbose}{set to TRUE for more output}
 }

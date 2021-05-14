@@ -35,7 +35,7 @@
 #'   \code{\link{calc_summary_stats_traces}} to calculate the
 #'   summary statistics of more traces (stored as a data frame).
 #' @examples
-#' estimates_all <- parse_beast_log(
+#' estimates_all <- parse_beast_tracelog_file(
 #'   get_tracerer_path("beast2_example_output.log")
 #' )
 #' estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
@@ -80,7 +80,7 @@ calc_summary_stats <- function(
 #' @seealso Use \code{\link{remove_burn_in}} to remove the burn-in
 #'   of a trace
 #' @examples
-#' estimates_all <- parse_beast_log(
+#' estimates_all <- parse_beast_tracelog_file(
 #'   get_tracerer_path("beast2_example_output.log")
 #' )
 #' estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
@@ -131,7 +131,7 @@ calc_summary_stats_trace <- function(
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-ins
 #'   of all traces
 #' @examples
-#' estimates_all <- parse_beast_log(
+#' estimates_all <- parse_beast_tracelog_file(
 #'   get_tracerer_path("beast2_example_output.log")
 #' )
 #' estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)

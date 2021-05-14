@@ -2,7 +2,9 @@ context("calc_geom_mean")
 
 test_that("use, posterior", {
 
-  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates <- parse_beast_tracelog_file(
+    get_tracerer_path("beast2_example_output.log")
+  )
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- "nonsense"
@@ -15,7 +17,7 @@ test_that("use, posterior", {
 
 test_that("use, tree height", {
 
-  estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates <- parse_beast_tracelog_file(get_tracerer_path("beast2_example_output.log"))
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- "nonsense"

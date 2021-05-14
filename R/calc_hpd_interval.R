@@ -14,7 +14,9 @@
 #' @author The original Java version of the algorithm was from J. Heled,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
 #' @examples
-#' estimates <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+#' estimates <- parse_beast_tracelog_file(
+#'   get_tracerer_path("beast2_example_output.log")
+#' )
 #' tree_height_trace <- remove_burn_in(
 #'   estimates$TreeHeight,
 #'   burn_in_fraction = 0.1

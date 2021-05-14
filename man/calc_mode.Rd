@@ -3,7 +3,7 @@
 \name{calc_mode}
 \alias{calc_mode}
 \title{Calculate the mode of values
-If the disribution is bi or multimodal or uniform, NA is returned}
+If the distribution is bi or multimodal or uniform, NA is returned}
 \usage{
 calc_mode(values)
 }
@@ -15,7 +15,7 @@ the mode of the trace
 }
 \description{
 Calculate the mode of values
-If the disribution is bi or multimodal or uniform, NA is returned
+If the distribution is bi or multimodal or uniform, NA is returned
 }
 \examples{
 # In a unimodal distribution, find the value that occurs most

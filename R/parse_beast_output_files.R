@@ -1,8 +1,5 @@
 #' Parse all BEAST2 output files
-#' @param log_filename name of the BEAST2 .log file
-#' @param trees_filenames name(s) of the BEAST2 .trees file(s) created.
-#'   BEAST2 will create one .trees file per alignment
-#' @param  state_filename name of the BEAST2 .xml.state file created
+#' @inheritParams default_params_doc
 #' @return a list with the following elements:\cr
 #'   \itemize{
 #'     item{\code{estimates}: parameter estimates}
@@ -38,7 +35,7 @@ parse_beast_output_files <- function(
 ) {
   out <- tracerer::parse_beast_posterior(
     trees_filenames = trees_filenames,
-    log_filename = log_filename
+    tracelog_filename = log_filename
   )
   out$operators <- tracerer::parse_beast_state_operators(
     state_filename

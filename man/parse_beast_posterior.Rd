@@ -4,13 +4,23 @@
 \alias{parse_beast_posterior}
 \title{Parses BEAST2 output files to a posterior}
 \usage{
-parse_beast_posterior(trees_filenames, log_filename)
+parse_beast_posterior(
+  trees_filenames,
+  tracelog_filename,
+  log_filename = "deprecated"
+)
 }
 \arguments{
-\item{trees_filenames}{one or more names of the BEAST2 .trees output files.
-A BEAST2 run will create as much .trees files as there are alignments}
+\item{trees_filenames}{the names of one or more a BEAST2
+posterior \code{.trees} file.
+Each \code{.trees} file can be read using \link{parse_beast_trees}}
 
-\item{log_filename}{name of the BEAST2 .trees output file}
+\item{tracelog_filename}{name of the BEAST2 tracelog \code{.log} output file,
+as can be read using \link{parse_beast_tracelog_file}}
+
+\item{log_filename}{deprecated name
+of the BEAST2 tracelog \code{.log} output file.
+Use \code{tracelog_filename} instead}
 }
 \value{
 a list with the following elements:\cr
@@ -27,13 +37,12 @@ a list with the following elements:\cr
 Parses BEAST2 output files to a posterior
 }
 \examples{
-  trees_filenames <- get_tracerer_path("beast2_example_output.trees")
-  log_filename <- get_tracerer_path("beast2_example_output.log")
-  posterior <- parse_beast_posterior(
-    trees_filenames = trees_filenames,
-    log_filename = log_filename
-  )
-  testit::assert(is_posterior(posterior))
+trees_filenames <- get_tracerer_path("beast2_example_output.trees")
+tracelog_filename <- get_tracerer_path("beast2_example_output.log")
+posterior <- parse_beast_posterior(
+  trees_filenames = trees_filenames,
+  tracelog_filename = tracelog_filename
+)
 }
 \seealso{
 Use \code{\link{remove_burn_ins}} to remove the burn-ins from

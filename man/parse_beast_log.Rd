@@ -2,34 +2,33 @@
 % Please edit documentation in R/parse_beast_log.R
 \name{parse_beast_log}
 \alias{parse_beast_log}
-\title{Parses a BEAST2 \code{.log} output file}
+\title{Deprecated function to parse a BEAST2 \code{.log} output file.
+Use \link{parse_beast_tracelog_file} instead}
 \usage{
-parse_beast_log(filename)
+parse_beast_log(tracelog_filename, filename = "deprecated")
 }
 \arguments{
-\item{filename}{name of the BEAST2 .log output file}
+\item{tracelog_filename}{name of the BEAST2 tracelog \code{.log} output file,
+as can be read using \link{parse_beast_tracelog_file}}
+
+\item{filename}{deprecated name of the BEAST2 .log output file}
 }
 \value{
 data frame with the parameter estimates
 }
 \description{
-Parses a BEAST2 \code{.log} output file
+Deprecated function to parse a BEAST2 \code{.log} output file.
+Use \link{parse_beast_tracelog_file} instead
 }
 \examples{
-  log_filename <- get_tracerer_path("beast2_example_output.log")
-  estimates <- parse_beast_log(filename = log_filename)
-  expected_names <- c(
-    "Sample", "posterior", "likelihood",
-    "prior", "treeLikelihood", "TreeHeight",
-    "BirthDeath", "birthRate2", "relativeDeathRate2"
-  )
-  testit::assert(names(estimates) == expected_names)
-}
-\seealso{
-Use \code{\link{remove_burn_ins}} to remove the burn-in from
-  the returned parameter estimates.
-  Use \code{\link{save_beast_estimates}} to save the estimates
-  to a \code{.log} file.
+# Deprecated
+parse_beast_log(
+  tracelog_filename = get_tracerer_path("beast2_example_output.log")
+)
+# Use the function 'parse_beast_tracelog_file' instead
+parse_beast_tracelog_file(
+  tracelog_filename = get_tracerer_path("beast2_example_output.log")
+)
 }
 \author{
 Richèl J.C. Bilderbeek

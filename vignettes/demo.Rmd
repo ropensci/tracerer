@@ -36,7 +36,7 @@ Most prominently, at the left, the effective sample sizes (ESSes) are shown.
 The show the ESSes using `tracerer`:
 
 ```{r}
-estimates <- parse_beast_log(
+estimates <- parse_beast_tracelog_file(
   get_tracerer_path("beast2_example_output.log")
 )
 estimates <- remove_burn_ins(estimates, burn_in_fraction = 0.1)

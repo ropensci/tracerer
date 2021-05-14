@@ -1,7 +1,5 @@
 #' Parses BEAST2 output files to a posterior
-#' @param trees_filenames one or more names of the BEAST2 .trees output files.
-#'   A BEAST2 run will create as much .trees files as there are alignments
-#' @param log_filename name of the BEAST2 .trees output file
+#' @inheritParams default_params_doc
 #' @return a list with the following elements:\cr
 #'   \itemize{
 #'     item{\code{estimates}: parameter estimates}
@@ -13,29 +11,36 @@
 #'   }
 #' @export
 #' @examples
-#'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")
-#'   log_filename <- get_tracerer_path("beast2_example_output.log")
-#'   posterior <- parse_beast_posterior(
-#'     trees_filenames = trees_filenames,
-#'     log_filename = log_filename
-#'   )
-#'   testit::assert(is_posterior(posterior))
+#' trees_filenames <- get_tracerer_path("beast2_example_output.trees")
+#' tracelog_filename <- get_tracerer_path("beast2_example_output.log")
+#' posterior <- parse_beast_posterior(
+#'   trees_filenames = trees_filenames,
+#'   tracelog_filename = tracelog_filename
+#' )
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-ins from
 #'   the posterior's estimates (\code{posterior$estimates})
 #' @author Richèl J.C. Bilderbeek
 parse_beast_posterior <- function(
   trees_filenames,
-  log_filename
+  tracelog_filename,
+  log_filename = "deprecated"
 ) {
+  # Check for deprecated argument names
+  calls <- names(sapply(match.call(), deparse))[-1]
+  if (any("log_filename" %in% calls)) {
+    stop(
+      "'log_filename' is deprecated, use 'tracelog_filename' instead"
+    )
+  }
 
   if (!all(file.exists(trees_filenames))) {
     stop("'trees_filenames' must be the name of one or more existing files. ",
       "File(s) with name(s) '", trees_filenames, "' not found")
   }
 
-  if (!file.exists(log_filename)) {
-    stop("'log_filename' must be the name of an existing file. ",
-      "File with name '", log_filename, "' not found")
+  if (!file.exists(tracelog_filename)) {
+    stop("'tracelog_filename' must be the name of an existing file. ",
+      "File with name '", tracelog_filename, "' not found")
   }
 
   posterior <- list()
@@ -46,8 +51,8 @@ parse_beast_posterior <- function(
     )
   }
   n_trees <- length(trees_filenames)
-  posterior[[n_trees + 1]] <- tracerer::parse_beast_log(
-    log_filename
+  posterior[[n_trees + 1]] <- tracerer::parse_beast_tracelog_file(
+    tracelog_filename = tracelog_filename
   )
   names(posterior) <- c(
     paste0(basename(tools::file_path_sans_ext(trees_filenames)), "_trees"),

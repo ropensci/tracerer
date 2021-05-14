@@ -38,7 +38,7 @@ library(tracerer)
 filename <- get_tracerer_path("beast2_example_output.log")
 
 # Parse that log file
-beast_log_full <- parse_beast_log(filename)
+beast_log_full <- parse_beast_tracelog_file(filename)
 
 # Remove the burn-in
 beast_log <- remove_burn_ins(

@@ -1,5 +1,5 @@
 #' Calculate the mode of values
-#' If the disribution is bi or multimodal or uniform, NA is returned
+#' If the distribution is bi or multimodal or uniform, NA is returned
 #' @param values numeric vector to calculate the mode of
 #' @return the mode of the trace
 #' @author Richèl J.C. Bilderbeek

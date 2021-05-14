@@ -7,7 +7,8 @@
 is_trees_file(trees_filename, verbose = FALSE)
 }
 \arguments{
-\item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
+\item{trees_filename}{name of a BEAST2 posterior \code{.trees} file,
+as can be read using \link{parse_beast_trees}}
 
 \item{verbose}{set to TRUE for more output}
 }
