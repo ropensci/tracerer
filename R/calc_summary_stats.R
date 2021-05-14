@@ -115,8 +115,8 @@ calc_summary_stats_trace <- function(
     geom_mean = geom_mean,
     hpd_interval_low = hpd_interval[1],
     hpd_interval_high = hpd_interval[2],
-    act = calc_act(trace, sample_interval = sample_interval),
-    ess = calc_ess(trace, sample_interval = sample_interval),
+    act = tracerer::calc_act(trace, sample_interval = sample_interval),
+    ess = tracerer::calc_ess(trace, sample_interval = sample_interval),
     stringsAsFactors = FALSE
   )
 }

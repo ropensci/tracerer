@@ -15,7 +15,9 @@ parse_beast_tracelog_file <- function(
   tracelog_filename
 ) {
   if (!file.exists(tracelog_filename)) {
-    stop("file absent. Could not find file with path '", tracelog_filename, "'.")
+    stop(
+      "file absent. Could not find file with path '", tracelog_filename, "'."
+    )
   }
 
   estimates <- utils::read.csv(
