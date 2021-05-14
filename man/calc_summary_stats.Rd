@@ -17,23 +17,25 @@ sampling interval will result in bogus return values.}
 }
 \value{
 the summary statistics of the traces. If one numeric
-  vector is supplied, a list is returned with the elements
-  listed below. If the traces are supplied as a data frame,
-  a data frame is returned with the elements listed
-  below as column names.\cr
-  The elements are:\cr
-  \itemize{
-    \item{\code{mean}: mean}
-    \item{\code{stderr_mean}: standard error of the mean}
-    \item{\code{stdev}: standard deviation}
-    \item{\code{variance}: variance}
-    \item{\code{mode}: mode}
-    \item{\code{geom_mean}: geometric mean}
-    \item{\code{hpd_interval_low}: lower bound of 95\% highest posterior density}
-    \item{\code{hpd_interval_high}: upper bound of 95\% highest posterior density}
-    \item{\code{act}: auto correlation time}
-    \item{\code{ess}: effective sample size}
-  }
+vector is supplied, a list is returned with the elements
+listed below. If the traces are supplied as a data frame,
+a data frame is returned with the elements listed
+below as column names.\cr
+The elements are:\cr
+\itemize{
+  \item{\code{mean}: mean}
+  \item{\code{stderr_mean}: standard error of the mean}
+  \item{\code{stdev}: standard deviation}
+  \item{\code{variance}: variance}
+  \item{\code{mode}: mode}
+  \item{\code{geom_mean}: geometric mean}
+  \item{\code{hpd_interval_low}:
+    lower bound of 95\% highest posterior density}
+  \item{\code{hpd_interval_high}:
+    upper bound of 95\% highest posterior density}
+  \item{\code{act}: auto correlation time}
+  \item{\code{ess}: effective sample size}
+}
 }
 \description{
 Calculates the Effective Sample Sizes of one estimated variable's trace.
@@ -45,24 +47,24 @@ This function assumes the burn-in is removed.
   the burn-in.
 }
 \examples{
-  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
-  estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
+estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
 
-  # From a single variable's trace
-  sum_stats_posterior <- calc_summary_stats(
-    estimates$posterior,
-    sample_interval = 1000
-  )
+# From a single variable's trace
+sum_stats_posterior <- calc_summary_stats(
+  estimates$posterior,
+  sample_interval = 1000
+)
 
-  testit::assert("mean" \%in\% names(sum_stats_posterior))
+testit::assert("mean" \%in\% names(sum_stats_posterior))
 
-  # From all variables' traces
-  sum_stats <- calc_summary_stats(
-    estimates,
-    sample_interval = 1000
-  )
+# From all variables' traces
+sum_stats <- calc_summary_stats(
+  estimates,
+  sample_interval = 1000
+)
 
-  testit::assert("mean" \%in\% colnames(sum_stats))
+testit::assert("mean" \%in\% colnames(sum_stats))
 }
 \seealso{
 Use \code{\link{calc_summary_stats_trace}} to calculate the

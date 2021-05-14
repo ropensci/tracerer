@@ -1,5 +1,3 @@
-context("calc_act")
-
 test_that("use", {
 
   act <- tracerer::calc_act(

@@ -1,6 +1,8 @@
 test_that("use, single trace", {
 
-  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(
+    get_tracerer_path("beast2_example_output.log")
+  )
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
   sum_stats <- calc_summary_stats(
     traces = estimates$posterior,
@@ -42,7 +44,9 @@ test_that("use, single trace", {
 
 test_that("use, multiple trace", {
 
-  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(
+    get_tracerer_path("beast2_example_output.log")
+  )
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
   sum_stats <- calc_summary_stats(
     traces = estimates,
@@ -64,7 +68,9 @@ test_that("use, multiple trace", {
 
 test_that("vignette", {
 
-  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(
+    get_tracerer_path("beast2_example_output.log")
+  )
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
 
   sum_stats_posterior <- calc_summary_stats(
@@ -77,7 +83,9 @@ test_that("vignette", {
 
 test_that("abuse", {
 
-  estimates_all <- parse_beast_log(get_tracerer_path("beast2_example_output.log"))
+  estimates_all <- parse_beast_log(
+    get_tracerer_path("beast2_example_output.log")
+  )
   estimates <- remove_burn_ins(estimates_all, burn_in_fraction = 0.1)
 
   expect_silent(

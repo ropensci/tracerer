@@ -13,7 +13,7 @@ save_beast_trees <- function(
 ) {
   if (class(trees) != "multiPhylo") {
     stop(
-      "'trees' must be of class 'multiPhylo' instead of '", class(trees) , "'"
+      "'trees' must be of class 'multiPhylo' instead of '", class(trees), "'"
     )
   }
   if (!is.character(filename) || stringr::str_length(filename) == 0) {

@@ -1,7 +1,6 @@
 #' Calculate the auto-correlation time using only R. Consider using
 #' \link{calc_act} instead, as it is orders of magnitude faster
-#' @param trace the values
-#' @param sample_interval the interval in timesteps between samples
+#' @inheritParams default_params_doc
 #' @return the auto correlation time
 #' @examples
 #' trace <- sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100))
@@ -11,9 +10,7 @@
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
 calc_act_r <- function(trace, sample_interval) {
-  if (!is.numeric(trace)) {
-    stop("trace must be numeric")
-  }
+  tracerer::check_trace(trace)
   if (sample_interval < 1) {
     stop("sample interval must be at least one")
   }

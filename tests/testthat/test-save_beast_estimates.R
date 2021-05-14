@@ -11,7 +11,9 @@ test_that("use", {
   save_beast_estimates(estimates = estimates_1, filename = filename_2)
   estimates_2 <- parse_beast_log(filename = filename_2)
   lines_1 <- readLines(filename_1)
-  lines_1 <- lines_1[ is.na(stringr::str_match(string = lines_1, pattern = "#.*")) ]
+  lines_1 <- lines_1[
+    is.na(stringr::str_match(string = lines_1, pattern = "#.*"))
+  ]
   lines_2 <- readLines(filename_2)
   expect_equal(lines_1[1], lines_2[1])
   expect_equal(estimates_1, estimates_2)

@@ -16,10 +16,10 @@ the full path to the filename
 Get the full path of a file in the \code{inst/extdata} folder
 }
 \examples{
-  testit::assert(is.character(get_tracerer_path("beast2_example_output.log")))
-  testit::assert(is.character(get_tracerer_path("beast2_example_output.trees")))
-  testit::assert(is.character(get_tracerer_path("beast2_example_output.xml")))
-  testit::assert(is.character(get_tracerer_path("beast2_example_output.xml.state")))
+get_tracerer_path("beast2_example_output.log")
+get_tracerer_path("beast2_example_output.trees")
+get_tracerer_path("beast2_example_output.xml")
+get_tracerer_path("beast2_example_output.xml.state")
 }
 \seealso{
 for more files, use \code{\link{get_tracerer_paths}}

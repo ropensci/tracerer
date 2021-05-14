@@ -17,7 +17,9 @@ test_that("abuse", {
   )
 
   testthat::expect_error(
-    extract_operators_lines(filename = get_tracerer_path("beast2_example_output.trees")),
+    extract_operators_lines(
+      filename = get_tracerer_path("beast2_example_output.trees")
+    ),
     "Start of BEAST2 operators JSON not found"
   )
 

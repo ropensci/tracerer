@@ -18,22 +18,33 @@ test_that("use on invalid file, with added verbosity", {
 
   # The file lacks 'End;' as the last line
   expect_message(
-    tracerer::is_trees_file(trees_filename = get_tracerer_path("mcbette_issue_8.trees"), verbose = TRUE),
+    tracerer::is_trees_file(
+      trees_filename = get_tracerer_path("mcbette_issue_8.trees"),
+      verbose = TRUE
+    ),
     "last line should be 'End;'"
   )
 
   expect_message(
-    is_trees_file(get_tracerer_path("beast2_example_output.log"), verbose = TRUE),
+    is_trees_file(
+      get_tracerer_path("beast2_example_output.log"), verbose = TRUE
+    ),
     "last line should be 'End;'"
   )
 
   expect_message(
-    is_trees_file(get_tracerer_path("beast2_example_output.xml"), verbose = TRUE),
+    is_trees_file(
+      get_tracerer_path("beast2_example_output.xml"),
+      verbose = TRUE
+    ),
     "last line should be 'End;'"
   )
 
   expect_message(
-    is_trees_file(get_tracerer_path("beast2_example_output.xml.state"), verbose = TRUE),
+    is_trees_file(
+      get_tracerer_path("beast2_example_output.xml.state"),
+      verbose = TRUE
+    ),
     "last line should be 'End;'"
   )
 

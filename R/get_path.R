@@ -4,10 +4,10 @@
 #' @author Richèl J.C. Bilderbeek
 #' @seealso for more files, use \code{\link{get_tracerer_paths}}
 #' @examples
-#'   testit::assert(is.character(get_tracerer_path("beast2_example_output.log")))
-#'   testit::assert(is.character(get_tracerer_path("beast2_example_output.trees")))
-#'   testit::assert(is.character(get_tracerer_path("beast2_example_output.xml")))
-#'   testit::assert(is.character(get_tracerer_path("beast2_example_output.xml.state")))
+#' get_tracerer_path("beast2_example_output.log")
+#' get_tracerer_path("beast2_example_output.trees")
+#' get_tracerer_path("beast2_example_output.xml")
+#' get_tracerer_path("beast2_example_output.xml.state")
 #' @export
 get_tracerer_path <- function(filename) {
 

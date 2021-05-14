@@ -14,7 +14,9 @@ test_that("use, single alignment", {
 test_that("use, two alignments", {
 
   posterior <- parse_beast_posterior(
-    trees_filename = get_tracerer_paths(c("anthus_2_4_a.trees", "anthus_2_4_b.trees")),
+    trees_filename = get_tracerer_paths(
+      c("anthus_2_4_a.trees", "anthus_2_4_b.trees")
+    ),
     log_filename = get_tracerer_path("anthus_2_4.log")
   )
   testthat::expect_true("anthus_2_4_a_trees" %in% names(posterior))

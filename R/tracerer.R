@@ -24,7 +24,7 @@
 #'     The package \code{babette} combines the
 #'     functionality of \code{beautier},
 #'     \code{beastier}, \code{tracerer} and
-#'     \code{mauricer} and 
+#'     \code{mauricer} and
 #'     into a single workflow
 #'   }
 #' }

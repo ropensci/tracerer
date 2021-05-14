@@ -6,9 +6,13 @@
 This function does nothing.
 It is intended to inherit function argument documentation.}
 \usage{
-default_params_doc(trees_filename, verbose)
+default_params_doc(sample_interval, trace, trees_filename, verbose)
 }
 \arguments{
+\item{sample_interval}{the interval in timesteps between samples}
+
+\item{trace}{the values}
+
 \item{trees_filename}{Name of a BEAST2 posterior \code{.trees} file.}
 
 \item{verbose}{set to TRUE for more output}

@@ -39,7 +39,7 @@ The show the ESSes using `tracerer`:
 estimates <- parse_beast_log(
   get_tracerer_path("beast2_example_output.log")
 )
-estimates <- remove_burn_ins(estimates, burn_in_fraction = 0.1) 
+estimates <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 esses <- calc_esses(estimates, sample_interval = 1000)
 table <- t(esses)
 colnames(table) <- c("ESS")
@@ -51,7 +51,7 @@ To reproduce these measures in `tracerer`:
 
 ```{r}
 sum_stats <- calc_summary_stats(
-  estimates$posterior, 
+  estimates$posterior,
   sample_interval = 1000
 )
 table <- t(sum_stats)
@@ -63,7 +63,7 @@ Unlike Tracer, in `tracerer` all summary statistics can be obtained at once:
 
 ```{r}
 sum_stats <- calc_summary_stats(
-  estimates, 
+  estimates,
   sample_interval = 1000
 )
 knitr::kable(sum_stats)
@@ -75,8 +75,9 @@ To reproduce these measures in `tracerer`:
 ```{r}
 ggplot2::ggplot(
   data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
-  ggplot2::aes(posterior) 
-) + ggplot2::geom_histogram(binwidth = 0.21) + ggplot2::scale_x_continuous(breaks = seq(-75,-68))
+  ggplot2::aes(posterior)
+) + ggplot2::geom_histogram(binwidth = 0.21) +
+  ggplot2::scale_x_continuous(breaks = seq(-75, -68))
 
 ```
 
@@ -89,7 +90,7 @@ Same can be done with `tracerer`:
 ```{r}
 ggplot2::ggplot(
   data = remove_burn_ins(estimates, burn_in_fraction = 0.1),
-  ggplot2::aes(x = Sample) 
+  ggplot2::aes(x = Sample)
 ) + ggplot2::geom_line(ggplot2::aes(y = posterior))
 
 ```
@@ -108,4 +109,3 @@ trees <- parse_beast_trees(
 )
 phangorn::densiTree(trees, width = 2)
 ```
-

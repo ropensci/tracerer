@@ -9,8 +9,8 @@ test_that("use case 1", {
   # ses: (0.25, 0.25)
   # sses: 0.5
   # n: 2
-  # f: 1 / (2 - 1) = 1
-  # cs_std_dev = sqrt(f * sses) = 1 * sqrt(1 * 0.5) = 0.707
+  # f: 1 / (2 - 1) = 1                                                          # nolint these notes are not commented code
+  # cs_std_dev = sqrt(f * sses) = 1 * sqrt(1 * 0.5) = 0.707                     # nolint these notes are not commented code
   testthat::expect_equal(sqrt(0.5), cs_std_dev(c(1.0, 2.0)))
 
 })
@@ -24,8 +24,8 @@ test_that("use case 2", {
   # ses: (1.0, 0.0, 1.0)
   # sses: 2.0
   # n: 3
-  # f: 1 / (3 - 1) = 0.5
-  # cs_std_dev = sqrt(f * sses) = sqrt(0.5 * 2.0) = 1.0
+  # f: 1 / (3 - 1) = 0.5                                                        # nolint these notes are not commented code
+  # cs_std_dev = sqrt(f * sses) = sqrt(0.5 * 2.0) = 1.0                         # nolint these notes are not commented code
   testthat::expect_equal(sqrt(1.0), cs_std_dev(c(1.0, 2.0, 3.0)))
 
 })
@@ -39,8 +39,8 @@ test_that("use case 3", {
   # ses: (2.25, 0.25, 0.25, 2.25)
   # sses: 5.0
   # n: 4
-  # f: 1 / (4 - 1) = 0.3333
-  # cs_std_dev = sqrt(f * sses) = sqrt(0.3333 * 5.0) = 1.29
+  # f: 1 / (4 - 1) = 0.3333                                                     # nolint these notes are not commented code
+  # cs_std_dev = sqrt(f * sses) = sqrt(0.3333 * 5.0) = 1.29                     # nolint these notes are not commented code
   testthat::expect_equal(sqrt(5.0 / 3.0), cs_std_dev(c(1.0, 2.0, 3.0, 4.0)))
 
 })
