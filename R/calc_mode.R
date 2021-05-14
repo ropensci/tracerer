@@ -4,13 +4,13 @@
 #' @return the mode of the trace
 #' @author Richèl J.C. Bilderbeek
 #' @examples
-#'   # In a unimodal distribution, find the value that occurs most
-#'   testit::assert(tracerer:::calc_mode(c(1, 2, 2)) == 2)
-#'   testit::assert(tracerer:::calc_mode(c(1, 1, 2)) == 1)
+#' # In a unimodal distribution, find the value that occurs most
+#' testit::assert(tracerer:::calc_mode(c(1, 2, 2)) == 2)
+#' testit::assert(tracerer:::calc_mode(c(1, 1, 2)) == 1)
 #'
-#'   # For a uniform distribution, NA is returned
-#'   testit::assert(is.na(tracerer:::calc_mode(c(1, 2))))
-#' @noRd
+#' # For a uniform distribution, NA is returned
+#' testit::assert(is.na(tracerer:::calc_mode(c(1, 2))))
+#' @export
 calc_mode <- function(values) {
   unique_values <- unique(values)
   occurrances <- tabulate(match(values, unique_values))
