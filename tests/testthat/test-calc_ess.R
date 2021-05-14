@@ -1,12 +1,10 @@
-context("calc_ess")
-
 test_that("exanple usage", {
 
-  filename <- get_tracerer_path("beast2_example_output.log")
+  tracelog_filename <- get_tracerer_path("beast2_example_output.log")
 
   # Parse the file as-is and conclude the sampling interval
   df <- parse_beast_tracelog_file(
-    filename = filename
+    tracelog_filename = tracelog_filename
   )
   sample_interval <- df$Sample[2] - df$Sample[1] # nolint use uppercase variable name just like BEAST2
 
