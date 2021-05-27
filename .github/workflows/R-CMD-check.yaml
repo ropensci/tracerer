@@ -20,10 +20,10 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - name: Windows git setup
-        if: runner.os == 'Windows'
-        run:
-          git config --global core.autocrlf false
+      #- name: Windows git setup
+      #  if: runner.os == 'Windows'
+      #  run:
+      #    git config --global core.autocrlf false
 
       - uses: actions/checkout@v2
 
