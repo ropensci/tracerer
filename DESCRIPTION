@@ -29,6 +29,7 @@ Suggests:
     knitr,
     markdown,
     phangorn,
+    rappdirs,
     rbenchmark,
     reshape2,
     rmarkdown,
