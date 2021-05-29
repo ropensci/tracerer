@@ -6,7 +6,7 @@ test_that("use", {
   trees_1 <- parse_beast_trees(filename = filename_1)
   n_trees <- length(trees_1)
 
-  filename_2 <- tempfile(fileext = ".trees")
+  filename_2 <- get_tracerer_tempfilename(fileext = ".trees")
   save_beast_trees(trees = trees_1, filename = filename_2)
   n_trees_in_file <- count_trees_in_file(filename_2)
   expect_equal(n_trees, n_trees_in_file)
@@ -23,7 +23,7 @@ test_that("stress-test", {
   # 'save_beast_trees' can hold 16384 trees
   # and store it as a 4.915468 Mb file without problems
   if (1 == 2 && Sys.getenv("TRAVIS") != "") {
-    trees_filename <- tempfile(fileext = ".trees")
+    trees_filename <- get_tracerer_tempfilename(fileext = ".trees")
     trees <- c(ape::rcoal(n = 10))
     for (i in seq(14)) {
       message(i)
@@ -40,7 +40,10 @@ test_that("abuse", {
 
   trees <- c(ape::read.tree(text = "((A,B),C);"))
   expect_error(
-    save_beast_trees(trees = "nonsense", filename = tempfile()),
+    save_beast_trees(
+      trees = "nonsense",
+      filename = get_tracerer_tempfilename()
+    ),
     "'trees' must be of class 'multiPhylo'"
   )
   expect_error(

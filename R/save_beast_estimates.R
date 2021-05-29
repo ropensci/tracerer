@@ -18,6 +18,8 @@ save_beast_estimates <- function(
     stop("'filename' must have at least one character")
   }
 
+  dir.create(dirname(filename), showWarnings = FALSE, recursive = TRUE)
+
   # Using 'x = format(estimates, digits = 16)' saves with more digits,
   # but messes up the lines
   utils::write.table(
