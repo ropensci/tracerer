@@ -32,7 +32,7 @@ tree_height_trace <- remove_burn_in(
 )
 
 # Values will be 0.453 and 1.816
-hpd_interval <- calc_hpd_interval(tree_height_trace, proportion = 0.95)
+calc_hpd_interval(tree_height_trace, proportion = 0.95)
 }
 \seealso{
 The function \code{\link{remove_burn_in}} removes

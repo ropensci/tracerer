@@ -2,7 +2,26 @@
 
 Newest versions at top.
 
-## tracerer 2.2  (2021-05-14)
+## tracerer 2.2.1 (2021-05-29)
+
+### NEW FEATURES
+
+  * None
+
+### MINOR IMPROVEMENTS
+
+  * `save_beast_estimates` can save in sub-sub-folder
+  * All temporary files are cleaned up
+
+### BUG FIXES
+
+  * None
+
+### DEPRECATED AND DEFUNCT
+
+  * None
+
+## tracerer 2.2 (2021-05-14)
 
 ### NEW FEATURES
 

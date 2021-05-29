@@ -19,11 +19,11 @@ If the distribution is bi or multimodal or uniform, NA is returned
 }
 \examples{
 # In a unimodal distribution, find the value that occurs most
-testit::assert(tracerer:::calc_mode(c(1, 2, 2)) == 2)
-testit::assert(tracerer:::calc_mode(c(1, 1, 2)) == 1)
+calc_mode(c(1, 2, 2))
+calc_mode(c(1, 1, 2))
 
 # For a uniform distribution, NA is returned
-testit::assert(is.na(tracerer:::calc_mode(c(1, 2))))
+tracerer:::calc_mode(c(1, 2))
 }
 \author{
 Richèl J.C. Bilderbeek

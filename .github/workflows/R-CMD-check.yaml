@@ -13,18 +13,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        # os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - name: Windows git setup
-        if: runner.os == 'Windows'
-        run:
-          git config --global core.autocrlf false
-
       - uses: actions/checkout@v2
 
       - uses: r-lib/actions/setup-r@v1
@@ -44,6 +38,10 @@ jobs:
 
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        shell: Rscript {0}
+
+      - name: Make sure that no files are created in the .cache folder
+        run: testthat::expect_equal(0, length(list.files(rappdirs::user_cache_dir(appname = "tracerer"))))
         shell: Rscript {0}
 
       - name: Test coverage

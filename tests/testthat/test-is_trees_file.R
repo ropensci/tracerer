@@ -54,14 +54,16 @@ test_that("use on absent file", {
 
   # The file lacks 'End;' as the last line
   expect_error(
-    is_trees_file(tempfile(pattern = "absent")),
+    is_trees_file(get_tracerer_tempfilename(pattern = "absent")),
     "'trees_filename' is the name of an absent file"
   )
 })
 
 test_that("evil file", {
 
-  trees_filename <- tempfile()
+  folder_name <- get_tracerer_tempfilename()
+  dir.create(folder_name, showWarnings = FALSE, recursive = TRUE)
+  trees_filename <- file.path(folder_name, "is_trees_file")
   text <- c("nonsense", "End;")
   writeLines(text, trees_filename)
 
@@ -69,4 +71,5 @@ test_that("evil file", {
     is_trees_file(trees_filename, verbose = TRUE),
     "Error message: argument of length 0"
   )
+  unlink(folder_name, recursive = TRUE)
 })

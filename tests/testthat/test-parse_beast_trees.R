@@ -37,15 +37,17 @@ test_that("Last line must be End or END, mcbette issue #8", {
 })
 
 test_that("Invalid file that does end with End", {
+  folder_name <- get_tracerer_tempfilename()
+  dir.create(folder_name, showWarnings = FALSE, recursive = TRUE)
+  filename <- file.path(folder_name, "parse_beast_trees")
 
-  filename <- tempfile(pattern = ".trees")
   writeLines(text = c("invalid", "End;"), con = filename, sep = "\n")
   expect_error(
     parse_beast_trees(filename),
     "invalid file"
   )
+  unlink(folder_name, recursive = TRUE)
 })
-
 
 test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
 
