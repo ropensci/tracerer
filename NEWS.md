@@ -11,6 +11,7 @@ Newest versions at top.
 ### MINOR IMPROVEMENTS
 
   * `save_beast_estimates` can save in sub-sub-folder
+  * All temporary files are cleaned up
 
 ### BUG FIXES
 
