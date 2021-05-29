@@ -4,18 +4,14 @@
 #' @author Richèl J.C. Bilderbeek
 #' @seealso for one file, use \code{\link{get_tracerer_path}}
 #' @examples
-#'   testit::assert(
-#'     length(
-#'       get_tracerer_paths(
-#'         c(
-#'           "beast2_example_output.log",
-#'           "beast2_example_output.trees",
-#'           "beast2_example_output.xml",
-#'           "beast2_example_output.xml.state"
-#'         )
-#'       )
-#'      ) == 4
-#'    )
+#' get_tracerer_paths(
+#'   c(
+#'     "beast2_example_output.log",
+#'     "beast2_example_output.trees",
+#'     "beast2_example_output.xml",
+#'     "beast2_example_output.xml.state"
+#'   )
+#' )
 #' @export
 get_tracerer_paths <- function(filenames) {
 

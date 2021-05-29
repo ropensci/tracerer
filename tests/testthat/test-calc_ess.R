@@ -37,8 +37,8 @@ test_that("use, posterior", {
   )
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
-  result <- tracerer:::calc_ess(trace$posterior, sample_interval = 1000)
-  testthat::expect_equivalent(10, result, tolerance = 0.01)
+  result <- calc_ess(trace$posterior, sample_interval = 1000)
+  expect_equivalent(10, result, tolerance = 0.01)
 
 })
 

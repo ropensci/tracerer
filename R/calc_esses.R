@@ -3,24 +3,13 @@
 #' @param sample_interval the interval in timesteps between samples
 #' @return the effective sample sizes
 #' @examples
-#'   # Parse an example log file
-#'   estimates_all <- parse_beast_tracelog_file(
-#'     get_tracerer_path("beast2_example_output.log")
-#'   )
+#' # Parse an example log file
+#' estimates <- parse_beast_tracelog_file(
+#'   get_tracerer_path("beast2_example_output.log")
+#' )
 #'
-#'   # Remove burn-ins
-#'   estimates <- remove_burn_ins(estimates_all,
-#'     burn_in_fraction = 0.1
-#'   )
-#'
-#'   # Calculate the effective sample sizes of all parameter estimates
-#'   esses <- calc_esses(
-#'     estimates,
-#'     sample_interval = 1000
-#'   )
-#'
-#'   expected <- c(10, 10, 10, 10, 7, 10, 9, 6)
-#'   testit::assert(all(esses == expected))
+#' # Calculate the effective sample sizes of all parameter estimates
+#' calc_esses(estimates, sample_interval = 1000)
 #' @export
 #' @author Richèl J.C. Bilderbeek
 calc_esses <- function(

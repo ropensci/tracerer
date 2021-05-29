@@ -14,17 +14,14 @@
 #'   }
 #' @export
 #' @examples
-#'   trees_filenames <- get_tracerer_path("beast2_example_output.trees")
-#'   log_filename <- get_tracerer_path("beast2_example_output.log")
-#'   state_filename <- get_tracerer_path("beast2_example_output.xml.state")
-#'   out <- parse_beast_output_files(
-#'     log_filename = log_filename,
-#'     trees_filenames = trees_filenames,
-#'     state_filename = state_filename
-#'   )
-#'   testit::assert("estimates" %in% names(out))
-#'   testit::assert("beast2_example_output_trees" %in% names(out))
-#'   testit::assert("operators" %in% names(out))
+#' trees_filenames <- get_tracerer_path("beast2_example_output.trees")
+#' log_filename <- get_tracerer_path("beast2_example_output.log")
+#' state_filename <- get_tracerer_path("beast2_example_output.xml.state")
+#' parse_beast_output_files(
+#'   log_filename = log_filename,
+#'   trees_filenames = trees_filenames,
+#'   state_filename = state_filename
+#' )
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-in from
 #'   \code{out$estimates}
 #' @author Richèl J.C. Bilderbeek

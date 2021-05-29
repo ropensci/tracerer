@@ -20,7 +20,7 @@ test_that("use", {
   expect_equal(lines_1[1], lines_2[1])
   expect_equal(estimates_1, estimates_2)
 
-  unlink(folder_name)
+  unlink(folder_name, recursive = TRUE)
 })
 
 test_that("save in sub-sub-folder", {
@@ -40,7 +40,7 @@ test_that("save in sub-sub-folder", {
     save_beast_estimates(estimates = estimates, filename = filename)
   )
 
-  unlink(folder_name)
+  unlink(folder_name, recursive = TRUE)
 })
 
 test_that("abuse", {

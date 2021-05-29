@@ -46,7 +46,7 @@ test_that("Invalid file that does end with End", {
     parse_beast_trees(filename),
     "invalid file"
   )
-  unlink(folder_name)
+  unlink(folder_name, recursive = TRUE)
 })
 
 test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {

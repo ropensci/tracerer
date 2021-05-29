@@ -16,6 +16,8 @@ test_that("use", {
   expect_equal(n_trees, n_trees_again)
 
   expect_equal(trees_1, trees_2)
+
+  file.remove(filename_2)
 })
 
 test_that("stress-test", {
@@ -33,6 +35,7 @@ test_that("stress-test", {
       message(paste(length(trees), "trees"))
       message(paste(file.size(trees_filename) / 1000000, "Mb"))
     }
+    file.remove(trees_filename)
   }
 })
 

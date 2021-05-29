@@ -23,7 +23,7 @@
 #' )
 #'
 #' # Values will be 0.453 and 1.816
-#' hpd_interval <- calc_hpd_interval(tree_height_trace, proportion = 0.95)
+#' calc_hpd_interval(tree_height_trace, proportion = 0.95)
 #' @export
 calc_hpd_interval <- function(trace, proportion = 0.95) {
 

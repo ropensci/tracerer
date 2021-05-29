@@ -16,18 +16,14 @@ the filenames' full paths
 Get the full paths of files in the \code{inst/extdata} folder
 }
 \examples{
-  testit::assert(
-    length(
-      get_tracerer_paths(
-        c(
-          "beast2_example_output.log",
-          "beast2_example_output.trees",
-          "beast2_example_output.xml",
-          "beast2_example_output.xml.state"
-        )
-      )
-     ) == 4
-   )
+get_tracerer_paths(
+  c(
+    "beast2_example_output.log",
+    "beast2_example_output.trees",
+    "beast2_example_output.xml",
+    "beast2_example_output.xml.state"
+  )
+)
 }
 \seealso{
 for one file, use \code{\link{get_tracerer_path}}

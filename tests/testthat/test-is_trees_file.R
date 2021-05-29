@@ -71,5 +71,5 @@ test_that("evil file", {
     is_trees_file(trees_filename, verbose = TRUE),
     "Error message: argument of length 0"
   )
-  unlink(folder_name)
+  unlink(folder_name, recursive = TRUE)
 })
