@@ -52,10 +52,34 @@ esses <- calc_esses(beast_log, sample_interval = 1000)
 
 ## Installation
 
-Install `tracerer` in `R` using `devtools`:
+You can install:
+
+ * (recommended) The CRAN version
+ * The stable development version
+ * The bleeding edge development version
+
+### CRAN
+
+`tracerer` is on CRAN:
 
 ```{r}
-devtools::install_github("ropensci/tracerer")
+install.packages("tracerer")
+```
+
+### Stable development version
+
+Install the `tracerer` `master` branch using `remotes`:
+
+```{r}
+remotes::install_github("ropensci/tracerer")
+```
+
+### Bleeding edge development version
+
+Install the `tracerer` `develop` branch using `remotes`:
+
+```{r}
+remotes::install_github("ropensci/tracerer", ref = "develop")
 ```
 
 ## FAQ
