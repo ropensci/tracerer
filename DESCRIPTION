@@ -17,7 +17,6 @@ Description: 'BEAST2' (<https://www.beast2.org>) is a widely used
   files without active user input, but using
   R function calls instead.
 License: GPL-3
-LazyData: TRUE
 Imports:
     jsonlite,
     Rcpp,
