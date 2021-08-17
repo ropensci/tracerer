@@ -12,7 +12,7 @@ matrix:
   #  os: osx
 
 r_github_packages:
-  - jimhester/covr
+  - r-lib/covr
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
