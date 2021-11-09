@@ -44,9 +44,7 @@ jobs:
 
       - name: Test coverage
         run: Rscript -e 'covr::codecov()'
-        if: matrix.os == 'ubuntu-latest'
 
       - name: Lint
         run: Rscript -e 'lintr::lint_package()'
-        if: matrix.os == 'ubuntu-latest'
 
