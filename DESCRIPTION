@@ -22,7 +22,7 @@ Imports:
     Rcpp,
     testit
 Suggests:
-    ape,
+    ape (<= 5.5),
     ggplot2,
     hunspell,
     knitr,
