@@ -8,7 +8,9 @@ test_that("use", {
 
   filename_2 <- get_tracerer_tempfilename(fileext = ".trees")
   save_beast_trees(trees = trees_1, filename = filename_2)
-  n_trees_in_file <- count_trees_in_file(filename_2)
+  n_trees_in_file <- count_trees_in_file(
+    trees_filename = filename_2
+  )
   expect_equal(n_trees, n_trees_in_file)
 
   trees_2 <- parse_beast_trees(filename = filename_2)

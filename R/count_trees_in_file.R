@@ -20,8 +20,11 @@ count_trees_in_file <- function(
       "'trees_filename' invalid"
     )
   }
-  sum(stringr::str_count(
-    string = readLines(trees_filename, warn = FALSE),
-    pattern = "(^tree STATE_)|(\tTREE \\* UNTITLED = \\[&R\\] \\()")
+  # pattern = "(^tree STATE_)|(\tTREE \\* UNTITLED = \\[&R\\] \\()")
+  sum(
+    stringr::str_detect(
+      string = readLines(trees_filename, warn = FALSE),
+      pattern = "(^tree STATE_)|(\tTREE \\* (UNTITLED|STATE_[:digit:]*) = \\[&R\\] \\()"
+    )
   )
 }
