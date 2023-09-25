@@ -30,6 +30,10 @@
 #' }
 #' If something is (still) missing from \code{tracerer},
 #' the \code{coda} package may have the functionality you need.
-#' @docType package
-#' @name tracerer
+#' @author Richèl J.C. Bilderbeek
+#' @keywords internal
+"_PACKAGE"
+
+## usethis namespace: start
+## usethis namespace: end
 NULL

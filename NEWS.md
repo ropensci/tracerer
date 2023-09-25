@@ -10,6 +10,7 @@ Newest versions at top.
 
 ### MINOR IMPROVEMENTS
 
+  * Use new package description style
   * Use new CITATION style
   * Use `inherits` instead of `class(x) == "some_class"`
 
