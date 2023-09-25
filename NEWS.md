@@ -2,7 +2,7 @@
 
 Newest versions at top.
 
-## tracerer v2.2.3 (2023-09-25)
+## tracerer 2.2.3 (2023-09-25)
 
 ### NEW FEATURES
 
@@ -20,7 +20,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.2.2 (2021-05-30)
+## tracerer 2.2.2 (2021-05-30)
 
 ### NEW FEATURES
 
@@ -38,7 +38,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.2.1 (2021-05-29)
+## tracerer 2.2.1 (2021-05-29)
 
 ### NEW FEATURES
 
@@ -57,7 +57,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.2 (2021-05-14)
+## tracerer 2.2 (2021-05-14)
 
 ### NEW FEATURES
 
@@ -76,7 +76,7 @@ Newest versions at top.
   * `parse_beast_log` will be deprecated and gives a warning. 
     Use `parse_beast_tracelog_file` instead"
 
-## tracerer v2.1 (2020-04-27)
+## tracerer 2.1 (2020-04-27)
 
 ### NEW FEATURES
 
@@ -95,7 +95,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.0.4 (2020-01-23)
+## tracerer 2.0.4 (2020-01-23)
 
 ### NEW FEATURES
 
@@ -113,7 +113,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.0.3 (2020-01-06)
+## tracerer 2.0.3 (2020-01-06)
 
 ### NEW FEATURES
 
@@ -132,7 +132,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.0.2 (2019-12-02)
+## tracerer 2.0.2 (2019-12-02)
 
 ### NEW FEATURES
 
@@ -151,7 +151,7 @@ Newest versions at top.
 
   * None
 
-## tracerer v2.0.1 (2019-03-08)
+## tracerer 2.0.1 (2019-03-08)
 
 ### NEW FEATURES
 
@@ -170,7 +170,7 @@ Newest versions at top.
 
   * None
 
-## tracerer 1.5.2 (2018-11-01)
+## tracerer v1.5.2 (2018-11-01)
 
 ### NEW FEATURES
 
@@ -189,7 +189,7 @@ Newest versions at top.
 
   * None
 
-## tracerer 1.4.3 (2018-05-17)
+## tracerer v1.4.3 (2018-05-17)
 
 ### NEW FEATURES
 
@@ -207,7 +207,7 @@ Newest versions at top.
 
   * None
 
-## tracerer 1.4.2 (2018-04-05)
+## tracerer v1.4.2 (2018-04-05)
 
 ### NEW FEATURES
 
