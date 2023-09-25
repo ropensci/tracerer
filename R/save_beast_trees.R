@@ -11,7 +11,7 @@ save_beast_trees <- function(
   trees,
   filename
 ) {
-  if (class(trees) != "multiPhylo") {
+  if (!inherits(trees, "multiPhylo")) {
     stop(
       "'trees' must be of class 'multiPhylo' instead of '", class(trees), "'"
     )

@@ -14,7 +14,7 @@
 #' @export
 is_posterior <- function(x) {
 
-  if (class(x) != "list") {
+  if (!inherits(x, "list")) {
     return(FALSE)
   }
   for (name in names(x)) {
