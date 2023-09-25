@@ -18,3 +18,4 @@
 ^appveyor\.yml$
 ^doc$
 ^Meta$
+^mlc_config\.json$
