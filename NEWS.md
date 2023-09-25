@@ -199,7 +199,7 @@ Newest versions at top.
 
 ### MINOR IMPROVEMENTS
 
-  * Tagged for [the academic article about `babette`](https://github.com/ropensci/babette_article)
+  * Tagged for [the academic article about `babette`](https://github.com/richelbilderbeek/babette_article)
 
 ### BUG FIXES
 
