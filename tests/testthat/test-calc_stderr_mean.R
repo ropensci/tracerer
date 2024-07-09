@@ -25,7 +25,7 @@ test_that("calc_stderr_mean: use, posterior", {
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_stderr_mean(trace$posterior)
-  testthat::expect_equivalent(0.5045, result, tolerance = 0.01)
+  testthat::expect_equal(0.5045, result, tolerance = 0.01)
 
 })
 
@@ -37,7 +37,7 @@ test_that("calc_stderr_mean: use, tree height", {
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_stderr_mean(trace$TreeHeight)
-  testthat::expect_equivalent(0.144, result, tolerance = 0.01)
+  testthat::expect_equal(0.144, result, tolerance = 0.01)
 
 })
 

@@ -28,7 +28,7 @@ Suggests:
     rappdirs,
     rmarkdown,
     spelling,
-    testthat (>= 2.1.0)
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 RoxygenNote: 7.3.2
 URL: https://docs.ropensci.org/tracerer/ (website)
@@ -37,3 +37,4 @@ BugReports: https://github.com/ropensci/tracerer/issues
 LinkingTo: Rcpp
 Language: en-US
 Encoding: UTF-8
+Config/testthat/edition: 3

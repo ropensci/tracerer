@@ -15,7 +15,7 @@ test_that("use, posterior", {
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_act(trace$posterior, sample_interval = 1000)
-  testthat::expect_equivalent(1000, result, tolerance = 0.01)
+  testthat::expect_equal(1000, result, tolerance = 0.01)
 
 })
 
@@ -27,7 +27,7 @@ test_that("use, tree height", {
   trace <- remove_burn_ins(estimates, burn_in_fraction = 0.1)
 
   result <- tracerer:::calc_act(trace$TreeHeight, sample_interval = 1000)
-  testthat::expect_equivalent(1502.1208, result, tolerance = 0.01)
+  testthat::expect_equal(1502.1208, result, tolerance = 0.01)
 
 })
 

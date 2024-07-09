@@ -24,6 +24,6 @@ test_that("calc_geom_mean: use, tree height", {
   testthat::expect_silent(
     result <- tracerer:::calc_geom_mean(values = trace$TreeHeight)
   )
-  testthat::expect_equivalent(0.9104, result, tolerance = 0.01)
+  testthat::expect_equal(0.9104, result, tolerance = 0.01)
 
 })
