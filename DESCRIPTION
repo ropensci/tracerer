@@ -31,7 +31,7 @@ Suggests:
     stringr,
     testthat (>= 2.1.0)
 VignetteBuilder: knitr
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 URL: https://docs.ropensci.org/tracerer/ (website)
     https://github.com/ropensci/tracerer/
 BugReports: https://github.com/ropensci/tracerer/issues
