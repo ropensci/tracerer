@@ -1,6 +1,4 @@
-context("parse_beast_trees")
-
-test_that("use", {
+test_that("parse_beast_trees: use", {
 
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
@@ -8,7 +6,7 @@ test_that("use", {
   expect_equal(length(posterior), 11)
 })
 
-test_that("detect missing 'End;'", {
+test_that("parse_beast_trees() detects missing 'End;'", {
 
   filename <- get_tracerer_path("missing_end.trees")
   expect_error(
@@ -18,7 +16,7 @@ test_that("detect missing 'End;'", {
 })
 
 
-test_that("issue 4", {
+test_that("parse_beast_trees() works (#4)", {
 
   filename <- get_tracerer_path("unplottable_anthus_aco.trees")
   trees <- parse_beast_trees(filename)

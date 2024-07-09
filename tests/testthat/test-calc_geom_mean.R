@@ -1,6 +1,4 @@
-context("calc_geom_mean")
-
-test_that("use, posterior", {
+test_that("calc_geom_mean: use, posterior", {
 
   estimates <- parse_beast_tracelog_file(
     get_tracerer_path("beast2_example_output.log")
@@ -15,7 +13,7 @@ test_that("use, posterior", {
 
 })
 
-test_that("use, tree height", {
+test_that("calc_geom_mean: use, tree height", {
 
   estimates <- parse_beast_tracelog_file(
     get_tracerer_path("beast2_example_output.log")

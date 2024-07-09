@@ -1,6 +1,4 @@
-context("remove_burn_ins")
-
-test_that("normal use", {
+test_that("remove_burn_ins: normal use", {
 
   # Remove first ten percent
   v <- data.frame(x = seq(1, 10), y = seq(11, 20))
@@ -11,7 +9,7 @@ test_that("normal use", {
   expect_true(all(w == expected))
 })
 
-test_that("100 percent burn-in", {
+test_that("remove_burn_ins: 100 percent burn-in", {
 
   # Remove first ten percent
   v <- data.frame(x = seq(1, 10), y = seq(11, 20))

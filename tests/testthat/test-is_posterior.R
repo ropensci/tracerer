@@ -1,6 +1,4 @@
-context("is_posterior")
-
-test_that("detect posterior", {
+test_that("is_posterior() detects posterior", {
 
   trees_filename <- get_tracerer_path("beast2_example_output.trees")
   expect_true(file.exists(trees_filename))
@@ -17,7 +15,7 @@ test_that("detect posterior", {
 
 })
 
-test_that("detect non-posteriors", {
+test_that("is_posterior() detects non-posteriors", {
 
   testthat::expect_false(
     tracerer::is_posterior("nonsense")

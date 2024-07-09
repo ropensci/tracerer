@@ -1,6 +1,4 @@
-context("test-save_beast_trees")
-
-test_that("use", {
+test_that("save_beast_trees: use", {
 
   filename_1 <- get_tracerer_path("beast2_example_output.trees")
   trees_1 <- parse_beast_trees(filename = filename_1)
@@ -22,7 +20,7 @@ test_that("use", {
   file.remove(filename_2)
 })
 
-test_that("stress-test", {
+test_that("save_beast_trees: stress-test", {
 
   # 'save_beast_trees' can hold 16384 trees
   # and store it as a 4.915468 Mb file without problems
@@ -41,7 +39,7 @@ test_that("stress-test", {
   }
 })
 
-test_that("abuse", {
+test_that("save_beast_trees: abuse", {
 
   trees <- c(ape::read.tree(text = "((A,B),C);"))
   expect_error(

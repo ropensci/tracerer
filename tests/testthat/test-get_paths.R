@@ -1,6 +1,4 @@
-context("get_tracerer_paths")
-
-test_that("use", {
+test_that("get_tracerer_paths: use", {
 
   testthat::expect_equal(
     c(

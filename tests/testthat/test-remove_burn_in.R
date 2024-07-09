@@ -1,5 +1,3 @@
-context("remove_burn_in")
-
 test_that("remove_burn_in: use", {
 
   # Remove first ten percent

@@ -1,6 +1,4 @@
-context("cs_std_dev")
-
-test_that("use case 1", {
+test_that("cs_std_dev: use case 1", {
 
   # values: 1.0 and 2.0
   #
@@ -15,7 +13,7 @@ test_that("use case 1", {
 
 })
 
-test_that("use case 2", {
+test_that("cs_std_dev: use case 2", {
 
   # values: 1.0, 2.0 and 3.0
   #
@@ -30,7 +28,7 @@ test_that("use case 2", {
 
 })
 
-test_that("use case 3", {
+test_that("cs_std_dev: use case 3", {
 
   # values: 1.0, 2.0, 3.0, 4.0
   #

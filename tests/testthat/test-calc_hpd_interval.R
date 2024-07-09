@@ -1,6 +1,4 @@
-context("calc_hpd_interval")
-
-test_that("use, posterior", {
+test_that("calc_hpd_interval: use, posterior", {
 
   estimates <- parse_beast_tracelog_file(
     get_tracerer_path("beast2_example_output.log")
@@ -13,7 +11,7 @@ test_that("use, posterior", {
 
 })
 
-test_that("use, tree height", {
+test_that("calc_hpd_interval: use, tree height", {
 
   estimates <- parse_beast_tracelog_file(
     get_tracerer_path("beast2_example_output.log")

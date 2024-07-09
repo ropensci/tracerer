@@ -1,5 +1,3 @@
-context("calc_esses")
-
 test_that("calc_esses: use", {
 
   estimates_all <- parse_beast_tracelog_file(
