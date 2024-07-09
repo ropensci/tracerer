@@ -206,18 +206,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=Rcpp"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "testit",
-      "name": "testit",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=testit"
     }
   ],
   "releaseNotes": "https://github.com/ropensci/tracerer/blob/master/NEWS.md",

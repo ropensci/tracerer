@@ -20,12 +20,12 @@ extract_operators_lines <- function(filename) {
     stop("Start of BEAST2 operators JSON not found")
   }
   start_index <- which(start_indices == TRUE)
-  testit::assert(lines[start_index] == "{\"operators\":[")
+  stopifnot(lines[start_index] == "{\"operators\":[")
 
   end_indices <- lines ==  "]}"
-  testit::assert(sum(end_indices) == 1)
+  stopifnot(sum(end_indices) == 1)
   end_index <- which(end_indices == TRUE)
-  testit::assert(lines[end_index] == "]}")
+  stopifnot(lines[end_index] == "]}")
 
   operator_lines <- lines[start_index:end_index]
   operator_lines

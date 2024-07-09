@@ -19,8 +19,7 @@ Description: 'BEAST2' (<https://www.beast2.org>) is a widely used
 License: GPL-3
 Imports:
     jsonlite,
-    Rcpp,
-    testit
+    Rcpp
 Suggests:
     ape,
     ggplot2,

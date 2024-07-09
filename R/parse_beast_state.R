@@ -33,7 +33,7 @@ parse_beast_state_operators <- function(
   json <- jsonlite::fromJSON(lines)
   df <- as.data.frame(json)
   names(df) <- gsub("operators.", "", names(df))
-  testit::assert(names(df)[1] == "id")
+  stopifnot(names(df)[1] == "id")
   names(df)[1] <- "operator"
 
   # 'WilsonBalding.t:test-alignment_to_beast_posterior' -> 'WilsonBalding.t' # nolint this is a regular comment, not code

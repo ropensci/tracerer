@@ -21,5 +21,6 @@ save_beast_trees <- function(
   }
   ape::write.nexus(phy = trees, file = filename)
 
-  testit::assert(tracerer::is_trees_file(filename))
+  stopifnot(tracerer::is_trees_file(filename))
+  invisible()
 }
