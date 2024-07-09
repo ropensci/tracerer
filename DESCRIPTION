@@ -23,13 +23,9 @@ Imports:
 Suggests:
     ape,
     ggplot2,
-    hunspell,
     knitr,
-    markdown,
     phangorn,
     rappdirs,
-    rbenchmark,
-    reshape2,
     rmarkdown,
     spelling,
     stringr,

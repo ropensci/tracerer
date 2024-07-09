@@ -75,18 +75,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "hunspell",
-      "name": "hunspell",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=hunspell"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "knitr",
       "name": "knitr",
       "provider": {
@@ -108,30 +96,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=phangorn"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "rbenchmark",
-      "name": "rbenchmark",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=rbenchmark"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "reshape2",
-      "name": "reshape2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=reshape2"
     },
     {
       "@type": "SoftwareApplication",
