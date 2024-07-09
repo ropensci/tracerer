@@ -57,9 +57,7 @@ test_that("get_tracerer_path returns multiPhlo with 'STATE_'s", {
   filename <- get_tracerer_path("unplottable_anthus_aco.trees")
   readLines(filename, warn = FALSE)
   trees <- parse_beast_trees(filename)
-  testit::assert(
-    all(grepl(pattern = "STATE_", x = names(trees)) == FALSE)
-  )
+  expect_no_match(names(trees), "STATE_")
 })
 
 

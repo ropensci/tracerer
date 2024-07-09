@@ -39,7 +39,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Make sure that no files are created in the .cache folder
-        run: testthat::expect_equal(0, length(list.files(rappdirs::user_cache_dir(appname = "tracerer"))))
+        run: testthat::expect_length(list.files(rappdirs::user_cache_dir(appname = "tracerer")), 0)
         shell: Rscript {0}
 
       - name: Test coverage

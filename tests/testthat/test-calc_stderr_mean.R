@@ -8,7 +8,7 @@ test_that("use", {
 })
 
 test_that("equivalent to suggestion of @bjoelle", {
-  return()
+  skip()
   # @bjoelle suggested to use 'stats::sd(trace) / sqrt(length(trace))'
   # instead of using 'calc_stderr_mean', as her suggestion is
   # indeed simpler. Too bad, the BEAST2 implementation is different
