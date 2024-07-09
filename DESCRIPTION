@@ -28,7 +28,6 @@ Suggests:
     rappdirs,
     rmarkdown,
     spelling,
-    stringr,
     testthat (>= 2.1.0)
 VignetteBuilder: knitr
 RoxygenNote: 7.3.2

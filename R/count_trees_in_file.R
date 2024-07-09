@@ -22,9 +22,9 @@ count_trees_in_file <- function(
   }
   # pattern = "(^tree STATE_)|(\tTREE \\* UNTITLED = \\[&R\\] \\()")
   sum(
-    stringr::str_detect(
-      string = readLines(trees_filename, warn = FALSE),
-      pattern = "(^tree STATE_)|(\tTREE \\* (UNTITLED|STATE_[:digit:]*) = \\[&R\\] \\()"
+    grepl(
+      "(^tree STATE_)|(\tTREE \\* (UNTITLED|STATE_[0-9]*) = \\[&R\\] \\()",
+      readLines(trees_filename, warn = FALSE)
     )
   )
 }
