@@ -1,6 +1,4 @@
-context("test-count_trees_in_file")
-
-test_that("use", {
+test_that("count_trees_in_file: use", {
 
   trees_filename <- get_tracerer_path("beast2_example_output.trees")
   created <- count_trees_in_file(trees_filename)
@@ -8,7 +6,7 @@ test_that("use", {
   expect_equal(created, expected)
 })
 
-test_that("abuse", {
+test_that("count_trees_in_file: abuse", {
   expect_error(
     count_trees_in_file("abs.ent"),
     "'trees_filename' absent"
@@ -20,7 +18,7 @@ test_that("abuse", {
 })
 
 
-test_that("issue 4", {
+test_that("count_trees_in_file (#4)", {
 
   trees_filename <- get_tracerer_path("unplottable_anthus_aco.trees")
   created <- count_trees_in_file(trees_filename)

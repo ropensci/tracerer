@@ -47,8 +47,10 @@ parse_beast_trees <- function(
     }
   )
 
-  testit::assert(is_trees_file(filename)) # nolint tracerer function
-  testit::assert(length(trees) != 1 || !is.na(trees))
+  stopifnot(
+    is_trees_file(filename), # nolint tracerer function
+    length(trees) != 1 || !is.na(trees)
+  )
 
 
   class(trees) <- "multiPhylo"
@@ -58,7 +60,7 @@ parse_beast_trees <- function(
   # Check if it matches the file
   n_trees_in_file <- tracerer::count_trees_in_file(filename)
   n_trees_in_output <- length(trees)
-  testthat::expect_equal(n_trees_in_file, n_trees_in_output)
+  stopifnot(n_trees_in_file == n_trees_in_output)
 
   trees
 }

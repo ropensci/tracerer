@@ -1,6 +1,4 @@
-context("parse_beast_output_files")
-
-test_that("use", {
+test_that("parse_beast_output_files: use", {
 
   testthat::expect_silent(
     parse_beast_output_files(

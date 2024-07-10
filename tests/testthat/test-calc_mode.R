@@ -1,6 +1,4 @@
-context("calc_mode")
-
-test_that("use", {
+test_that("calc_mode: use", {
 
   testthat::expect_equal(tracerer:::calc_mode(c(1, 2, 2)), 2)
   testthat::expect_equal(tracerer:::calc_mode(c(1, 1, 2)), 1)

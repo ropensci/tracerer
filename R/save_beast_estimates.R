@@ -14,7 +14,7 @@ save_beast_estimates <- function(
   if (!is.data.frame(estimates)) {
     stop("'estimates' must be a data.frame")
   }
-  if (!is.character(filename) || stringr::str_length(filename) == 0) {
+  if (!is.character(filename) || nchar(filename) == 0) {
     stop("'filename' must have at least one character")
   }
 

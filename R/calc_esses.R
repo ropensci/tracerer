@@ -40,8 +40,10 @@ calc_esses <- function(
 
   df <- traces[1, ]
   df[1, ] <- esses
-  testit::assert(nrow(df) == 1)
-  testit::assert(names(df) == names(traces))
+  stopifnot(
+    nrow(df) == 1,
+    names(df) == names(traces)
+  )
 
   # Round off values to nearest integers
   df[1, ] <- as.integer(as.numeric(df[1, ]) + 0.5)

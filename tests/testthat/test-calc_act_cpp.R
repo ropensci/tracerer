@@ -1,6 +1,4 @@
-context("calc_act_cpp")
-
-test_that("use", {
+test_that("calc_act_cpp: use", {
 
   # Could not find documentation how to fix the warning.
   # The warning used to be absent in R 3.4.4 and/or before June 2019.

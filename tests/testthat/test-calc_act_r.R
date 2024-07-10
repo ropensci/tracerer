@@ -1,6 +1,4 @@
-context("calc_act_r")
-
-test_that("use", {
+test_that("calc_act_r: use", {
 
   act <- calc_act_r(
     trace = sin(seq(from = 0.0, to = 2.0 * pi, length.out = 100)),
@@ -9,7 +7,7 @@ test_that("use", {
   testthat::expect_equal(object = act, expected = 38.18202, tolerance = 0.01)
 })
 
-test_that("abuse", {
+test_that("calc_act_r: abuse", {
 
   testthat::expect_error(
     calc_act_r(trace = "not numeric", sample_interval = 1),

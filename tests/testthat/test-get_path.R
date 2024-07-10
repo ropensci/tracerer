@@ -1,6 +1,4 @@
-context("get_tracerer_path")
-
-test_that("use", {
+test_that("get_tracerer_path: use", {
 
   testthat::expect_equal(
     system.file("extdata", "beast2_example_output.log", package = "tracerer"),
@@ -14,7 +12,7 @@ test_that("use", {
 
 })
 
-test_that("abuse", {
+test_that("get_tracerer_path: abuse", {
 
   testthat::expect_error(
     tracerer:::get_tracerer_path("abs.ent"),

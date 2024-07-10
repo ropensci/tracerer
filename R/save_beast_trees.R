@@ -16,10 +16,11 @@ save_beast_trees <- function(
       "'trees' must be of class 'multiPhylo' instead of '", class(trees), "'"
     )
   }
-  if (!is.character(filename) || stringr::str_length(filename) == 0) {
+  if (!is.character(filename) || nchar(filename) == 0) {
     stop("'filename' must have at least one character")
   }
   ape::write.nexus(phy = trees, file = filename)
 
-  testit::assert(tracerer::is_trees_file(filename))
+  stopifnot(tracerer::is_trees_file(filename))
+  invisible()
 }

@@ -1,6 +1,4 @@
-context("calc_std_error_of_mean_cpp")
-
-test_that("use", {
+test_that("calc_std_error_of_mean_cpp: use", {
 
   testthat::expect_silent(
     tracerer:::calc_std_error_of_mean_cpp(

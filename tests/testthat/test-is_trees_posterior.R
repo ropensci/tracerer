@@ -1,37 +1,35 @@
-context("is_trees_posterior")
-
-test_that("can find is_trees_posterior_test.R", {
+test_that("is_trees_posterior() can find is_trees_posterior_test.R", {
   filename <- get_tracerer_path("beast2_example_output.trees")
   file_exists <- file.exists(filename)
   expect_true(file_exists)
 })
 
-test_that("can create a posterior", {
+test_that("is_trees_posterior() can create a posterior", {
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
   expect_true(is_trees_posterior(posterior))
 })
 
-test_that("can create a posterior with length 10", {
+test_that("is_trees_posterior() can create a posterior with length 10", {
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
-  expect_equal(length(posterior), 11)
+  expect_length(posterior, 11)
 })
 
-test_that("can detect an invalid posterior, basic types", {
-  expect_true(!is_trees_posterior(42))
-  expect_true(!is_trees_posterior(3.14))
-  expect_true(!is_trees_posterior("Hello world"))
-  expect_true(!is_trees_posterior(ape::rcoal(n = 2)))
+test_that("is_trees_posterior() can detect an invalid posterior, basic types", {
+  expect_false(is_trees_posterior(42))
+  expect_false(is_trees_posterior(3.14))
+  expect_false(is_trees_posterior("Hello world"))
+  expect_false(is_trees_posterior(ape::rcoal(n = 2)))
 })
 
-test_that("can detect an invalid posterior, list", {
+test_that("is_trees_posterior() can detect an invalid posterior, list", {
   # Putting posteriors in a list must yield an invalid BEAST posterior
   filename <- get_tracerer_path("beast2_example_output.trees")
   posterior <- parse_beast_trees(filename)
   not_posteriors <- c(list(posterior), list(posterior))
   expect_equal(length(not_posteriors), 2)
-  expect_true(!is_trees_posterior(not_posteriors))
+  expect_false(is_trees_posterior(not_posteriors))
 })
 
 test_that("is_trees_posterior: abuse", {

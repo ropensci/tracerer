@@ -1,6 +1,4 @@
-context("extract_operators_lines")
-
-test_that("abuse", {
+test_that("extract_operators_lines: use", {
 
   testthat::expect_silent(
     extract_operators_lines(
@@ -9,7 +7,7 @@ test_that("abuse", {
   )
 })
 
-test_that("abuse", {
+test_that("extract_operators_lines: abuse", {
 
   testthat::expect_error(
     extract_operators_lines(filename = "abs.ent"),
