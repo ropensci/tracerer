@@ -11,7 +11,7 @@ extract_operators_lines <- function(filename) {
 
   if (!file.exists(filename)) {
     stop("'filename' must be the name of an existing file. ",
-      "File '", filename, "' not found")
+         "File '", filename, "' not found")
   }
 
   lines <- readLines(filename, warn = FALSE)

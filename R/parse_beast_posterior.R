@@ -35,12 +35,12 @@ parse_beast_posterior <- function(
 
   if (!all(file.exists(trees_filenames))) {
     stop("'trees_filenames' must be the name of one or more existing files. ",
-      "File(s) with name(s) '", trees_filenames, "' not found")
+         "File(s) with name(s) '", trees_filenames, "' not found")
   }
 
   if (!file.exists(tracelog_filename)) {
     stop("'tracelog_filename' must be the name of an existing file. ",
-      "File with name '", tracelog_filename, "' not found")
+         "File with name '", tracelog_filename, "' not found")
   }
 
   posterior <- list()

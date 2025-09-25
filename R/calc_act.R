@@ -69,7 +69,7 @@ calc_act_r <- function(trace, sample_interval) {
       ) {
         integral_ac_times_two <- integral_ac_times_two +
           (2.0 * (auto_correlation[lag_index - 1 + 1] +
-          auto_correlation[lag_index + 1]))
+                    auto_correlation[lag_index + 1]))
       } else {
         break
       }
