@@ -5,6 +5,7 @@
 #'   use \link{is_trees_file} with \code{verbose = TRUE}
 #'   for the reason
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @export
 count_trees_in_file <- function(
   trees_filename

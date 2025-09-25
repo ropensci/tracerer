@@ -11,6 +11,7 @@
 #'   Use \link{is_trees_file} with \code{verbose = TRUE} to find out
 #'   why a file is invalid
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_trees <- function(
   filename
 ) {

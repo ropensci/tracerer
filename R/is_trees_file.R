@@ -13,6 +13,7 @@
 #' @seealso
 #'   Most of the work is done by \link[ape]{read.nexus}
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 is_trees_file <- function(
   trees_filename,
   verbose = FALSE

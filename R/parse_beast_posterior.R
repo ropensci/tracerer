@@ -2,12 +2,11 @@
 #' @inheritParams default_params_doc
 #' @return a list with the following elements:\cr
 #'   \itemize{
-#'     item{\code{estimates}: parameter estimates}
-#'     item{
+#'     item \code{estimates}: parameter estimates
+#'     item
 #'       \code{[alignment_id]_trees}: the phylogenies in the
 #'       BEAST2 posterior. \code{[alignment_id]} is the ID
 #'       of the alignment.
-#'     }
 #'   }
 #' @export
 #' @examples
@@ -20,6 +19,7 @@
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-ins from
 #'   the posterior's estimates (\code{posterior$estimates})
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_posterior <- function(
   trees_filenames,
   tracelog_filename,

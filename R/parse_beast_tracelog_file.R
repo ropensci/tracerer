@@ -11,6 +11,7 @@
 #'   Use \code{\link{save_beast_estimates}} to save the estimates
 #'   to a \code{.log} file.
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_tracelog_file <- function(
   tracelog_filename
 ) {

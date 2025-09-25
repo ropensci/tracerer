@@ -3,6 +3,7 @@
 #' @return TRUE if the input contains all information of
 #'   a BEAST2 posterior. Returns FALSE otherwise.
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @examples
 #' trees_filename <- get_tracerer_path("beast2_example_output.trees")
 #' tracelog_filename <- get_tracerer_path("beast2_example_output.log")

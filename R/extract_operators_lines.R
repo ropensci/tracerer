@@ -6,6 +6,7 @@
 #'   the unparsed BEAST2 MCMC operator acceptances
 #' @export
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 extract_operators_lines <- function(filename) {
 
   if (!file.exists(filename)) {

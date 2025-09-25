@@ -3,6 +3,7 @@
 #' @param values numeric vector to calculate the mode of
 #' @return the mode of the trace
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @examples
 #' # In a unimodal distribution, find the value that occurs most
 #' calc_mode(c(1, 2, 2))

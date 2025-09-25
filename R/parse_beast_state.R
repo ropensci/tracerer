@@ -10,6 +10,7 @@
 #'   state_filename = get_tracerer_path("beast2_example_output.xml.state")
 #' )
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_state_operators <- function(
   state_filename = get_tracerer_path("beast2_example_output.xml.state"),
   filename = "deprecated"

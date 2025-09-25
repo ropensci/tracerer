@@ -3,6 +3,7 @@
 #' @return returns the geometric mean if all values are at least zero,
 #'   else returns NA
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @export
 calc_geom_mean <- function(values) {
   if (any(values < 0.0)) return(NA)

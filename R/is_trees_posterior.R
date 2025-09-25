@@ -3,6 +3,7 @@
 #' @param x the input
 #' @return TRUE or FALSE
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @export
 is_trees_posterior <- function(x) {
   class(x) == "multiPhylo"
