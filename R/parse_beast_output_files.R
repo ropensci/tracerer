@@ -2,15 +2,14 @@
 #' @inheritParams default_params_doc
 #' @return a list with the following elements:\cr
 #'   \itemize{
-#'     item{\code{estimates}: parameter estimates}
-#'     item{
+#'     item \code{estimates}: parameter estimates
+#'     item
 #'       \code{[alignment_id]_trees}: the phylogenies in the
 #'       BEAST2 posterior. \code{[alignment_id]} is the ID
 #'       of the alignment.
-#'     }
-#'     item{\code{operators}: the BEAST2 MCMC operator
+#'
+#'     item \code{operators}: the BEAST2 MCMC operator
 #'       acceptances
-#'     }
 #'   }
 #' @export
 #' @examples
@@ -25,6 +24,7 @@
 #' @seealso Use \code{\link{remove_burn_ins}} to remove the burn-in from
 #'   \code{out$estimates}
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_output_files <- function(
   log_filename,
   trees_filenames,

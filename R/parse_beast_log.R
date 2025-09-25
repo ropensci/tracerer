@@ -14,6 +14,7 @@
 #'   tracelog_filename = get_tracerer_path("beast2_example_output.log")
 #' )
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_log <- function(
   tracelog_filename,
   filename = "deprecated"

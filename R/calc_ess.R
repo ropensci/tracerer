@@ -10,6 +10,7 @@
 #' @seealso Java code can be found here: \url{https://github.com/CompEvol/beast2/blob/9f040ed0357c4b946ea276a481a4c654ad4fff36/src/beast/core/util/ESS.java#L161} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 calc_ess <- function(trace, sample_interval) {
   tracerer::check_trace(trace)
   if (sample_interval < 1) {

@@ -2,6 +2,7 @@
 #' @param filename the file's name, without the path
 #' @return the full path to the filename
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @seealso for more files, use \code{\link{get_tracerer_paths}}
 #' @examples
 #' get_tracerer_path("beast2_example_output.log")

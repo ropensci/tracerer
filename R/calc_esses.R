@@ -12,6 +12,7 @@
 #' calc_esses(estimates, sample_interval = 1000)
 #' @export
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 calc_esses <- function(
   traces,
   sample_interval

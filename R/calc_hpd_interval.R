@@ -13,6 +13,7 @@
 #'   \url{https://github.com/beast-dev/beast-mcmc/blob/98705c59db65e4f406a420bbade949aeecfe05d0/src/dr/stats/DiscreteStatistics.java#L317} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from J. Heled,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @examples
 #' estimates <- parse_beast_tracelog_file(
 #'   get_tracerer_path("beast2_example_output.log")

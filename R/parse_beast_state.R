@@ -10,6 +10,7 @@
 #'   state_filename = get_tracerer_path("beast2_example_output.xml.state")
 #' )
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_state_operators <- function(
   state_filename = get_tracerer_path("beast2_example_output.xml.state"),
   filename = "deprecated"
@@ -26,7 +27,7 @@ parse_beast_state_operators <- function(
   filename <- state_filename
   if (!file.exists(filename)) {
     stop("'filename' must be the name of an existing file. ",
-      "File '", filename, "' not found")
+         "File '", filename, "' not found")
   }
 
   lines <- tracerer::extract_operators_lines(filename)

@@ -6,9 +6,9 @@ test_that("use", {
     tracelog_filename = filename
   )
   expected_names <- c(
-   "Sample", "posterior", "likelihood",
-   "prior", "treeLikelihood", "TreeHeight",
-   "BirthDeath", "birthRate2", "relativeDeathRate2"
+    "Sample", "posterior", "likelihood",
+    "prior", "treeLikelihood", "TreeHeight",
+    "BirthDeath", "birthRate2", "relativeDeathRate2"
   )
   testthat::expect_equal(names(estimates), expected_names)
 

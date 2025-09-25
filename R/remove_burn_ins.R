@@ -6,6 +6,7 @@
 #' @return the data frame with the burn-in removed
 #' @export
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 remove_burn_ins <- function(
   traces,
   burn_in_fraction = 0.1

@@ -1,7 +1,8 @@
-#' Calculate the corrected sample standard deviation.
+#' Calculate the corrected sample standard deviation
 #' @param values numeric values
 #' @return the corrected sample standard deviation
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @export
 cs_std_dev <- function(values) {
 

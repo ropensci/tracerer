@@ -11,6 +11,7 @@
 #'   Use \link{is_trees_file} with \code{verbose = TRUE} to find out
 #'   why a file is invalid
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 parse_beast_trees <- function(
   filename
 ) {
@@ -35,17 +36,12 @@ parse_beast_trees <- function(
   }
 
   trees <- tryCatch({
-      # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
-      # Do not use force.multi, as STATE_ will be lost
-      ape::read.nexus(filename)
-    },
-    error = function(e) {
-      stop(
-        "invalid file '", filename, "' \n",
-        "error message: ", e$message
-      )
-    }
-  )
+    # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
+    # Do not use force.multi, as STATE_ will be lost
+    ape::read.nexus(filename)
+  }, error = function(e) {
+    stop("invalid file '", filename, "' \n", "error message: ", e$message)
+  })
 
   stopifnot(
     is_trees_file(filename), # nolint tracerer function

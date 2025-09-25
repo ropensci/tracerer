@@ -2,6 +2,7 @@
 #' @inheritParams default_params_doc
 #' @export
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 #' @examples
 #' check_trace(seq(1, 2))
 check_trace <- function(trace) {

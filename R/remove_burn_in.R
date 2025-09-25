@@ -11,6 +11,7 @@
 #' # in this case removes the first value, which is one
 #' w <- remove_burn_in(trace = v, burn_in_fraction = 0.1)
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 remove_burn_in <- function(trace, burn_in_fraction) {
   tracerer::check_trace(trace)
   if (burn_in_fraction < 0.0) {

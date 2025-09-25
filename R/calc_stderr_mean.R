@@ -13,6 +13,7 @@ NULL
 #' @seealso Java code can be found here: \url{https://github.com/beast-dev/beast-mcmc/blob/800817772033c13061f026226e41128d21fd14f3/src/dr/inference/trace/TraceCorrelation.java#L159} # nolint URLs can be long
 #' @author The original Java version of the algorithm was from Remco Bouckaert,
 #'   ported to R and adapted by Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 calc_stderr_mean <- function(trace) {
   tracerer::check_trace(trace)
   calc_std_error_of_mean_cpp(trace) # nolint internal function

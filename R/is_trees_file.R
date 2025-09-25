@@ -13,6 +13,7 @@
 #' @seealso
 #'   Most of the work is done by \link[ape]{read.nexus}
 #' @author Richèl J.C. Bilderbeek
+#' @encoding UTF-8
 is_trees_file <- function(
   trees_filename,
   verbose = FALSE
@@ -30,7 +31,7 @@ is_trees_file <- function(
   # BEAST2 saves as 'End;', where ape saves as 'END;'
   if (last_line != "End;" && last_line != "END;") {
     if (verbose) {
-        message("last line should be 'End;'")
+      message("last line should be 'End;'")
     }
     return(FALSE)
   }
@@ -38,15 +39,13 @@ is_trees_file <- function(
   is_valid <- FALSE
 
   tryCatch({
-      # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
-      ape::read.nexus(trees_filename)
-      is_valid <- TRUE
-    },
-    error = function(e) {
-      if (verbose) {
-        message("Error message: ", e$message)
-      }
+    # Cannot use ape::read.tree, as that's incompatible with BEAST2's output
+    ape::read.nexus(trees_filename)
+    is_valid <- TRUE
+  }, error = function(e) {
+    if (verbose) {
+      message("Error message: ", e$message)
     }
-  )
+  })
   is_valid
 }
