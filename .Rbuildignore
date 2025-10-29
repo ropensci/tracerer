@@ -19,3 +19,4 @@
 ^doc$
 ^Meta$
 ^mlc_config\.json$
+^CITATION\.cff$
