@@ -2,6 +2,30 @@
 
 Newest versions at top.
 
+# tracerer 2.2.4 (2026-02-28)
+
+## NEW FEATURES
+
+  * None
+
+## MINOR IMPROVEMENTS
+
+  * Fix documentation
+
+## BUG FIXES
+
+  * None
+
+## DEPRECATED AND DEFUNCT
+
+  * None
+
+# tracerer 2.2.2 (2021-05-30)
+
+## NEW FEATURES
+
+  * None
+
 # tracerer 2.2.3 (2023-09-25)
 
 ## NEW FEATURES
