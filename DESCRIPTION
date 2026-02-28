@@ -31,7 +31,7 @@ Suggests:
     spelling,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 URL: https://docs.ropensci.org/tracerer/ (website)
     https://github.com/ropensci/tracerer/
 BugReports: https://github.com/ropensci/tracerer/issues

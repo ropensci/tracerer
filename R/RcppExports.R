@@ -7,7 +7,6 @@
 #' @param sample_interval sample interval
 #' @return the auto correlation time
 #' @author Richèl J.C. Bilderbeek
-#' @encoding UTF-8
 calc_act_cpp <- function(sample, sample_interval) {
     .Call('_tracerer_calc_act_cpp', PACKAGE = 'tracerer', sample, sample_interval)
 }
@@ -16,7 +15,6 @@ calc_act_cpp <- function(sample, sample_interval) {
 #' @param sample numeric vector of values
 #' @return the standard error of the mean
 #' @author Richèl J.C. Bilderbeek
-#' @encoding UTF-8
 calc_std_error_of_mean_cpp <- function(sample) {
     .Call('_tracerer_calc_std_error_of_mean_cpp', PACKAGE = 'tracerer', sample)
 }

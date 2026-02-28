@@ -26,8 +26,8 @@ Use \code{tracelog_filename} instead}
 \value{
 a list with the following elements:\cr
   \itemize{
-    item \code{estimates}: parameter estimates
-    item
+    \item \code{estimates}: parameter estimates
+    \item
       \code{[alignment_id]_trees}: the phylogenies in the
       BEAST2 posterior. \code{[alignment_id]} is the ID
       of the alignment.
