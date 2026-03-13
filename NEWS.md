@@ -241,7 +241,7 @@ Newest versions at top.
 
 ## MINOR IMPROVEMENTS
 
-  * Follow all [rOpenSci packaging guidelines](https://github.com/ropensci/onboarding/blob/master/packaging_guide.md)
+  * Follow all [rOpenSci packaging guidelines](https://github.com/ropensci/onboarding/blob/main/packaging_guide.md)
 
 ## BUG FIXES
 
