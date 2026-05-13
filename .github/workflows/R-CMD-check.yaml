@@ -28,6 +28,9 @@ jobs:
       - name: Install libuv1-dev
         run: sudo apt install -qq libuv1-dev
 
+      - name: Install libglpk-dev
+        run: sudo apt install -qq libglpk-dev
+ 
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
