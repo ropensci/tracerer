@@ -8,7 +8,7 @@
 
 Branch   |[![GitHub Actions logo](man/figures/GitHubActions.png)](https://github.com/ropensci/tracerer/actions)|[![Codecov logo](man/figures/Codecov.png)](https://www.codecov.io)
 ---------|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------
-`master` |![R-CMD-check](https://github.com/ropensci/tracerer/workflows/R-CMD-check/badge.svg?branch=master)   |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=master)](https://codecov.io/github/ropensci/tracerer/branch/master)
+`main`   |![R-CMD-check](https://github.com/ropensci/tracerer/workflows/R-CMD-check/badge.svg?branch=main)     |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=main)](https://codecov.io/github/ropensci/tracerer/branch/main)
 `develop`|![R-CMD-check](https://github.com/ropensci/tracerer/workflows/R-CMD-check/badge.svg?branch=develop)  |[![codecov.io](https://codecov.io/github/ropensci/tracerer/coverage.svg?branch=develop)](https://codecov.io/github/ropensci/tracerer/branch/develop)
 
 `tracerer`, 'Tracer for R' is an R package to work with BEAST2 output files. 
@@ -68,7 +68,7 @@ install.packages("tracerer")
 
 ### Stable development version
 
-Install the `tracerer` `master` branch using `remotes`:
+Install the `tracerer` `main` branch using `remotes`:
 
 ```{r}
 remotes::install_github("ropensci/tracerer")
